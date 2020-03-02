@@ -1,0 +1,125 @@
+.nt {
+    text-align:center;
+    padding-top:24px;
+    padding-bottom:58px;
+    position:relative;
+    h1 {
+        max-width:600px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    article {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-top:56px;
+        text-align:left;
+        margin-left:7.7%;
+        h3 {
+            margin-bottom:8px;
+        }
+        .txt {
+            width:42.59%;
+            order:1;
+            p {
+                margin-bottom:26px !important;
+            }
+            .btn {
+                min-width:155px;
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+            h2 {
+                margin-bottom:8px;
+                font-size: 22px;
+                line-height:32px;
+                font-weight:normal;
+                font-family:$open-sans;
+            }
+        }
+        .picture {
+            width:54%;
+            order:2;
+            display: flex;
+            justify-content: space-between; /*flex-start flex-end center space-around*/
+            .item {
+                @media (min-width: $mobil-device-big-width) {
+                    background:none;
+                    img {
+                        display:block;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                @media (max-width: $mobil-device-big-width) {
+                    img {
+                        display:none;
+                    }
+                    height:245px;
+                    background-size: cover !important;
+                }
+            }
+            .owl-pagination {
+                bottom:20px;
+                position:absolute;
+                left:0;
+                right:0;
+                text-align:center;
+                line-height:12px;
+                height:12px;
+                .owl-page {
+                    width:12px;
+                    height:12px;
+                    display:inline-block;
+                    margin-left:3px;
+                    margin-right:3px;
+                    cursor:pointer;
+                    @include radius(50%);
+                    background-color:#E2E2E2;
+                    &.active {
+                        background-color:$sunglow-color;
+                    }
+                }
+            }
+        }
+        .txt-wide {
+            width:74.07%;
+            margin-top:15px;
+            order:3;
+            p {
+                margin-bottom:12px;
+            }
+        }
+    }
+    @media (max-width: $mobil-device-big-width) {
+        article {
+            display:block;
+            margin-top:24px;
+            margin-left:0;
+            .txt {
+                width:auto;
+            }
+            .picture {
+                width:auto;
+                margin-left:-10px;
+                margin-right:-10px;
+                margin-bottom:24px;
+                display:block;
+                .cell {
+                    width:auto;
+                    &:last-child {
+                        display:none;
+                    }
+                }
+                img {
+                    max-width:100%;
+                }
+            }
+            .txt-wide {
+                width:auto;
+                margin-top:32px;
+            }
+        }
+    }
+}

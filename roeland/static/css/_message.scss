@@ -1,0 +1,167 @@
+.message {
+    padding-top:38px;
+    text-align:center;
+    .block {
+        max-width:680px;
+        margin-left:auto;
+        margin-right:auto;
+        h3 {
+            margin-bottom:12px;
+        }
+        .txt {
+            max-width:365px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    form {
+        input {
+            display:block;
+            margin-bottom:10px;
+            -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+            width:100%;
+            padding-left:22px;
+            padding-right:22px;
+            font-size: 14px;
+            line-height:1;
+            font-family:inherit;
+            color:$mine-shaft-color;
+            height:50px;
+            border:#E0E7EE 1px solid;
+            @include radius(2px);
+            font-weight:300 !important;
+        }
+        @include placeholder($dove-gray-color, 1);
+        .btn-place {
+            text-align:center;
+            font-size: 14px;
+            line-height:19px;
+            margin-top:26px;
+            a {
+                color:$dove-gray-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .btn {
+                margin-bottom:16px;
+            }
+        }
+    }
+    @media (max-width: $mobil-device-big-width) {
+        padding-top:13px;
+    }
+}
+
+.employees-login {
+    overflow:hidden;
+    margin-bottom:82px;
+    padding-top:38px;
+    .container {
+        display: flex;
+        justify-content: space-between; /*flex-start flex-end center space-around*/
+    }
+    .txt-place {
+        width:40.59%;
+        position:relative;
+        z-index:5;
+    }
+    h2 {
+        margin-bottom:32px;
+    }
+    p {
+        margin-bottom:12px;
+        b {
+            font-weight:600;
+        }
+    }
+    .form-place {
+        width:45.04%;
+        text-align:center;
+        position:relative;
+        .link {
+            font-size: 14px;
+            line-height:19px;
+            padding-top:28px;
+            color:$dove-gray-color;
+            a {
+                margin-left:22px;
+                color:$mine-shaft-color;
+            }
+        }
+        &:before {
+            position:absolute;
+            width:117px;
+            height:97px;
+            content:'';
+            display:block;
+            left:-138px;
+            bottom:67px;
+            background: url('../images/7.png') no-repeat center;
+            -webkit-background-size:100% 100%;
+            background-size:100% 100%;
+        }
+        &:after {
+            position:absolute;
+            width:148px;
+            height:120px;
+            content:'';
+            display:block;
+            right:-68px;
+            top:46px;
+            background: url('../images/8.svg') no-repeat center;
+            -webkit-background-size:100% 100%;
+            background-size:100% 100%;
+        }
+    }
+    .block {
+        position:relative;
+        z-index:5;
+        form {
+            max-width:365px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            padding-top:30px;
+            h3 {
+                margin-bottom:28px;
+            }
+            input {
+                display:block;
+                margin-bottom:10px;
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+                width:100%;
+                padding-left:22px;
+                padding-right:22px;
+                font-size: 14px;
+                line-height:1;
+                font-family:inherit;
+                color:$mine-shaft-color;
+                height:50px;
+                border:#E0E7EE 1px solid;
+                @include radius(2px);
+                font-weight:300 !important;
+            }
+            @include placeholder($dove-gray-color, 1);
+            .btn-place {
+                text-align:center;
+                font-size: 14px;
+                line-height:19px;
+                margin-top:26px;
+                a {
+                    color:$dove-gray-color;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .btn {
+                    margin-bottom:16px;
+                }
+            }
+        }
+    }
+}

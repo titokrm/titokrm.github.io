@@ -1,0 +1,74 @@
+@mixin gradient($top-color, $bottom-color) {
+    background-image: -ms-linear-gradient(top, $top-color, $bottom-color);
+    background-image: -webkit-linear-gradient(top, $top-color, $bottom-color);
+    background-image: -o-linear-gradient(top, $top-color, $bottom-color);
+    background-image: -moz-linear-gradient(top, $top-color, $bottom-color);
+    background-image: linear-gradient(top, $top-color, $bottom-color);
+    background-repeat: repeat-x;
+}
+
+@mixin transform($deg) {
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin b-s($size) {
+    -webkit-background-size:$size;
+    -o-background-size:$size;
+    -moz-background-size:$size;
+    background-size:$size;
+}
+
+@mixin radius($radius) {
+    -moz-border-radius:$radius;
+    -webkit-border-radius:$radius;
+    -khtml-border-radius:$radius;
+    border-radius:$radius;
+}
+
+@mixin clear {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+@mixin placeholder($color,$opacity) {
+    ::-webkit-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+    }
+
+    /* Firefox 19+ */
+    ::-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+    }
+
+    /* Firefox 18- */
+    :-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+    }
+
+    :-ms-input-placeholder {
+        opacity: $opacity;
+        color: $color;
+    }
+}
+
+@mixin no-list {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+@mixin no-appearance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none !important;
+}

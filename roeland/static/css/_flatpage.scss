@@ -1,0 +1,152 @@
+.flatpage {
+    text-align:center;
+    padding-top:38px;
+    position:relative;
+    h1 {
+        max-width:600px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    article {
+        .txt-picture {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom:82px;
+            .txt {
+                width:42.59%;
+                order:1;
+                h2 {
+                    margin-bottom:8px;
+                    font-size: 24px;
+                    line-height:32px;
+                }
+            }
+            .picture {
+                width:54%;
+                order:2;
+                text-align:right;
+                img {
+                    max-width:528px;
+                    width:100%;
+                    height:auto;
+                }
+            }
+        }
+        margin-top:42px;
+        text-align:left;
+        margin-bottom:64px;
+        margin-left:7.7%;
+/*        &.one-column {
+            display:block;
+            margin-bottom:64px;
+            background:none;
+            margin-top:0;
+            p {
+                margin-bottom:12px;
+            }
+            ul {
+                line-height:38px;
+                font-size: 16px;
+                margin-bottom:38px;
+                @include no-list;
+                li {
+                    position:relative;
+                    padding-left:36px;
+                    &:before {
+                        display:block;
+                        content:'';
+                        width:4px;
+                        height:4px;
+                        @include radius(50%);
+                        position:absolute;
+                        left:11px;
+                        top:17px;
+                        background-color:$mine-shaft-color;
+                    }
+                }
+            }
+            p + h3 {
+                margin-top:64px;
+            }
+            h3 {
+                margin-bottom:16px;
+            }
+        }*/
+        h3 {
+            margin-bottom:8px;
+            max-width:800px;
+        }
+        p, h2, ul, ol {
+            max-width:800px;
+        }
+        .two-column {
+            margin-top:82px;
+            display: flex;
+            justify-content: flex-start; /*flex-start flex-end center space-around*/
+            align-items: stretch; /*flex-start flex-end center baseline*/
+            & > div {
+                width:42.59%;
+                & + div {
+                    margin-left:32px;
+                }
+            }
+        }
+        .download-place {
+            margin-bottom:26px;
+            font-size: 16px;
+            line-height:26px;
+        }
+    }
+    @media (max-width: $mobil-device-big-width) {
+        article {
+            margin-top:24px;
+            margin-left:0;
+            .txt-picture {
+                display:block;
+                .txt {
+                    width:auto;
+                }
+                .picture {
+                    width:auto;
+                    margin-left:-10px;
+                    margin-right:-10px;
+                    margin-bottom:24px;
+                    img {
+                        max-width:100%;
+                    }
+                }
+            }
+            .two-column {
+                display:block;
+                & > div {
+                    width:auto;
+                    & + div {
+                        margin-left:0;
+                    }
+                }
+            }
+            /*
+            &.one-column {
+                margin-bottom:40px;
+                padding-bottom:0;
+                ul {
+                    line-height:26px;
+                    li {
+                        &:before {
+                            top:11px;
+                        }
+                    }
+                }
+                h3 {
+                    margin-bottom:8px;
+                }
+                p + h3 {
+                    margin-top:32px;
+                }
+            }
+            */
+        }
+    }
+}
+

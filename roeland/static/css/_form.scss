@@ -1,0 +1,363 @@
+.form {
+	input[type='email'], input[type='number'], input[type='password'], input[type='text'], textarea {
+		display:block;
+		height:$fields-height;
+		padding-left:$left-right-space;
+		padding-right:$left-right-space;
+		line-height:1;
+		font-size: $fields-font;
+		color:$fields-text-color;
+		width:100%;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		background-color:$fields-background;
+		border:$fields-border-color $fields-border-width solid;
+		-webkit-border-radius: $radius-field;
+		border-radius: $radius-field;
+		font-family: inherit;
+		color:$fields-text-color;
+	}
+	textarea {
+		height:auto;
+		overflow:auto;
+		padding-top:($fields-height - $fields-font - 2px) / 2;
+		padding-bottom:($fields-height - $fields-font - 2px) / 2;
+	}
+	input[type='email']:focus, input[type='number']:focus, input[type='password']:focus, input[type='text']:focus, textarea:focus {
+		border:$fields-border-active-color $fields-border-width solid;
+	}
+
+	input[type='email']:disabled,
+	input[type='number']:disabled,
+	input[type='password']:disabled,
+	input[type='text']:disabled, 
+	textarea:disabled {
+		background-color:$fields-disable-bg-color;
+	}
+
+	@include placeholder($fields-placeholders-color,$opacity-placeholder);
+/*
+	select {
+		width:100%;
+		display:block;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		-webkit-border-radius: $radius-field;
+		border-radius: $radius-field;
+		height:$fields-height;
+		padding-right:$select-right-space;
+		padding-left:$left-right-space - 3px;
+		font-size: $fields-font;
+		color:$fields-text-color;
+		line-height:$fields-height - 2px;
+		font-family: inherit;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-overflow: '';
+		-ms-appearance: none;
+		appearance: none!important;
+		background: url('../images/select-triangl.png') no-repeat right center;
+		background-color:$fields-background;
+		border:$fields-border-color $fields-border-width solid;
+	}
+	select:-moz-focusring {
+		color:transparent;
+		text-shadow:0 0 0 $fields-text-color;
+	}
+	select::-ms-expand {
+		display: none;
+	}
+	select::focus {
+		outline:none;
+	}*/
+	.btn-place {
+		line-height:50px;
+        text-align:center;
+        margin-bottom:44px;
+	}
+	.controls { 
+		span {
+			display:inline-block;
+			line-height:$fields-height;
+			font-size:$label-font;
+		}
+	}
+	.vertical-list {
+		margin:0;
+		padding:0;
+		list-style:none;
+		font-size: $label-font;;
+		line-height:$label-line-height;
+		margin-bottom:$label-line-height;
+		li {
+			margin-bottom:$row-bottom-space;
+		}
+	}
+	.one-half {
+		float:left;
+		width:50%;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		padding-right:$fields-space / 2;
+		&+.one-half {
+			padding-left:$fields-space / 2;
+			padding-right:0;
+		}
+	}
+
+	.one-third {
+		float:left;
+		width:33.33%;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		padding-right:$fields-space / 2;
+		&:last-child {
+			padding-right:0;
+		}
+		& + .one-third {
+			padding-left:$fields-space / 2;
+		}
+		& + .two-third {
+			padding-right:0;
+			padding-left:$fields-space / 2;
+		}
+	}
+
+	.two-third {
+		width:66.66%;
+		float:left;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		padding-right:$fields-space / 2;
+		& + .one-third {
+			padding-right:0;
+			padding-left:$fields-space / 2;
+		}
+	}
+	.errorlist {
+		@include no-list;
+		font-size: $label-font * 0.8;
+		line-height:1.2;
+		color:$error-list-color;
+        display:none;
+
+		li {
+			margin-bottom:4px;
+            margin-top:4px;
+		}
+	}
+	.error-place:after {
+		@include clear;
+	}
+	.error {
+		@include placeholder($error-placeholder,$opacity-placeholder);
+		position:relative;
+		&:before {
+			display:block;
+			content:'!';
+			position:absolute;
+			right:15px;
+            top:0;
+            bottom:0;
+            line-height:$fields-height;
+            color:$error-list-color;
+            font-size: 16px;
+            font-weight:bold;
+		}
+		input, textarea {
+			border:$error-border-color $fields-border-width solid !important;
+			padding-right:$select-right-space;
+		}
+		& + .errorlist {
+			display:block;
+		}
+	}
+/*
+	.input-checkbox {
+		label {
+			cursor: pointer;
+		}
+		label:before {
+			content: "";
+			display: inline-block;
+			width: 19px;
+			height: 19px;
+			background: url("../images/check2.png") no-repeat left top;
+			vertical-align: middle;
+			margin-top: -2px;
+			margin-right: 10px;
+		}
+
+		input[type='checkbox'] {
+			position: absolute;
+			clip: rect(0, 0, 0, 0);
+		}
+
+		input[type='checkbox']:checked + label:before {
+			background-position: 0 -19px !important;
+		}
+	
+	}
+*/
+}
+
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.form select {
+		text-indent:$left-right-space - 3px;
+		padding-left:0;
+	}
+}*/
+
+.form.form-vertical {
+	.row-form {
+		margin-bottom:$row-bottom-space;
+		display:table;
+		width:100%;
+	}
+	.controls:after {
+		@include clear;
+	}
+	.label {
+		font-size: $label-font;
+		margin-bottom:$row-bottom-space / 2;
+	}
+}
+
+.form.form-horisontal {
+	.wrap {
+		display:table;
+		width:100%;
+		.row-form {
+			display:table-row;
+		}
+		.label {
+			padding-right:$left-right-space;
+			vertical-align:middle;
+			text-align:right;
+			font-weight:bold;
+			font-size: $label-font;
+			width:$label-width;
+			padding-bottom:$row-bottom-space;
+			display:table-cell;
+			text-align:right;
+			&.valign-top {
+				padding-top:($fields-height - $label-line-height) / 2;
+				vertical-align:top;
+			}
+			label {
+				display:inline-block;
+				float:none;
+				line-height:inherit;
+				width:auto;
+			}
+		}
+		.controls {
+			padding-bottom:$row-bottom-space;
+			display:table-cell;
+			&:after {
+				@include clear;
+			}
+		}
+	}
+}
+
+ul.list-chkbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    @include no-list;
+    margin-bottom:-23px;
+    li {
+        width:41%;
+        margin-bottom:23px;
+        font-size: 14px;
+        line-height:20px;
+        font-weight:300;
+        color:$black-color;
+        padding-left:28px;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        label {
+            cursor: pointer;
+        }
+        label:before {
+            content: "";
+            float:left;
+            width: 19px;
+            height: 19px;
+            background: url("../images/checkbox.png") no-repeat left bottom;
+            -webkit-background-size:19px 38px;
+            background-size:19px 38px;
+            margin-top: 1px;
+            margin-left: -28px;
+            -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.15);
+            box-shadow: 0 0 2px rgba(0,0,0,0.15);
+            -webkit-border-radius:3px;
+            border-radius:3px;
+        }
+
+        input[type='checkbox'] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        input[type='checkbox']:checked + label:before {
+            background-position: 0 top !important;
+        }
+    }
+}
+
+ul.vert-list-chk {
+    @include no-list;
+    padding-top:13px;
+    li {
+        margin-bottom:23px;
+        font-size: 14px;
+        line-height:19px;
+        font-weight:300;
+        color:$black-color;
+        padding-left:28px;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        a {
+            color:$black-color;
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+        &:last-child {
+            margin-bottom:0;
+        }
+        label {
+            cursor: pointer;
+        }
+        label:before {
+            content: "";
+            float:left;
+            width: 19px;
+            height: 19px;
+            background: url("../images/checkbox.png") no-repeat left bottom;
+            -webkit-background-size:19px 38px;
+            background-size:19px 38px;
+            margin-top: 1px;
+            margin-left: -28px;
+            -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.15);
+            box-shadow: 0 0 2px rgba(0,0,0,0.15);
+            -webkit-border-radius:3px;
+            border-radius:3px;
+        }
+
+        input[type='checkbox'] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        input[type='checkbox']:checked + label:before {
+            background-position: 0 top !important;
+        }
+    }
+}

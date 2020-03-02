@@ -1,0 +1,154 @@
+.contacts-detal {
+    padding-top:28px;
+    text-align:center;
+    h1 {
+        margin-bottom:32px;
+    }
+    h2 {
+        font-size: 22px;
+        line-height:32px;
+        padding-bottom:12px;
+        border-bottom:#D1D1D1 1px solid;
+        margin-bottom:21px;
+        font-family:$open-sans;
+        font-weight:600;
+    }
+    h4 {
+        margin-bottom:5px;
+    }
+    .flex-wrap {
+        text-align:left;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        & > div {
+            width:39.82%;
+            padding-top:21px;
+            margin-bottom:28px;
+            p {
+                margin-bottom:8px;
+            }
+            ul {
+                @include no-list;
+                font-size: 16px;
+                line-height:30px;
+                margin-top:10px;
+                margin-bottom:10px;
+                max-width:300px;
+                li {
+                    padding-top:8px;
+                    padding-bottom:8px;
+                    span {
+                        display:inline-block;
+                        margin-right:10px;
+                    }
+                    & + li {
+                        border-top:#DFE2E5 1px solid;
+                    }
+                }
+            }
+            .map {
+                margin-bottom:46px;
+                margin-top:22px;
+                max-width:400px;
+                img {
+                    display:block;
+                    width:100%;
+                    height:auto;
+                }
+            }
+        }
+        form {
+            width:49.74%;
+            -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+            padding:20px 45px 40px;
+            background-color:$porcelain-color;
+            border:$mystic-color 1px solid;
+            @include radius(6px);
+            margin-bottom:28px;
+            .phones {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                font-size: 16px;
+                line-height:26px;
+                margin-bottom:30px;
+                div {
+                    padding-right:26px;
+                }
+            }
+            @include placeholder($dove-gray-color, 1);
+            input, textarea {
+                font-weight:300 !important;
+                color:$mine-shaft-color;
+            }
+            .row-form {
+                margin-bottom:14px;
+            }
+            .btn-place {
+                margin-top:34px;
+                text-align:left;
+                margin-bottom:0;
+            }
+        }
+    }
+    @media (max-width: $mobil-device-big-width) {
+        padding-top:14px;
+        h1 {
+            font-size: 24px;
+            line-height:32px;
+            margin-bottom:24px;
+        }
+        h2 {
+            font-size: 22px;
+            line-height:29px;
+            font-weight:bold;
+            font-family:$roboto;
+            margin-bottom:18px;
+            padding-bottom:13px;
+            text-align:center;
+        }
+        .flex-wrap {
+            display:block;
+            form {
+                width:auto;
+                padding:24px 10px 14px;
+                margin-left:-10px;
+                margin-right:-10px;
+                @include radius(2px);
+                h2 {
+                    padding-bottom:0;
+                    border:none;
+                }
+                .one-half {
+                    float:none;
+                    width:auto;
+                    padding:0 !important;
+                    margin-bottom:7px;
+                    &:last-child {
+                        margin-bottom:0;
+                    }
+                }
+                .row-form {
+                    margin-bottom:7px;
+                }
+                .phones {
+                    font-size: 14px;
+                    margin-bottom:16px;
+                }
+                .btn-place {
+                    margin-top:16px;
+                    text-align:center;
+                }
+            }
+            & > div {
+                width:auto;
+                .map {
+                    margin-top:18px;
+                    margin-bottom:18px;
+                }
+            }
+        }
+    }
+}

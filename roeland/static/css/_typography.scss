@@ -1,0 +1,57 @@
+h1, .h1 {
+    font-size: 36px;
+    line-height:48px;
+    font-weight:bold;
+    font-family:$roboto;
+}
+
+h2, .h2 {
+    font-size: 28px;
+    line-height:37px;
+    font-weight:bold;
+    font-family:$roboto;
+}
+
+h3, .h3 {
+    font-size: 22px;
+    line-height:32px;
+    font-weight:normal;
+    font-family:$open-sans;
+}
+
+h4 {
+    font-size: 12px;
+    line-height:17px;
+    color:$silver-chalice-color;
+    font-weight:600;
+    font-family:$open-sans;
+    letter-spacing:1px;
+}
+
+p {
+    font-size: 16px;
+    line-height:26px;
+    margin-bottom:26px;
+    &.intro {
+        font-size: 22px;
+        line-height:40px;
+        margin-bottom:40px;
+        font-weight:600;
+    }
+}
+
+@media (max-width: $mobil-device-big-width) {
+    h1, .h1 {
+        font-size: 32px;
+        line-height:43px;
+    }
+    h2, .h2 {
+        font-size: 24px;
+        line-height:32px;
+    }
+    p.intro {
+        font-size: 18px;
+        line-height:30px;
+        margin-bottom:30px;
+    }
+}

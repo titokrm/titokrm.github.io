@@ -1,0 +1,168 @@
+.faq {
+    .banner {
+        min-height:200px;
+        padding-top:20px;
+        padding-bottom:20px;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('../images/search.jpg') no-repeat center;
+        -webkit-background-size:cover;
+        background-size:cover;
+        position:relative;
+        &:after {
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            content:'';
+            display:block;
+            background-color:$mine-shaft-color;
+            opacity:0.3;
+            z-index:1;
+        }
+        .search {
+            width:386px;
+            padding-left:10px;
+            padding-right:10px;
+            color:$white-color;
+            text-align:center;
+            position:relative;
+            z-index:2;
+            h1 {
+                margin-bottom:25px;
+                text-shadow: 0 1px 4px rgba(35,35,35,0.5);
+            }
+            .input {
+                position:relative;
+                input {
+                    -webkit-border-radius:25px;
+                    border-radius:25px;
+                    display:block;
+                    width:100%;
+                    -webkit-box-sizing:border-box;
+                    box-sizing:border-box;
+                    height:50px;
+                    background-color:$white-color;
+                    padding-left:22px;
+                    padding-right:55px;
+                    font-size: 14px;
+                    line-height:1;
+                    font-weight:300;
+                    font-family:inherit;
+                    color:$mine-shaft-color;
+                }
+                button {
+                    width:40px;
+                    height:40px;
+                    top:5px;
+                    right:5px;
+                    border:none;
+                    @include radius(50%);
+                    cursor:pointer;
+                    background: url('../images/send.png') no-repeat center;
+                    -webkit-background-size:100% 100%;
+                    background-size:100% 100%;
+                    position:absolute;
+                }
+                @include placeholder($dove-gray-color, 1);
+            }
+        }
+    }
+    .section-list {
+        padding-top:28px;
+        max-width:650px;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom:83px;
+        @media (max-width: $mobil-device-big-width) {
+            max-width:100%;
+            padding-top:12px;
+        }
+        h2 {
+            margin-bottom:0;
+            padding-bottom:6px;
+            padding-top:16px;
+            position:relative;
+            font-size: 24px;
+            line-height:33px;
+            font-weight:600;
+            font-family:$open-sans;
+            border-bottom:#D1D1D1 1px solid;
+            span {
+                display:block;
+                cursor:pointer;
+                padding-right:30px;
+                position:relative;
+                z-index:11;
+            }
+            &:after {
+                width:15px;
+                height:8px;
+                display:block;
+                content:'';
+                z-index:10;
+                position:absolute;
+                right:4px;
+                bottom:14px;
+                background: url('../images/arrow-faq.svg') no-repeat left top;
+                -webkit-background-size:100% 100%;
+                background-size:100% 100%;
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                -webkit-transition: all 0.4s ease-out;
+                transition: all 0.4s ease-out;
+            }
+            &.active:after {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            @media (max-width: $mobil-device-big-width) {
+                font-size: 22px;
+                line-height:30px;
+                &:after {
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                }
+                &.active:after {
+                    -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        .faq-list {
+            padding-top:12px;
+            display:none;
+            h3 {
+                font-size: 18px;
+                line-height:24px;
+                padding-bottom:12px;
+                @media (max-width: $mobil-device-big-width) {
+                    font-size: 16px;
+                    line-height:22px;
+                }
+                span {
+                    cursor:pointer;
+                }
+            }
+            .answer {
+                position:relative;
+                top:-3px;
+                padding-bottom:1px;
+                display:none;
+                p {
+                    font-size: 16px;
+                    line-height:26px;
+                    margin-bottom:13px;
+                    color:$dove-gray-color;
+                    @media (max-width: $mobil-device-big-width) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

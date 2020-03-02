@@ -1,0 +1,55 @@
+$open-sans: 'Open Sans', sans-serif;
+$roboto: 'Roboto Slab', serif;
+
+$mobil-device-big-width: 960px;
+$mobil-device-small-width: 480px;
+
+$min-width: 320px;
+$max-width: 1190px;
+
+/*-------------COLORS-------------------*/
+$mine-shaft-color: #212121;
+$white-color: #ffffff;
+$black-color: #000000;
+$breaker-bay-color :#519e8a;
+$sunglow-color: #ffca3a;
+$pickled-bluewood-color: #34495e;
+$gull-gray-color: #97a4b1;
+$silver-chalice-color: #9d9d9d;
+$silver-color: #cdcdcd;
+$porcelain-color: #f7f8f9;
+$rose-color: #ff005b;
+$dove-gray-color: #6c6c6c;
+$red-color: #ff0000;
+$red-ribbon-color: #f20f2a;
+$scorpion-color: #5a5a5a;
+$mystic-color: #e0e7ee;
+$mercury-color: #e2e2e2;
+$tundora-color: #4a4a4a;
+$tradewind-color: #70c1b3;
+/*--------------------------------------*/
+/* variables for form */
+$fields-height: 40px;
+$label-width: 120px;
+$label-font: 16px;
+$fields-font: 14px;
+$label-line-height: 14px;
+$label-color: $mine-shaft-color;
+$left-right-space:13px; /*space internal input*/
+$row-bottom-space:21px;
+$radius-field: 2px;
+$select-right-space: 24px;
+$fields-space: 10px;
+$fields-text-color: $mine-shaft-color;
+$fields-placeholders-color: $black-color;
+$fields-border-color: rgba(226,226,226,0.95);
+$fields-border-active-color: rgba(226,226,226,1);
+$fields-border-width: 1px;
+$fields-background: $white-color;
+$fields-disable-bg-color: #e9eef4;
+$error-list-color: #EB0021;
+$error-list-bgcolor: transparent;
+$error-placeholder: #EB0021;
+$error-border-color: #EB0021;
+$opacity-placeholder: 1;
+/*---------------------*/

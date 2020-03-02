@@ -1,0 +1,350 @@
+.profile-user {
+    padding-top:16px;
+    h2 {
+        margin-bottom:32px;
+    }
+    .column {
+        width:48%;
+        max-width:526px;
+    }
+    .medical-record {
+        h4 {
+            padding-bottom:6px;
+            border-bottom:#E2E2E2 1px dashed;
+            margin-bottom:18px;
+            font-size: 16px;
+            line-height:22px;
+            font-weight:normal;
+            color:$black-color;
+            letter-spacing:0;
+        }
+        .vert-list-chk {
+            li {
+                font-weight:normal !important;
+            }
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            &.middle {
+                align-items: center;
+            }
+            & + .row {
+                margin-top:18px;
+            }
+            .value {
+                margin-left:20px;
+                ul {
+                    @include no-list;
+                    white-space:nowrap;
+                    li {
+                        display:inline-block;
+                        & + li {
+                            margin-left:16px;
+                        }
+                        label {
+                            cursor: pointer;
+                        }
+                        label:before {
+                            content: "";
+                            display:inline-block;
+                            vertical-align:middle;
+                            width: 13px;
+                            height: 13px;
+                            background: url("../images/radio.png") no-repeat left bottom;
+                            -webkit-background-size:13px 26px;
+                            background-size:13px 26px;
+                            margin-top: -1px;
+                            margin-right:3px;
+                        }
+                        input[type='radio'] {
+                            position: absolute;
+                            clip: rect(0, 0, 0, 0);
+                        }
+                        input[type='radio']:checked + label:before {
+                            background-position: 0 top !important;
+                        }
+                    }
+                }
+                .select-with-border {
+                    min-width:172px;
+                }
+            }
+            .attr {
+                flex-grow:1;
+            }
+        }
+        fieldset {
+            margin-bottom:44px !important;
+            font-size: 14px;
+            line-height:19px;
+            .vert-list-chk {
+                padding-top:6px !important;
+            }
+        }
+    }
+    .personal-detail-form.form {
+        padding-top:8px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: stretch;
+        .label {
+            font-size: 15px;
+            line-height:20px;
+            color:$black-color;
+        }
+        .row-form {
+            margin-bottom:11px;
+            & + .row-form {
+                .label {
+                    padding-top:5px;
+                }
+            }
+        }
+        .birthday {
+            border: 1px solid #E0E7EE;
+            @include radius(2px);
+            &:after {
+                @include clear;
+            }
+            .select-with-border {
+                border:none;
+                float:left;
+                @include radius(0);
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+                &.day {
+                    width:25%;
+                }
+                &.moonth {
+                    width:40%;
+                    border-left:1px solid #E0E7EE;
+                }
+                &.year {
+                    width:35%;
+                    border-left:1px solid #E0E7EE;
+                }
+            }
+        }
+        fieldset {
+            margin-bottom:10px;
+            &:last-child {
+                margin-bottom:0;
+            }
+        }
+        .btn-place {
+            margin-top:-12px;
+            margin-bottom:8px;
+            width:100%;
+            &:after {
+                @include clear;
+            }
+            .btn {
+                float:right;
+                margin-left:15px;
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+        }
+        @include placeholder($dove-gray-color, 1);
+        input, textarea, select {
+            font-weight:300 !important;
+        }
+        .select-with-border {
+            select {
+                padding-left:13px;
+            }
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                select {
+                    text-indent:13px;
+                    padding-left:0;
+                }
+            }
+        }
+    }
+    hr {
+        display:block;
+        border:none;
+        height:0;
+        border-top:#E2E2E2 1px dashed;
+        margin-bottom:28px;
+        margin-top:32px;
+    }
+    @media (max-width: $mobil-device-big-width) {
+        padding-top:24px;
+        .txt {
+            padding:20px 10px 24px !important;
+        }
+        h2 {
+            margin-bottom:24px;
+        }
+        .personal-detail-form.form {
+            display:block;
+            padding-top:0;
+            .column {
+                width:auto;
+                max-width:100%;
+                & + .column {
+                    margin-top:16px;
+                }
+            }
+            .one-half, .one-third, .two-third {
+                padding:0;
+                width:auto;
+                margin-bottom:11px;
+                float:none;
+                &:last-child {
+                    margin-bottom:0;
+                }
+            }
+            .gender, .school-year {
+                float:left;
+                width:50%;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+                padding-right:$fields-space / 2;
+                .gender +.school-year {
+                    padding-left:$fields-space / 2;
+                    padding-right:0;
+                }
+            }
+            .school-year {
+                padding-right:0;
+            }
+            fieldset {
+                margin-bottom:5px;
+                &:last-child {
+                    margin-bottom:0;
+                }
+            }
+            .btn-place {
+                margin-top:-6px;
+                text-align:center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .btn {
+                    margin-left:8px;
+                    margin-right:8px;
+                    float:none;
+                    min-width:155px;
+                    margin-top:8px;
+                    margin-bottom:8px;
+                }
+                hr {
+                    margin-top:8px;
+                    margin-bottom:16px;
+                    width:100%;
+                }
+            }
+        }
+    }
+    &.children {
+        .tabs {
+            @include no-list;
+            &:after {
+                @include clear;
+            }
+            border-bottom:$mercury-color 1px solid;
+            li {
+                float:left;
+                margin-right:15px;
+                position:relative;
+                a {
+                    min-width:130px;
+                    display:block;
+                    padding-right:15px;
+                    font-size: 18px;
+                    line-height:24px;
+                    padding-bottom:15px;
+                    color:$mine-shaft-color;
+                    text-decoration: none;
+                }
+                &.active {
+                    &:after {
+                        display:block;
+                        content:'';
+                        height:2px;
+                        background-color:$sunglow-color;
+                        position:absolute;
+                        left:0;
+                        right:0;
+                        bottom:-1px;
+                    }
+                    font-weight:600;
+                }
+                &:last-child {
+                    a {
+                        padding-right:15px;
+                        padding-left:15px;
+                    }
+                }
+            }
+        }
+        .tabs-content {
+            padding-top:24px;
+        }
+        .column {
+            order:1;
+        }
+        .btn-place {
+            order:3;
+        }
+        .photo {
+            order:2;
+            font-size: 12px;
+            line-height:17px;
+            text-align:center;
+            margin-bottom:32px;
+            .current-picture {
+                width:194px;
+                margin-bottom:25px;
+                margin-left:auto;
+                margin-right:auto;
+                img {
+                    display:block;
+                    width:100%;
+                    height:auto;
+                    @include radius(50%);
+                }
+            }
+            a {
+                color:$mine-shaft-color;
+                text-decoration: none;
+                letter-spacing:1px;
+                font-weight:600;
+                .fa {
+                    color:$gull-gray-color;
+                }
+            }
+        }
+        @media (max-width: $mobil-device-big-width) {
+            .photo {
+                .current-picture {
+                    width:104px;
+                    margin-bottom:22px;
+                }
+            }
+            .personal-detail-form.form .btn-place {
+                hr {
+                    margin-top:24px;
+                }
+            }
+            .tabs {
+                display:none;
+            }
+            .tabs-content {
+                & > div {
+                    display:block !important;
+                }
+                .only-desktop {
+                    display:none !important;
+                }
+            }
+        }
+    }
+}

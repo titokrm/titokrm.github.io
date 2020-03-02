@@ -1,0 +1,281 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-size: 16px;
+    line-height:26px;
+    color: $mine-shaft-color;
+    min-width: $min-width;
+    font-family: $open-sans;
+    background-color: $white-color;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &.menu-visible {
+        overflow:hidden;
+    }
+}
+
+.container {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color:$breaker-bay-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: text;
+    }
+}
+
+.btn {
+    height: 50px;
+    border-radius: 100px;
+    font-family:inherit;
+    display:inline-block;
+    background-color:$white-color;
+    min-width:170px;
+    padding-left:15px;
+    padding-right:15px;
+    text-align:center;
+    background-color:$sunglow-color;
+    color:$white-color;
+    font-size: 12px;
+    line-height:50px;
+    text-decoration: none;
+    letter-spacing:1px;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+    &:hover {
+        background-color:#FFCF00;
+    }
+    &:active {
+        background-color:#F8C435;
+    }
+    &.white {
+        border: 1px solid #E6E6E6;
+        color:$mine-shaft-color;
+        line-height:50px;
+        background-color:$white-color;
+        &:hover {
+            background-color:rgba(237,237,237,0.1);
+        }
+        &:active {
+            background-color:$porcelain-color;
+        }
+    }
+    &.small {
+        height:33px;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        min-width:95px;
+        font-size: 14px;
+        letter-spacing:0;
+        line-height:33px;
+        font-weight:normal;
+        &.white {
+            line-height:31px;
+            color:$dove-gray-color;
+        }
+    }
+}
+
+.overlay {
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:1000;
+    display:none;
+    background-color: rgba(33,33,33,0.36);
+}
+
+
+.pagination {
+    margin-top:34px;
+    line-height:22px;
+    font-size: 16px;
+    a {
+        display:inline-block;
+        color:$silver-chalice-color;
+        opacity:0.6;
+        height:22px;
+        text-decoration: none;
+        &:hover {
+            color:$mine-shaft-color;
+        }
+        & + a {
+            margin-left:20px;
+        }
+        &.right, &.left {
+            opacity:1;
+        }
+        &.active {
+            opacity:1;
+            color:$mine-shaft-color;
+            font-weight:bold;
+        }
+        img {
+            width:14px;
+            vertical-align:middle;
+            margin-top:-2px;
+        }
+    }
+}
+
+.select-with-border {
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    border: 1px solid #E0E7EE;
+    background-color: $white-color;
+    position:relative;
+    @include radius(2px);
+    &:before {
+        display:block;
+        font-family: 'FontAwesome';
+        content: "\f107";
+        position:absolute;
+        right:12px;
+        top:7px;
+        z-index:1;
+        color:#2D2E2E;
+    }
+    select {
+        position:relative;
+        z-index:2;
+        width:100%;
+        display:block;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        height:38px;
+        padding-right:30px;
+        font-size: 14px;
+        font-family:inherit;
+        color:$mine-shaft-color;
+        border:none;
+        padding-left:16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-overflow: '';
+        -ms-appearance: none;
+        appearance: none!important;
+    }
+    select:-moz-focusring {
+        color:transparent;
+        text-shadow:0 0 0 $mine-shaft-color;;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    select::focus {
+        outline:none;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        select {
+            text-indent:16px;
+            padding-left:0;
+        }
+    }
+}
+
+article {
+    h2, .h2 {
+        font-size: 24px;
+        line-height:32px;
+        margin-bottom:14px;
+    }
+    h3, .h3 {
+        margin-bottom:16px;
+    }
+    p {
+        margin-bottom:14px !important;
+        &.intro {
+            font-size: 20px;
+            line-height:27px;
+        }
+    }
+    p + h2, ul + h2, .map-block + h2, .two-column + h2, p + .h2, ul + .h2, .map-block + .h2, .two-column + .h2 {
+        margin-top:48px;
+    }
+    p + h3, p + .h3 {
+        margin-top:32px;
+    }
+    .two-column {
+        margin-top:19px;
+    }
+    .map-block {
+        margin-top:48px;
+        h4 {
+            margin-bottom:16px;
+        }
+        .wrap-map {
+            img {
+                display:block;
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+    h2 + h3, .h2 + .h3, h2 + .h3, .h2 + h3 {
+        margin-top:22px;
+    }
+    ul {
+        @include no-list;
+        font-size: 16px;
+        line-height:26px;
+        margin-bottom:14px;
+        li {
+            position:relative;
+            padding-left:35px;
+            &:before {
+                display:block;
+                content:'';
+                width:4px;
+                height:4px;
+                background-color:$mine-shaft-color;
+                @include radius(50%);
+                position:absolute;
+                left:10px;
+                top:12px;
+            }
+        }
+    }
+}
+
+.wrap-space-left {
+    margin-left:7.7%;
+    @media (max-width: $mobil-device-big-width) {
+        margin-left:0;
+    }
+}
+
+.bread-crumbs {
+    font-size: 10px;
+    line-height:14px;
+    color:$scorpion-color;
+    margin-bottom:14px;
+    text-align:left;
+    letter-spacing:1px;
+    a {
+        color:$scorpion-color;
+    }
+    b {
+        font-weight:600;
+        display:inline-block;
+        margin-left:4px;
+        margin-right:4px;
+    }
+    @media (max-width: $mobil-device-big-width) {
+        display:none;
+    }
+}
