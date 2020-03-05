@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Register" transform="translate(-974.000000, -569.000000)" fill="#F6501A" stroke="#F6501A">
+            <g id="Group-3" transform="translate(443.000000, 263.000000)">
+                <g transform="translate(0.000000, 261.000000)" id="btn-copy">
+                    <g transform="translate(0.000000, 28.000000)">
+                        <g id="close" transform="translate(532.000000, 18.000000)">
+                            <polygon id="close-[#1511]" points="4.5784 4 8 7.4216 7.4212 8 4 4.5784 0.5784 8 0 7.4216 3.4212 4 0 0.5784 0.5784 0 4 3.4216 7.4212 0 8 0.5784"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

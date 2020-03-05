@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>btn copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Configurator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Choose-category" transform="translate(-334.000000, -145.000000)" fill="#000000">
+            <g id="sidebar" transform="translate(-1.000000, 81.000000)">
+                <g id="btn-copy" transform="translate(338.000000, 69.000000) rotate(-90.000000) translate(-338.000000, -69.000000) translate(333.000000, 66.000000)">
+                    <path d="M10,0.758181818 L9.297,0 L4.9935,4.506 L4.5345,4.02545455 L4.537,4.02818182 L0.7135,0.0245454545 L0,0.771272727 C1.0565,1.878 4.007,4.96745455 4.9935,6 C5.7265,5.23309091 5.012,5.98090909 10,0.758181818" id="arrow_down-[#339]"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

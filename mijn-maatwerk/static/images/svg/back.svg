@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Configurator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Closets" transform="translate(-29.000000, -133.000000)" fill="#000000">
+            <g id="sidebar" transform="translate(-1.000000, 81.000000)">
+                <g id="Group" transform="translate(0.000000, 41.000000)">
+                    <g id="back" transform="translate(30.000000, 11.000000)">
+                        <path d="M7.0322396,11.1642 L2.35412446,6.6 L12,6.6 L12,5.4 L2.35412446,5.4 L7.01932512,0.8484 L6.14975042,0 C3.89832679,2.1966 2.15487255,3.8976 0,6 C2.43899101,8.3796 0.717060899,6.6996 6.14975042,12 L7.0322396,11.1642 Z" id="arrow_left-[#350]"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

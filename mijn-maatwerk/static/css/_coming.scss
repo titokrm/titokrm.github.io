@@ -1,0 +1,131 @@
+.cooming-page {
+  height:auto;
+  header {
+    position: absolute;
+    border: none;
+    background: none;
+  }
+  position: relative;
+  .wrap-all {
+    min-height: 100vh;
+    > .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .column {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        min-height: 100vh;
+        box-sizing: border-box;
+        padding-top: 80px;
+        position: relative;
+        padding-bottom: 80px;
+        .icons-btn {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 80px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          > div {
+            & + div {
+              margin-left: 34px;
+            }
+            img {
+              height: 16px;
+            }
+            a {
+              opacity: .2;
+              transition: opacity .2s ease-in-out;
+              &:hover {
+                opacity: .75;
+              }
+            }
+          }
+        }
+        .txt {
+          max-width: 460px;
+          padding-right: 25px;
+          h2 {
+            margin-bottom: 20px;
+            line-height: 45px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 26px;
+            &:last-child {
+              margin-bottom:0;
+            }
+            .mark {
+              font-weight:bold;
+            }
+            a {
+              text-decoration: none;
+              color:$black-color;
+              font-weight:bold;
+              border-bottom: $gallery-color 2px solid;
+              &:hover {
+                border-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    .picture {
+      width: 50%;
+      top: 0;
+      right: 0;
+      position: absolute;
+      height: 100%;
+      background: url('../images/image-temporary.jpg') no-repeat center;
+      background-size: cover;
+    }
+    @media (max-width: $device-mob) {
+      > .container {
+        display: block;
+        min-height: 0;
+        .column {
+          width: auto;
+          min-height: 0;
+          padding-top: 180px;
+          .txt {
+            padding-right: 0;
+            max-width: 570px;
+          }
+        }
+      }
+      .picture {
+        position: static;
+        height: 840px;
+        width: auto;
+      }
+    }
+    @media (max-width: $device-xsm) {
+      > .container {
+        .column {
+          padding-top: 110px;
+          .txt {
+            h2 {
+              line-height: 40px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 24px;
+              margin-bottom: 16px;
+            }
+          }
+        }
+      }
+      .picture {
+        height: 485px;
+      }
+    }
+  }
+}

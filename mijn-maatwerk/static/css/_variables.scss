@@ -1,0 +1,105 @@
+$stark: 'stark', Sans-serif;
+$nexa: 'nexa', Sans-serif;
+
+/*----WIDTH------*/
+$device-desk-sm: 1060px;
+$device-mob: 960px;
+$device-sm: 768px;
+$device-xsm: 480px;
+
+$min-width: 320px;
+$max-width: 1160px;
+
+
+/*----COLORS-----*/
+$white-color: #ffffff;
+$black-color: #000000;
+$turbo-color: #EEE300;
+$gallery-color: #EEEEEE;
+$silver-color: #cccccc;
+$alabaster-color: #F7F7F7;
+$tundora-color: #4A4A4A;
+$dusty-gray-color: #9B9B9B;
+
+/*
+$river-bed-color: #465362;
+$midnight-color: #011936;
+$punch-color: #dc3520;
+$pomegranate-color: #f33821;
+$porcelain-color: #edf1f1;
+$athens-gray-color: #eaedf2;
+$ebony-clay-color: #262F3A;
+$athensdark-gray-color: #E6E6EA;
+$dodger-blue-color: #0facf3;
+$gable-green-color: #1a363f;
+$white-ice-color: #edf8fc;
+
+
+$ebony-color: #0c1624;
+$gray-chateau-color: #A1A9B3;
+$black-squeeze-color: #eef4f9;
+$oslo-gray-color: #8f949a;
+$radical-red-color: #fe2e5a;
+$cod-gray-color: #1e1e1e;
+$dove-gray-color: #666666;
+$coral-color: #FF8C42;
+$nepal-color: #9ab0c3;
+$shamrock-color: #3ddc97;
+$border-color: #DFE3E8;
+$pale-sky-color: #6a7481;
+//$dodger-blue-color: #256eff;
+$ghost-color: #c4ccd7;
+$catalina-blue-color: #083d77;
+$athens-gray-color: #F4F6F8;
+$alabaster-color: #fcfcfc;
+$gallery-color: #ebebeb;
+$dusty-gray-color: #9B9B9B;
+$zuccini-color: #075b36;
+$cioccolato-color: #612e0d;
+$cream-can-color: #f2cd60;
+$cafe-royale-color: #634d0d;
+$amber-color: #fdc203;
+$electric-violet-color: #bd10e0;
+$athens-gray-color: #f9fafb;
+$froly-color: #f66d7d;
+
+/* VARIABLES FOR FORM */
+    $fields-height: 45px;
+    $label-width: 120px;
+    $label-font: 14px;
+    $fields-font: 14px;
+    $label-line-height: 18px;
+    $label-color: $black-color;
+    $left-right-space:15px; /*space internal input */
+    $row-bottom-space:15px;
+    $radius-field: 0px;
+    $select-right-space: 24px;
+    $fields-space: 16px;
+    $fields-text-color: $tundora-color;
+    $fields-placeholders-color: $dusty-gray-color;
+    $fields-border-color: rgba(0,0,0,0.15);
+    $fields-border-active-color: rgba(0,0,0,0.5);
+    $fields-border-width: 1px;
+    $fields-background: $white-color;
+    $fields-disable-bg-color: $alabaster-color;
+    $fields-disable-color: $dusty-gray-color;
+    $error-list-color: #F63E02;
+    $error-list-bgcolor: transparent;
+    $error-placeholder: $tundora-color;
+    $error-border-color: #F63E02;
+    $error-list-font-size: 12px;
+    $error-list-line-height: 24px;
+    $error-list-space-top: 5px;
+    $opacity-placeholder: 1;
+
+    /* var for checklist */
+    $space-left-for-chk: 28px;
+    $font-label-chk: 14px;
+    $line-height-label-chk:20px;
+    $size-chk: 20px;
+    $weight-label-chk: 300;
+    $space-bottom-label:8px;
+    $space-bottom-horisontal-label: 8px;
+    $space-right-label:16px;
+/*---------------------*/
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>delete [#1487]</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.09375,15.3125 L12.03125,15.3125 L12.03125,11.5625 L11.09375,11.5625 L11.09375,15.3125 Z M12.96875,15.3125 L13.90625,15.3125 L13.90625,11.5625 L12.96875,11.5625 L12.96875,15.3125 Z M10.15625,16.25 L14.84375,16.25 L14.84375,10.625 L10.15625,10.625 L10.15625,16.25 Z M11.09375,9.6875 L13.90625,9.6875 L13.90625,8.75 L11.09375,8.75 L11.09375,9.6875 Z M14.84375,9.6875 L14.84375,7.8125 L10.15625,7.8125 L10.15625,9.6875 L7.8125,9.6875 L7.8125,10.625 L9.21875,10.625 L9.21875,17.1875 L15.78125,17.1875 L15.78125,10.625 L17.1875,10.625 L17.1875,9.6875 L14.84375,9.6875 Z" id="path-1"></path>
+    </defs>
+    <g id="Configurator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Closet" transform="translate(-944.000000, -149.000000)">
+            <g id="controls" transform="translate(871.000000, 142.000000)">
+                <g id="remove" transform="translate(66.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="delete-[#1487]" fill="#000000" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

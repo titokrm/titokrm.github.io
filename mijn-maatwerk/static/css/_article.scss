@@ -1,0 +1,189 @@
+.article {
+  margin-bottom: 155px;
+  @media (max-width: $device-mob) {
+    margin-bottom: 50px;
+  }
+  .txt {
+    max-width: 555px;
+    margin: 0 auto 30px;
+    text-align: center;
+    p {
+      font-family: $nexa;
+      color: $tundora-color;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+  &.success {
+    article {
+      max-width: 555px;
+    }
+    .two-block {
+      max-width: 555px;
+      margin: 0 auto;
+      font-family: $nexa;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-top: 100px;
+      > div {
+        padding: 30px;
+        box-sizing: border-box;
+        width: 262px;
+        background-color: $alabaster-color;
+        p {
+          margin-bottom: 0;
+          color: $tundora-color;
+        }
+        h5 {
+          margin-bottom: 10px;
+        }
+        .socio {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-top: 18px;
+          a {
+            margin-right: 32px;
+            opacity: .2;
+            transition: opacity .2s ease-in-out;
+            &:hover {
+              opacity: .75;
+            }
+            img {
+              display: block;
+              height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+  article {
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: $nexa;
+    ul {
+      @include no-list;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 8px;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        a {
+          text-decoration: none;
+          color:$black-color;
+          font-weight:bold;
+          border-bottom: $gallery-color 2px solid;
+          &:hover {
+            border-color: transparent;
+          }
+        }
+        & + li {
+          margin-top: 6px;
+        }
+        &::before {
+          display: block;
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 9px;
+          width: 5px;
+          height: 5px;
+          background-color: $black-color;
+        }
+      }
+    }
+    ul + p {
+      margin-top: 24px;
+    }
+    p, ul {
+      font-weight: 300;
+      color: $tundora-color;
+      b {
+        color: $black-color;
+      }
+    }
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 12px;
+    }
+    .txt-with-picture {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .text {
+        flex-grow: 1;
+      }
+      .picture {
+        margin-left: 30px;
+        img {
+          display: block;
+          width: 262px;
+          height: auto;
+        }
+      }
+      @media (max-width: $device-sm) {
+        display: block;  
+        .text {
+          margin-bottom: 50px;
+        }      
+        .picture {
+          margin-left: 0;
+          img {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .video, .picture-single {
+      max-width: 555px;
+      margin: 50px auto;
+      a {
+        display: block;
+        position: relative;
+        &::after {
+          display: block;
+          content: '';
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -25px;
+          margin-top: -25px;
+          background: url('../images/svg/play.svg') no-repeat center;
+          background-size: contain;
+        }
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }        
+      .title-picture {
+        font-size: 14px;
+        line-height: 18px;
+        color: $dusty-gray-color;
+        font-family: $nexa;
+        font-weight: 300;
+        margin-top: 12px;
+        text-align: center;
+      }
+      .title-video {
+        text-align: center;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: $nexa;
+        margin-top: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+}

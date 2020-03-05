@@ -1,0 +1,82 @@
+footer {
+  padding: 50px 0;
+  border-top: $gallery-color 1px solid;
+  background-color: $white-color;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $device-mob) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  .logo {
+    img {
+      display: block;
+      height: 60px;
+    }
+  }
+  .icons-btn {
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media (max-width: $device-mob) {
+      justify-content: center;
+    }
+    > div {
+      & + div {
+        margin-left: 34px;
+      }
+      img {
+        height: 16px;
+      }
+      a {
+        opacity: .2;
+        transition: opacity .2s ease-in-out;
+        &:hover {
+          opacity: .75;
+        }
+      }
+    }
+  }
+  nav {    
+    @media (max-width: $device-mob) {
+      width: 100%;
+      margin: 50px 0 70px;
+    }
+    ul {
+      @include no-list;
+      font-size: 14px;
+      line-height: 18px;
+      font-family: $nexa;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: $device-mob) {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      li {
+        @media (max-width: $device-mob) {
+          text-align: center;
+          width: 100%;
+          margin-left: 0 !important;
+          & + li {
+            margin-top: 20px;
+          }
+        }
+        & + li {
+          margin-left: 40px;
+        }
+        a {
+          color: $black-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

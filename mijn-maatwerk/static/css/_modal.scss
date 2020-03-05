@@ -1,0 +1,287 @@
+.modal {
+  background-color: $white-color;
+  display: none;
+  &.width-450 {
+    width: 450px;
+  }
+  &.width-555 {
+    width: 555px;
+  }
+  &.width-810 {
+    width: 810px;
+  }
+  .modal-body {
+    padding: 30px;
+    position:relative;
+    .close {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 15px;
+      height: 15px;
+      background: url('../images/svg/close-grey.svg') no-repeat center;
+      background-size: contain;
+    }
+    &.two-column {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      padding: 0 30px;
+      .select-color-column {
+        width: 44.44%;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        > div {
+          width: 100%;
+        }
+        .count {
+          font-size: 15px;
+          line-height: 18px;
+          color: $dusty-gray-color;
+          font-family: $nexa;
+          font-weight: 300;
+        }
+        ul.select-color {
+          margin: 0 -8px;
+          li {
+            width: 33.33%;
+            padding: 0 8px;
+            margin-bottom: 14px;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 300;
+            font-family: $nexa;
+            box-sizing: border-box;
+          }
+        }
+      }
+      .you-detail-column {
+        width: 55.56%;
+        box-sizing: border-box;
+        padding-left: 30px;
+        border-left: $gallery-color 1px solid;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .title-modal {
+    margin-bottom: 15px;
+    &.pull-center {
+      text-align: center;
+    }
+    h3, p {
+      margin-bottom: 0;
+    }
+    p {
+      color: $tundora-color;
+    }
+  }
+  .btns-place {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    .btn + .btn {
+      margin-left: 15px;
+    }
+  }
+  .form-you-detail {
+    .btn-place {
+      margin-bottom: 0 !important;
+      .btn {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .form-create-acc {
+    margin-top: 30px;
+    .btn-place {
+      margin-bottom: 0;
+      .btn {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .form-edit {
+    .btn-place {
+      margin-bottom: 0 !important;
+      .btn {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .select-category-btns, .select_type_room {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    > div, .item {
+      padding: 0 8px;
+      width: 33.33%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $black-color;
+        font-family: $nexa;
+        border: #dddddd 1px solid;
+        transition: border-color .2s ease-in-out;
+        &:hover {
+          border: $black-color 1px solid;
+        }
+      }
+    }
+  }
+  .select-product-btns, .select_cupboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    > div, .item {
+      padding: 0 8px;
+      width: 33.33%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      a {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $black-color;
+        font-family: $nexa;
+        text-align: center;
+        .picture, .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80px;
+          padding: 10px;
+          box-sizing: border-box;
+          border: #dddddd 1px solid;
+          transition: border-color .2s ease-in-out;
+          margin-bottom: 10px;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+          }
+        }
+        .name, .title {
+          display: block;
+          padding: 0 10px;
+        }
+
+        &:hover {
+          .picture, .icon {
+            border: $black-color 1px solid;
+          }          
+        }
+      }
+    }
+  }
+  .link-place {
+    text-align: center;
+    font-size: 11px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-family: $nexa;
+    font-weight: bold;
+    a {
+      color: $black-color;
+      text-decoration: none;
+      width: auto !important;
+      height: auto !important;
+      position: static !important;
+      background: none !important;
+      opacity: .4;
+      transition: opacity .2s ease-in-out;
+      &:hover {
+        opacity: 1;
+      }
+      img {
+        margin-right: 8px;
+        vertical-align: middle;
+        margin-top: -4px;
+      }
+    }
+  }
+  .modal-footer {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $alabaster-color;
+    border-top: $gallery-color;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+ul.select-color {
+  @include no-list;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  input[type=checkbox], input[type=radio] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+  label {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $nexa;
+    font-weight: 300;
+    > div {
+      position: relative;
+      margin-bottom: 5px;
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: $black-color 1px solid;
+        background: url('../images/svg/selected.svg') no-repeat right bottom;
+        background-size: 26px 20px;
+        opacity: 0;
+      }
+    }    
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  input[type=checkbox]:checked + label > div:after, input[type=radio]:checked + label > div:after {
+    opacity: 1;
+  }
+}

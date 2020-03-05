@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="12px" viewBox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Configurator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-project" transform="translate(-751.000000, -557.000000)" fill="#999999">
+            <g id="controls" transform="translate(748.000000, 555.000000)">
+                <g id="undo" transform="translate(0.000000, 2.000000)">
+                    <g id="back" transform="translate(3.000000, 0.000000)">
+                        <path d="M7.04396,11.1642 L2.358048,6.6 L20.02,6.6 L20.02,5.4 L2.358048,5.4 L7.031024,0.8484 L6.16,0 C3.904824,2.1966 2.158464,3.8976 0,6 C2.443056,8.3796 0.718256,6.6996 6.16,12 L7.04396,11.1642 Z" id="arrow_left-[#350]"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

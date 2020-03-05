@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>clock [#1315] 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-orders" transform="translate(-657.000000, -331.000000)" fill="#000000">
+            <g id="1" transform="translate(637.000000, 212.000000)">
+                <g id="Group-5" transform="translate(20.000000, 115.000000)">
+                    <g id="clock-[#1315]-2" transform="translate(0.000000, 4.000000)">
+                        <path d="M9,5 C9,2.7945 7.2055,1 5,1 C2.7945,1 1,2.7945 1,5 C1,7.2055 2.7945,9 5,9 C7.2055,9 9,7.2055 9,5 M10,5 C10,7.7615 7.7615,10 5,10 C2.2385,10 0,7.7615 0,5 C0,2.2385 2.2385,0 5,0 C7.7615,0 10,2.2385 10,5 M8,5.5 C8,5.776 7.776,6 7.5,6 L5.5,6 C4.9475,6 4.5,5.5525 4.5,5 L4.5,2.5 C4.5,2.224 4.724,2 5,2 C5.276,2 5.5,2.224 5.5,2.5 L5.5,4.5 C5.5,4.775 5.725,5 6,5 L7.5,5 C7.776,5 8,5.224 8,5.5" id="clock-[#1315]"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

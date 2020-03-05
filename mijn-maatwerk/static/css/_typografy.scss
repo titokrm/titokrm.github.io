@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'stark';
+    src: url('../fonts/stark-webfont.woff2') format('woff2'),
+         url('../fonts/stark-webfont.woff') format('woff'),
+         url('../fonts/stark-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('../fonts/nexa_bold-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_bold-webfont.woff') format('woff'),
+         url('../fonts/nexa_bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('../fonts/nexa_light-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_light-webfont.woff') format('woff'),
+         url('../fonts/nexa_light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+h1 {
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: normal;
+  margin-bottom: 50px;
+//  color: $midnight-color;
+  @media (max-width: $device-mob) {
+    font-size: 48px;
+    line-height:64px;
+    margin-bottom:25px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  color: $black-color;
+  .mark {
+    @include underline-mark($turbo-color, false, 18%, 9%);
+  }
+  @media (max-width: $device-mob) {
+    font-size: 28px;
+    line-height:35px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: bold;
+  font-family:$nexa;
+  margin-bottom: 10px;
+//  color: $midnight-color;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family:$nexa;
+  margin-bottom: 16px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  font-family:$nexa;
+  margin-bottom: 21px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  font-family:$nexa;
+  font-weight:300;
+  a {
+    text-decoration: none;
+    color:$black-color;
+    font-weight:bold;
+    border-bottom: $gallery-color 2px solid;
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}

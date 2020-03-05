@@ -1,0 +1,89 @@
+.our-works {
+  text-align: center;
+  margin-bottom: 96px;
+  @media (max-width: $device-mob) {
+    margin-bottom: 68px;
+  }
+  .txt {
+    max-width: 555px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    p {
+      font-family: $nexa;
+      color: $tundora-color;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+  .item {
+    position: relative;
+    img {
+      width: 100%;
+      display: block;
+    }
+    .name {
+      font-size: 18px;
+      line-height: 26px;
+      margin: 15px 0;
+    }
+    a {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;        
+      color: $black-color;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  .three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+    @media (max-width: $device-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .four {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    margin-bottom: 58px;
+    @media (max-width: $device-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.txt-info {
+  padding: 70px 0;
+  background-color: $alabaster-color;
+  @media (max-width: $device-mob) {
+    padding: 50px 0;
+  }
+  .wrap {
+    max-width: 555px;
+    margin: 0 auto;
+    & + .wrap {
+      margin-top: 30px;
+    }
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

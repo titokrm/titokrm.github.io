@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-bottom</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu@mobile" transform="translate(-330.000000, -132.000000)" fill="#000000">
+            <g id="menu" transform="translate(108.000000, 0.000000)">
+                <g id="links" transform="translate(30.000000, 125.000000)">
+                    <g id="Group-2-Copy">
+                        <g id="Group-4">
+                            <g id="arrow-bottom" transform="translate(199.500000, 11.500000) scale(1, -1) translate(-199.500000, -11.500000) translate(192.000000, 7.000000)">
+                                <path d="M15,1.13727273 L13.9455,0 L7.49025,6.759 L6.80175,6.03818182 L6.8055,6.04227273 L1.07025,0.0368181818 L0,1.15690909 C1.58475,2.817 6.0105,7.45118182 7.49025,9 C8.58975,7.84963636 7.518,8.97136364 15,1.13727273" id="arrow_down-[#339]"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

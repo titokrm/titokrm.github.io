@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="15px" viewBox="0 0 26 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>toggle-off</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Configurator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Detailed-edit" transform="translate(-28.000000, -536.000000)" stroke="#000000" stroke-width="0.8415">
+            <g id="open-group" transform="translate(-1.000000, 183.000000)">
+                <g id="toggles" transform="translate(30.000000, 353.000000)">
+                    <g id="toggle-off">
+                        <path d="M7.65673981,0.42075 C3.746978,0.42075 0.577489812,3.59023818 0.577489812,7.5 C0.577489812,11.4097618 3.746978,14.57925 7.65673981,14.57925 L16.7946708,14.57925 C20.7044327,14.57925 23.8739208,11.4097618 23.8739208,7.5 C23.8739208,3.59023818 20.7044327,0.42075 16.7946708,0.42075 L7.65673981,0.42075 Z" id="Rectangle-11-Copy-4"></path>
+                        <ellipse id="Oval-3" cx="7.05329154" cy="7.49975991" rx="6.89655172" ry="6.66666667"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

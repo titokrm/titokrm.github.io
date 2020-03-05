@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu@mobile" transform="translate(-330.000000, -30.000000)" fill="#000000">
+            <g id="menu" transform="translate(108.000000, 0.000000)">
+                <g id="close" transform="translate(222.000000, 30.000000)">
+                    <polygon id="close-[#1511]" points="8.5845 7.5 15 13.9155 13.91475 15 7.5 8.5845 1.0845 15 0 13.9155 6.41475 7.5 0 1.0845 1.0845 0 7.5 6.4155 13.91475 0 15 1.0845"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-orders" transform="translate(-1167.000000, -504.000000)" fill="#000000">
+            <g id="2" transform="translate(637.000000, 385.000000)">
+                <g id="Group-4" transform="translate(479.000000, 115.000000)">
+                    <g id="arrow" transform="translate(51.000000, 4.000000)">
+                        <path d="M0.695,0 L0,0.703 L4.1305,5.0065 L3.69,5.4655 L3.6925,5.463 L0.0225,9.2865 L0.707,10 C1.7215,8.9435 4.5535,5.993 5.5,5.0065 C4.797,4.2735 5.4825,4.988 0.695,0" id="arrow_right-[#333]"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
