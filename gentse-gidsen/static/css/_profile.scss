@@ -1,0 +1,363 @@
+.my-profile {
+  padding-top: 20px;
+  .left-sidebar {
+    margin-right: 30px;
+    width: 256px;
+    &::after {
+      display: block;
+      content: '';
+      width: 256px;
+    }
+    .menu-section {
+      border: $mystic-color 1px solid;
+      border-radius: 2px;
+      background-color: $white-color;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+      padding: 5px 15px;
+      margin-bottom: 14px;
+      ul {
+        @include no-list;
+        li {
+          padding: 10px 0;
+          padding-left: 30px;
+          font: 500 16px/25px $roboto;
+          a {
+            color: $outer-space-color;
+            i {
+              margin-left: -30px;
+              float: left;
+              margin-top: 4px;
+            }
+          }
+          &.active {
+            a {
+              color: $prim-btn-color;
+            }
+          }
+          & + li {
+            border-top: $mystic-color 1px solid;
+          }
+        }
+      }
+    }
+    .customer {
+      border: $mystic-color 1px solid;
+      border-radius: 2px;
+      background-color: $white-color;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+      padding: 20px;
+      margin-bottom: 14px;      
+      h5 {
+        font: 500 16px/19px $roboto;
+      }
+      hr {
+        display: block;
+        height: 0;
+        border: none;
+        margin: 15px 0;
+        border-top: $mystic-color 1px solid;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .main {
+    h5 {
+      font-weight: bold;
+    }
+    .items {
+      .item + h5 {
+        margin-top: 24px;
+      }
+      .item {
+        padding: 20px;
+        border: $mystic-color 1px solid;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+        background-color: $white-color;
+        border-radius: 2px;
+        margin: 14px 0;
+        .top {
+          display: flex;
+          justify-content: flex-start;
+          align-items: stretch;
+          .picture {
+            margin-right: 20px;
+            img {
+              display: block;
+              width: 155px;
+            }
+          }
+          .price {
+            width: 86px;
+            margin-left: 20px;
+            font: normal 13px/15px $roboto;
+            color: $regent-gray-color;
+            text-align: right;
+            b {
+              display: block;
+              font: bold 20px/30px $roboto;
+              color: $outer-space-color;
+            }
+          }
+          .txt {
+            flex-grow: 1;
+            .name {
+              font: 500 18px/21px $roboto;
+              margin-bottom: 11px;
+              a {
+                color: $outer-space-color;
+              }
+            }
+            .section {
+              font: 500 14px/16px $roboto;
+              margin-bottom: 10px;
+            }
+            p {
+              margin-bottom: 0;
+              img {
+                width: 12px;
+                vertical-align: middle;
+                margin-top: -2px;
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+        .bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 16px;
+          border-top: $mystic-color 1px solid;
+          margin-top: 20px;
+          .ref-label {
+            font: 500 14px/16px $roboto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            div + div {
+              margin-left: 35px;
+            }
+          }
+          .btn-place {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .btn + .btn {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+    .items-profile-edit {
+      margin-bottom: 100px;
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 20px;
+        border: $mystic-color 1px solid;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+        background-color: $white-color;
+        border-radius: 2px;
+        margin: 14px 0;
+        &.blk {
+          display: block;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+        .txt-form {
+          width: 608px;
+          .static {
+            .label {
+              color: $outer-space-color;
+            }
+          }
+          .edit {
+            display: none;
+          }
+          &.active {
+            .edit {
+              display: block;
+            }
+            .static {
+              display: none;
+            }
+            & + .link-btn {
+              a {
+                display: none;
+              }
+            }
+          }
+        }
+        .link-btn {
+          width: 64px;
+          margin-left: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          font: 500 14px/18px $roboto;
+        }
+      }
+      .form {
+        h5 {
+          font-size: 20px;
+          margin-bottom: 18px;
+          font-weight: bold;
+        }
+        .row-form:last-child {
+          margin-bottom: 0;
+        }
+        .cancel-btn {
+          margin-right: 10px;
+        }
+        .controls {
+          span {
+            display: block;
+            font: normal 16px/22px $roboto;
+            color: $slate-gray-color;
+          }
+          &.middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn.google-btn {
+              width: 300px;
+              img {
+                vertical-align: middle;
+                margin-top: -3px;
+                margin-right: 10px;
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: $device-mob) {
+        margin-bottom: 50px;
+        .item {
+          flex-wrap: wrap;
+          .txt-form, .link-btn {
+            width: 100%;
+          }
+          .link-btn {
+            text-align: right;
+            justify-content: flex-end;
+            margin-left: 0;
+          }
+        }
+        .form {
+          .controls {
+            &.middle {
+              span {
+                width: 50%;
+                margin-right: 7px;
+              }
+              .btn.google-btn {
+                width: 50%;
+                margin-left: 8px;
+              }
+            }
+          }
+          .btn-place {
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            .btn {
+              width: 50%;
+              &:first-child {
+                margin-right: 7px;
+              }
+              &:last-child {
+                margin-left: 8px;
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: $device-sm) {
+        .form {
+          .controls {
+            &.middle {
+              flex-wrap: wrap;
+              span {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+              }
+              .btn.google-btn {
+                width: 100%;
+                margin-left: 0;
+              }
+            }
+          }
+        }        
+      }      
+    }
+  }
+  @media (max-width: $device-mob) {
+    .left-sidebar {
+      display: none;
+    }
+    .main {
+      .items {
+        .item {
+          padding: 15px;
+          .top {
+            .picture {
+              display: none;
+            }
+          }
+          .bottom {
+            display: block;
+            .ref-label {
+              margin-top: 5px;
+              margin-bottom: 20px;
+            }
+            .btn-place {
+              .btn {
+                width: 50%;
+                margin-right: 8px;
+                &:last-child {
+                  margin-right: 0;
+                  display: block;
+                  width: 100%;
+                }
+              }
+              .btn + .btn {
+                margin-left: 7px;
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.list-contacts {
+  font: 500 14px/16px $roboto;
+  @include no-list;
+  li {
+    padding-left: 25px;
+    i {
+      color: $prim-btn-color;
+      float: left;
+      margin-left: -25px;
+    }
+    .fa-phone {
+      font-size: 13px;
+      transform: rotate(90deg);
+    }
+    .fa-envelope {
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    & + li {
+      margin-top: 10px;
+    }
+  }
+}

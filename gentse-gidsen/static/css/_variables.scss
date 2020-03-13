@@ -1,0 +1,91 @@
+$roboto: 'Roboto', sans-serif;
+
+$device-dt-sm: 1200px;
+$device-mob: 960px;
+$device-sm: 768px;
+$device-xsm: 480px;
+
+$min-width: 320px;
+$max-width: 1110px;
+
+/*-------------COLORS-------------------*/
+$white-color: #ffffff;
+$black-color: #000000;
+$mystic-color: #e9eef2;
+$slate-gray-color: #6d8494;
+$pelorous-color: #47a7c5;
+$outer-space-color: #2e353b;
+$shakespeare-color: #57b7ca;
+$regent-st-blue-color: #a8d5e3;
+$ziggurat-color: #bacedc;
+$bermuda-color: #80ced7;
+$nevada-color: #626c76;
+$regent-gray-color: #7c8b99;
+$aqua-spring-color: #f2f9fb;
+$zircon-color: #fdfeff;
+$prim-btn-color: #3bb2cd;
+$prim-hover-btn-color: #008da8;
+$prim-disable-btn-color: #F4F8F9;
+$second-btn-color: #E9F1F7;
+$second-hover-btn-color: #DFE4EF;
+$second-disable-btn-color:#F4F8F9;
+$mirage-color: #17232c;
+$athens-gray-color: #FAFBFC;
+$shuttle-gray-color: #57626C;
+$viking-color: #6BC8D9;
+$java-color: #17bebb;
+$froly-color: #f36a6a;
+$yellow-sea-color: #ffb000;
+.slate-gray {
+  color: $slate-gray-color;
+}
+.regent-gray {
+  color: $regent-gray-color;
+}
+.froly-color {
+  color: $froly-color !important;
+}
+
+.shakespeare {
+  color:$shakespeare-color;
+}
+
+/*--------------------------------------*/
+/* variables for form */
+$fields-height: 46px;
+$label-width: 120px;
+$label-font: 14px;
+$fields-font: 14px;
+$label-line-height: 18px;
+$label-color: $outer-space-color;
+$left-right-space: 16px; /*space internal input*/
+$row-bottom-space: 15px;
+$radius-field: 2px;
+$select-right-space: 18px;
+$fields-space: 10px;
+$fields-text-color: $outer-space-color;
+$fields-placeholders-color: #9DA4AE;
+$fields-border-color: $ziggurat-color;
+$fields-border-active-color: $slate-gray-color;
+$fields-border-width: 1px;
+$fields-background: $white-color;
+$fields-disable-bg-color: #e9eef4;
+$error-list-color: $froly-color;
+$error-list-bgcolor: transparent;
+$error-placeholder: $froly-color;
+$error-border-color: $froly-color;
+$opacity-placeholder: 1;
+$font-label-chk: 16px;
+$weight-label-chk: normal;
+$size-chk: 18px;
+$space-left-for-chk: 31px;
+$line-height-label-chk: 19px;
+$space-bottom-label: 14px;
+$space-right-label: 10px;
+$space-bottom-horisontal-label: 10px;
+/*---------------------*/
+
+@keyframes phoenix-from-top-right{
+    0%{opacity:0;transform:translate(50%,-50%) scale(0)}
+    50%{opacity:1}to{transform:translate(0,0) scale(1);opacity:1}
+}

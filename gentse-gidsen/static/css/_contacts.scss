@@ -1,0 +1,86 @@
+.contacts-detail {
+  margin-bottom: 100px;
+  article {
+    max-width: 700px;
+    h4 {
+      color: $outer-space-color;
+    }
+  }
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 30px;
+    .form {
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+      box-sizing: border-box;
+      width: 40.1%;
+      input[type='email'], input[type='search'], input[type='number'], input[type='password'], input[type='text'], input[type='tel'], textarea {
+        background-color: $white-color;
+      }
+      .row-form:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .txt-contacts {
+      width: 51.35%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .column {
+        width: 50%;
+        &+.column {
+          margin-left: 15px;
+        }
+      }
+      .item {
+        margin-bottom: 30px;
+        h6 {
+          font-size: 12px;
+          line-height: 15px;
+          margin-bottom: 12px;
+          font-weight: bold;
+          color: #454D54;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 5px;
+          color: $slate-gray-color;
+          b {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: $device-mob) {
+    padding-top: 20px;
+    .columns {
+      flex-wrap: wrap;
+      .form {
+        width: 100%;
+        margin-bottom: 50px;
+        .tabs {
+          li {
+            margin-right: 25px;
+          }
+        }
+        .btn-place {
+          margin-top: 30px;
+          .btn {
+            display: block;
+            width: 100%;
+            margin: 0 !important;
+          }
+        }
+      }
+      .txt-contacts {
+        width: 100%;
+        padding-top: 0;        
+      }
+    }
+  }
+}

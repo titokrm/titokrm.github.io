@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="14px" viewBox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Lock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Rondleidingen-&amp;-dag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Log-in" transform="translate(-1125.000000, -686.000000)" fill="#6D8494" fill-rule="nonzero">
+            <g id="Group-10" transform="translate(165.000000, 150.000000)">
+                <g id="Group-26" transform="translate(960.000000, 534.000000)">
+                    <g id="Group-8">
+                        <g id="Lock" transform="translate(0.000000, 2.000000)">
+                            <g id="Layer_1">
+                                <path d="M8.75,4.375 L8.125,4.375 L8.125,3.125 C8.125,1.40625 6.71875,0 5,0 C3.28125,0 1.875,1.40625 1.875,3.125 L1.875,4.375 L1.25,4.375 C0.5624375,4.375 0,4.9374375 0,5.625 L0,11.875 C0,12.5625625 0.5624375,13.125 1.25,13.125 L8.75,13.125 C9.4375625,13.125 10,12.5625625 10,11.875 L10,5.625 C10,4.9374375 9.4375625,4.375 8.75,4.375 Z M5,10.0625 C4.3124375,10.0625 3.75,9.5000625 3.75,8.8125 C3.75,8.1249375 4.3124375,7.5625 5,7.5625 C5.6875625,7.5625 6.25,8.1249375 6.25,8.8125 C6.25,9.5000625 5.6875625,10.0625 5,10.0625 Z M6.9375625,4.375 L3.0624375,4.375 L3.0624375,3.125 C3.0624375,2.062375 3.93753125,1.1874375 5,1.1874375 C6.062625,1.1874375 6.9375625,2.062375 6.9375625,3.125 L6.9375625,4.375 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
