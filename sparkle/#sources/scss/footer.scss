@@ -1,0 +1,152 @@
+.footer {
+
+  &__main-block {
+    padding: 70px 0 12px;
+    background-color: #f9fafd;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    @media (max-width: $device-mob) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__short-about {
+    width: 30%;
+    box-sizing: border-box;
+    padding-right: 40px;
+    @media (max-width: $device-mob) {
+      padding-right: 0;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 150px;
+    margin-bottom: 32px;
+  }
+
+  &__menu-and-adres {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;    
+    align-items: flex-start;
+    @media (max-width: $device-mob) {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__column {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding-right: 40px;
+    &:last-child {
+      padding-right: 0;
+    }
+    @media (max-width: $device-mob) {
+      padding-right: 0;
+      width: 100%;
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+  }
+
+  &__menu {
+    @include no-list;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    li + li {
+      margin-top: 27px;
+    }
+    li {
+      padding-left: 20px;
+      position: relative;
+      .fa-angle-right {
+        left: 0;
+        top: -2px;
+        position: absolute;
+        color: #2185f5;
+        font-size: 18px;
+      }
+    }
+
+    &_contacts {
+      margin-top: 10px;
+      li {
+        padding-left: 0;
+      }
+      a {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+
+  &__menu-icon {
+    width: 32px;
+    box-sizing: border-box;
+    padding-right: 14px;
+    text-align: center;
+    font-size: 18px;
+    color: #2185f5;
+  }
+
+  &__copy {
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 17px 0;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  p {
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 0;
+    text-align: justify;
+  }
+  address {
+    display: block;
+    font-size: 12px;
+    line-height: 22px;
+    font-style: normal;
+  }
+  address + address {
+    margin-top: 22px;
+  }
+
+}
+.container {
+}
+.fas {
+}
+.fa-angle-right {
+}
+.fa-envelope {
+}
+.fa-phone-volume {
+}
+.fab {
+}
+.fa-skype {
+}

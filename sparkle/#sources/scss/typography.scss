@@ -1,0 +1,86 @@
+.poppins {
+  font-family: $poppins
+}
+
+.varela {
+  font-family: $varela;
+}
+
+.archivo {
+  font-family: $archivo;
+}
+
+.montserrat {
+  font-family: $montserrat;
+}
+
+.h1-size {
+  font-size: 50px;  
+  line-height: normal;
+  font-weight: 300;
+  b {
+    font-weight: bold;
+  }
+}
+
+.h2-size {
+  font-size: 42px;
+  line-height: normal;
+  &_light {
+    font-weight: 300;
+  }
+  @media (max-width: $device-mob) {
+    font-size: 34px;
+  }
+}
+
+.h3-size {
+  font-size: 30px;
+  line-height: normal;
+  @media (max-width: $device-mob) {
+    font-size: 20px;
+  }
+}
+
+.h4-size {
+  font-size: 24px;
+  line-height: normal;
+}
+
+.h5-size {
+  font-size: 20px;
+  line-height: normal;
+  @media (max-width: $device-mob) {
+    font-size: 18px;
+  }
+}
+
+.h6-size {
+  font-size: 18px;
+  line-height: normal;
+}
+
+body {
+  font-size: 14px;
+  line-height: 26px;
+  @media (max-width: $device-mob) {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+p, ul, ol {
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 26px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.first-letter-big::first-letter{
+    font-size: 6em;
+    line-height: .9;
+    float: left;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+}

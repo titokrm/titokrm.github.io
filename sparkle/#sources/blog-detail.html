@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+@@include('./_head.htm')
+
+<body class="blog-detail-page">
+  <div class="wrap-all">
+    @@include('./_header.htm')
+    <main>
+      <div class="blog-detail">
+        <div class="container blog-detail__container">
+          <article class="blog-detail__wrapper blog-detail__wrapper_bg blog-article">
+            <div class="blog-article__header">
+              <h1 class="h3-size blog-article__title title-block__title_weight-normal">Playful illustration</h1>
+              <div class="blog-article__title-links"><a href="#comment-form" class="goto-pos">Leave a Comment</a><span>/</span><a href="">Uncategorized</a></div>
+            </div>
+            <div>
+              <picture class="blog-article__img">
+                <source media="(min-width: 769px)" srcset="images/blogs/4.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="images/blogs/4-small.webp" type="image/webp">
+                <img src="images/blogs/4.webp" alt="">
+              </picture>
+              <p class="first-letter-big">Duis iaculis mattis rutrum. Sed iaculis magna sit amet suscipit ornare. Nulla ornare leo a tortor aliquam, quis interdum ex tempor. Quisque ultricies consequat suscipit. Donec tincidunt tempor ornare. Praesent a enim vel augue suscipit auctor in gravida augue. Suspendisse ut libero sit amet augue molestie fringilla. Fusce molestie, velit a finibus eleifend, nibh odio sagittis est, id aliquet turpis orci quis nibh. Donec tincidunt tempor ornare. Praesent a enim vel augue suscipit auctor in gravida augue. Suspendisse ut libero sit amet augue molestie fringilla. Fusce molestie, velit a finibus eleifend, nibh odio sagittis est, id aliquet turpis orci quis nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.</p>
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+              </blockquote>
+              <picture class="blog-article__img">
+                <source media="(min-width: 769px)" srcset="images/blogs/5.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="images/blogs/5-small.webp" type="image/webp">
+                <img src="images/blogs/5.webp" alt="">
+              </picture>              
+              <div class="blog-article__imgtitle">
+                <h3 class="h2-size blog-article__imgtitle-item">Illustrations can be extremely practical ways of presenting or explaining information</h3>
+              </div>
+              <div class="blog-article__two-column">
+                <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </b></p>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+              </div>
+            </div>
+          </article>
+          <div class="blog-detail__pagination pagination">
+            <a href="#" class="pagination__prev">&larr;	 Previous Post</a>
+            <a href="#" class="pagination__next">Next Post &rarr;</a>
+          </div>
+          <div class="blog-detail__wrapper blog-contact blog-detail__wrapper_bg">
+            <div class="title-block blog-contact__title-block">
+              <h4 class="h4-size title-block__title title-block__title_weight-normal blog-contact__title">Leave a Comment</h4>
+              <p>Your email address will not be published. Required fields are marked *</p>
+            </div>
+            <form action="" class="blog-contact__form fb-form">
+              <div class="fb-form__row">
+                <textarea name="" id="" rows="10" placeholder="Message" requiredfield="true"></textarea>
+              </div>
+              <div class="fb-form__row">
+                <div class="fb-form__col fb-form__col_one-third">
+                  <input type="text" placeholder="Name" requiredfield="true">
+                </div>
+                <div class="fb-form__col fb-form__col_one-third">
+                  <input type="email" placeholder="Email" requiredfield="true">
+                </div>
+                <div class="fb-form__col fb-form__col_one-third">
+                  <input type="text" placeholder="Website">
+                </div>
+              </div>
+              <div class="fb-form__row">
+                <div class="fb-form__checkbox">
+                  <input type="checkbox" name="" id="chk1">
+                  <label for="chk1">Save my name, email, and website in this browser for the next time I comment.</label>
+                </div>
+              </div>
+              <div class="fb-form__row">
+                <button type="submit" class="btn fb-form__btn btn_transp btn_blue btn_whitebg">Post Comment »</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  @@include('./_footer.htm')
+</body>
+</html>

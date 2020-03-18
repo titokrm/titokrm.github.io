@@ -1,0 +1,219 @@
+.btn {
+  display: inline-flex;
+  font-family: inherit;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  align-items: center;
+  text-decoration: none !important;
+  border-radius: 100px;
+  transition: all $animate-time ease-in-out;
+  height: 48px;
+  padding: 0 20px;
+  font-size: inherit;
+  .fa:last-child, .fas:last-child, .far:last-child, .fab:last-child {
+    margin-left: 8px;
+  }
+  .fa:first-child, .fas:first-child, .far:first-child, .fab:first-child {
+    margin-right: 8px;
+  }
+  &.btn_transp {
+    border-width: 1px;
+    &.btn_whitebg {
+      background-color: #fff;
+    }
+  }
+  &.btn_small {
+    height: 40px;
+    padding: 0 40px;
+  }
+  &.btn_big {
+    font-weight: 700;
+    &.btn_transp {
+      border-width: 2px;
+    }
+  }
+  &.btn_xbig {
+    height: 60px;
+  }
+  &.btn_minwidth {
+    min-width: 178px;
+  }
+  &.btn_shadow {
+    box-shadow: 0px 10px 30px -8px rgba(0,0,0,.16);
+  }
+  &.btn_white {
+    &.btn_transp {
+      background: none;
+      border-color: white;
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  &.btn_blue-dark {
+    background-color: #3425f4;
+    color: white;
+    border: #3425f4 1px solid;
+    &:hover {
+      border-color: #3c25c4;
+      color: #3c25c4;
+      background-color: transparent;
+    }
+  }
+  &.btn_blue {
+    background-color: #2355DA;
+    color: white;
+    border: #2355DA 1px solid;
+    &.btn_transp {
+      background: none;
+      border-color: #2355DA;
+      color: #2355DA;
+      &:hover {
+        background-color: #2355DA;
+        color: white;
+      }
+    }
+  }
+  &.btn_blue-light {
+    background-color: #2185f5;
+    color: white;
+    border: #2185f5 1px solid;
+    &:hover {
+      color: #ff7052;
+      background-color: white;
+      border-color: #ff7052;
+    }
+  }
+  &.btn_cerulean {
+    background-color: #0693E3;
+    color: white;
+    border: #0693E3 1px solid;
+    padding: 0 40px;
+    &:hover {
+      color: #fff;
+      background-color: #3a3a3a;
+      border-color: #3a3a3a;
+    }
+  }
+  &.btn_green {
+    background-color: #4DE55C;
+    color: white;
+    &.btn_transp {
+      background: none;
+      border-color: #4DE55C;
+      color: #4DE55C;
+      &:hover {
+        background-color: #4DE55C;
+        color: white;
+      }
+    }
+  }
+  &.btn_lochmara {
+    background-color: #0274BE;
+    color: white;
+    border: #0274BE 1px solid;
+    &.btn_transp {
+      background: none;
+      border-color: #0274BE;
+      color: #0274BE;
+      &:hover {
+        background-color: #0274BE;
+        color: white;
+      }
+    }
+  }
+  &.btn_royalblue {
+    background-color: #4064d7;
+    color: white;
+    border: #4064d7 1px solid;
+    &.btn_transp {
+      background: none;
+      border-color: #4064d7;
+      color: #4064d7;
+      &:hover {
+        background-color: #4064d7;
+        color: white;
+      }
+    }
+  }
+  &.btn_transp {
+    border-style: solid;
+  }
+  &.btn_heavy-border {
+    border-width: 2px;
+    padding: 0 30px;
+  }
+  &.btn_super-heavy-border {
+    border-width: 3px;
+  }
+  &.btn_hover-royalblue {
+    &:hover {
+      border-color: #4064d7;
+      background-color: #4064d7;
+      color: white;
+    }
+  }
+  &.btn_jump {
+    opacity: .5;
+    transform: translateY(25px);
+  }
+}
+
+.hamburger {
+  display: none;
+  background-color: #0aa5aa;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 42px;
+  height: 44px;
+  font-size: 16px;
+  order: 2;
+  .fa-times {
+    display: none;
+  }
+  &.hamburger_active {
+    .fa-bars {
+      display: none;
+    }
+    .fa-times {
+      display: block;
+    }
+  }
+  @media (max-width: $device-mob) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.read-more {
+  display: inline-flex;
+  height: 36px;
+  font-family: inherit;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  align-items: center;
+  text-decoration: none !important;
+  font-size: inherit;
+  &_whitebg {
+    background-color: #fff;
+    color: #313131 !important;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+  &_graybg {
+    background-color: #333;
+    color: #fff !important;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+}
