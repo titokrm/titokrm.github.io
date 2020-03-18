@@ -171,10 +171,12 @@
     }
 
     &:hover {
-      .header-main__subnav {
-        top: 100%;
-        margin-top: 10px;
-        opacity: 1;
+      @media (min-width: $device-mob + 1) {
+        .header-main__subnav {
+          top: 100%;
+          padding-top: 10px;
+          opacity: 1;
+        }
       }
       > a {
         color: #2355da;
