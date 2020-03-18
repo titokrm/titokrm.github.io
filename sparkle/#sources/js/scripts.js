@@ -224,6 +224,12 @@ $(function() {
 	  		if (widthContenArea<=mobileWidth && !home) {
 	  			$('html,body').animate({scrollTop: top}, animateSpeed);
 	  			home = true;
+	  		} else {
+				$('.'+hambBtn).removeClass(hambBtn+'_active');
+				$('body').removeClass(bodyLock);
+				$('.'+menu).removeClass(menu+'_active').find('.'+subMenu+'_active')
+				.removeClass(subMenu+'_active');
+				$('.'+overlayClass).remove();
 	  		}
 		});	
 	}
