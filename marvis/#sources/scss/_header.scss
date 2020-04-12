@@ -1,0 +1,307 @@
+.header {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5.6rem;
+    margin-bottom: 8.6rem;
+    @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+      padding-top: 3.6rem;
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__logo-n-about {
+    width: 51.32%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+    }
+    @media screen and (max-width: $phone) {
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 13px;
+    img {
+      width: 18.7rem;
+      display:block;
+      height: auto;
+    }
+    @media screen and (max-width: $phone) {
+      width: 30%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__about {
+    padding-left: 2rem;
+    font-family: $museo;
+    box-sizing: border-box;
+    @media screen and (max-width: $phone) {
+      width: 70%;
+    }
+  }
+
+  &__about-text {
+    color: $main-light-color;
+    margin-left: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    letter-spacing: 0.09rem;
+  }
+
+  &__about-info {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    letter-spacing: 0.03rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: .7rem;
+    @media screen and (max-width: $phone) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__about-info-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 1.5rem;
+    font-weight: 500;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      margin-right: .7rem;
+      height: 3rem;
+      margin-top: -0.3rem;
+    }
+    @media screen and (max-width: $phone) {
+      width: 100%;
+      margin-bottom: 1rem;
+      margin-right: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__price-n-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 48.68%;
+    padding-left: 4rem;
+    box-sizing: border-box;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $museo;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.121rem;
+    padding-right: 1.5rem;
+    a {
+      color: $link-color;
+      text-decoration: none;
+      border-bottom: $link-color 1px dashed;
+      transition: all $animate-time ease-in-out;
+      &:hover {
+        border-color: transparent;
+      }
+      @media screen and (max-width: $phablet) {
+        border: none;
+        text-decoration: underline;
+        text-decoration-color: $link-color;
+        text-decoration-style: dashed;
+        &:hover {
+          text-decoration-color: transparent;
+        }
+      }
+      @media screen and (max-width: $phone) {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__price-icon {
+    width: 6.8rem;
+    margin-right: 1.7rem;
+    position: relative;
+    img {
+      display:block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      display: block;
+      content: '';
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 0.1rem 0.1rem 10rem rgba(0, 0, 0, 0.43), inset 0 0 1.5rem rgba(0, 0, 0, 0.1);      
+    }
+  }
+
+  &__contacts {
+    font-family: $museo;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.068rem;
+    @media screen and (max-width: $phone) {
+      text-align: right;      
+    }
+  }
+
+  &__online {
+    color: $no-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.1rem;
+
+    &:before {
+      display: block;
+      content: '';
+      margin-right: 1.3rem;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: $no-color;
+    }
+   &_active {
+     color: $ok-color;
+     &:before {
+       background-color: $ok-color;
+     }
+   }
+  }
+
+  &__phone {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Gotham Pro";
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.045rem;
+    color: $main-color;
+    text-decoration: none;
+    img {
+      width: 1.7rem;
+      margin-right: 1rem;
+    }
+    @media screen and (max-width: $phone) {
+      justify-content: flex-end;
+      span {
+        display: none;
+      }
+      img {
+        width: 4rem;
+        animation-name: tremor;
+        animation-duration: 3s;
+        //animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-delay: 0;
+        position: relative;
+      }
+      @-webkit-keyframes tremor {
+        0% {
+          top: -0.5rem;
+          transform: rotate(-10deg);
+        }
+        5% {
+          top: 0;
+          transform: rotate(0);
+        }
+        10% {
+          top: 0.5rem;
+          transform: rotate(10deg);
+        }
+        15% {
+          top: 0;
+          transform: rotate(0);
+        }
+        20% {
+          top: -0.5rem;
+          transform: rotate(-10deg);
+        }
+        25% {
+          top: 0;
+          transform: rotate(0);
+        }
+        30% {
+          top: 0.5rem;
+          transform: rotate(10deg);
+        }
+        35% {
+          top: 0;
+          transform: rotate(0);
+        }
+        40% {
+          top: -0.5rem;
+          transform: rotate(-10deg);
+        }
+        45% {
+          top: 0;
+          transform: rotate(0);
+        }
+        50% {
+          top: 0.5rem;
+          transform: rotate(10deg);
+        }
+        55% {
+          top: 0;
+          transform: rotate(0);
+        }
+        60% {
+          top: -0.5rem;
+          transform: rotate(-10deg);
+        }
+        65% {
+          top: 0;
+          transform: rotate(0);
+        }
+        100% {
+          top: 0; 
+          transform: rotate(0);
+        }
+      }
+            
+      class-name:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
