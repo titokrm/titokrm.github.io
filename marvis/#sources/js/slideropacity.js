@@ -103,6 +103,7 @@ function sliderOpacity(sliderId) {
   
   function nextSlide() {
     //console.log('work='+work+'   intervalID='+intervalID);
+    //console.log('next begin slideNow='+slideNow);
     if (work != true) {
   //    console.log('work!=true');
       if (slideNow >= slideCount || slideNow <=0) {
@@ -113,12 +114,9 @@ function sliderOpacity(sliderId) {
           speedAnimation, function() {
           $(this).removeClass(sliderClass+'__slide_active');
           slider.find('.'+sliderClass+'__slide').first().removeClass(sliderClass+'__slide_next').addClass(sliderClass+'__slide_active');
-          slideNow = 1;
-          slider.find('.'+sliderClass+'__active-num').text(slideNow);
-          slider.find('.'+sliderClass+'__slide-nav_active').removeClass(sliderClass+'__slide-nav_active');
-          slider.find('.'+sliderClass+'__slide-nav').eq(slideNow - 1).addClass(sliderClass+'__slide-nav_active');
           work = false;
         });
+        slideNow = 1;
       } else {
         work = true;
         slider.find('.'+sliderClass+'__slide_active').next().addClass(sliderClass+'__slide_next').css('opacity', '1');
@@ -126,15 +124,17 @@ function sliderOpacity(sliderId) {
           opacity: 0
           },
           speedAnimation, function() {
-          $(this).removeClass(sliderClass+'__slide_active').next().removeClass(sliderClass+'__slide_next').addClass(sliderClass+'__slide_active').css('opacity', '1');
-          slideNow++;
-          slider.find('.'+sliderClass+'__active-num').text(slideNow);
-          slider.find('.'+sliderClass+'__slide-nav_active').removeClass(sliderClass+'__slide-nav_active');
-          slider.find('.'+sliderClass+'__slide-nav').eq(slideNow - 1).addClass(sliderClass+'__slide-nav_active');
+          slider.find('.'+sliderClass+'__slide_next').removeClass(sliderClass+'__slide_next').css('opacity', '0');;
+          $(this).removeClass(sliderClass+'__slide_active').next().addClass(sliderClass+'__slide_active').css('opacity', '1');
           work = false;
         });
+        slideNow++;
       }
+      slider.find('.'+sliderClass+'__active-num').text(slideNow);
+      slider.find('.'+sliderClass+'__slide-nav_active').removeClass(sliderClass+'__slide-nav_active');
+      slider.find('.'+sliderClass+'__slide-nav').eq(slideNow - 1).addClass(sliderClass+'__slide-nav_active');
     }
+    //console.log('next end slideNow='+slideNow);
   }
 
   function prevSlide() {
@@ -148,11 +148,8 @@ function sliderOpacity(sliderId) {
           $(this).removeClass(sliderClass+'__slide_active');
           slider.find('.'+sliderClass+'__slide').last().removeClass(sliderClass+'__slide_next').addClass(sliderClass+'__slide_active');
           work = false;
-          slideNow = slideCount;
-          slider.find('.'+sliderClass+'__active-num').text(slideNow);
-          slider.find('.'+sliderClass+'__slide-nav_active').removeClass(sliderClass+'__slide-nav_active');
-          slider.find('.'+sliderClass+'__slide-nav').eq(slideNow - 1).addClass(sliderClass+'__slide-nav_active');
         });     
+        slideNow = slideCount;
       } else {
         work = true;
         slider.find('.'+sliderClass+'__slide_active').prev().addClass(sliderClass+'__slide_next').css('opacity', '1');
@@ -160,15 +157,17 @@ function sliderOpacity(sliderId) {
           opacity: 0
           },
           speedAnimation, function() {
-          $(this).removeClass(sliderClass+'__slide_active').prev().removeClass(sliderClass+'__slide_next').addClass(sliderClass+'__slide_active').css('opacity', '1');
+          slider.find('.'+sliderClass+'__slide_next').removeClass(sliderClass+'__slide_next').css('opacity', '0');;
+          $(this).removeClass(sliderClass+'__slide_active').prev().addClass(sliderClass+'__slide_active').css('opacity', '1');
           work = false;
-          slideNow--;
-          slider.find('.'+sliderClass+'__active-num').text(slideNow);
-          slider.find('.'+sliderClass+'__slide-nav_active').removeClass(sliderClass+'__slide-nav_active');
-          slider.find('.'+sliderClass+'__slide-nav').eq(slideNow - 1).addClass(sliderClass+'__slide-nav_active');
         });
+        slideNow--;
       }
+      slider.find('.'+sliderClass+'__active-num').text(slideNow);
+      slider.find('.'+sliderClass+'__slide-nav_active').removeClass(sliderClass+'__slide-nav_active');
+      slider.find('.'+sliderClass+'__slide-nav').eq(slideNow - 1).addClass(sliderClass+'__slide-nav_active');
     }
+    //console.log('prev end slideNow='+slideNow);
   }
 
   function addControls() {

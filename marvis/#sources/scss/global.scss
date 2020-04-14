@@ -19,18 +19,6 @@ body {
   background: url('../images/bg/bg.jpg') no-repeat  center;
   background-size: cover;
   overflow-x: hidden;
-  &:before {
-    display: block;
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 92.7rem;
-    width: 17.3rem;
-    height: 35.4rem;
-    background: url('../images/bg/right1.png') no-repeat right bottom;
-    background-size: cover;
-    z-index: 1;
-  }
   &:after {
     display: block;
     content: '';
@@ -51,20 +39,28 @@ body {
   }
 }
 
+.right-rollet {
+  position: absolute;
+  right: -3rem;
+  top: 92.7rem;
+  width: 17.3rem;
+  height: 35.4rem;
+  background: url('../images/bg/right1.png') no-repeat right bottom;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
 .right-green {
   position: absolute;
-  right: -2rem;
+  right: -3rem;
   top: 46.3rem;
   width: 19.2rem;
   height: 64.8rem;
   background: url('../images/bg/right2.png') no-repeat right bottom;
   background-size: cover;  
   transition: transform 0.3s ease-in-out;
-  //background-position: right 2rem bottom 2rem;
   z-index: 2;
-  &.animate {
-    transition: transform 300ms ease-in-out;
-  }
 }
 
 .overlay {

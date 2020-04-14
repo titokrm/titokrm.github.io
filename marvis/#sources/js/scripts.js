@@ -35,17 +35,25 @@ $(function() {
   }
 
   function paralax() {
-    var speedParalax = 300,
-        widthScreen = $(window).width(),
-        ratio = widthScreen*0.5208,
-        startX = 0,
+    const speedParalax = 300, // время возвращения элементов на место после покидания мыши окна
+          paralaxObj = $('.paralax'), // класс для элементов, data-layer="" - номер слоя у элемента (1 - самый ближний к наблюдателю)
+          koefMoving = 0.75, // коеф для разных слоев, 1 слой = 0,75, 2 = 1,5, 3 = 2,25 и т.д.
+          rem = 0.5208, // 0,5208 - это сколько vw равен 1 rem
+          paralaxY = true, // включить для координат Y
+          paralaxX = true; // включить для координат X
+        //----------------------------
+    let startX = 0,
         offsX = 0,
         startY = 0,
         outWindow = true,
         offsY = 0;
+        ratio = $(window).width() * rem;
 
+    $(window).resize(function(){
+      ratio = $(window).width() * rem;
+    })
     function animateOff() {
-      $('.right-green').css('transition', 'none');
+      paralaxObj.css('transition', 'none');
       outWindow = false;
     }
     $('body').on('mouseenter', function(event) {
@@ -54,23 +62,35 @@ $(function() {
 
     $('body').on('mouseleave', function(e) {
       outWindow = true;
-      $('.right-green').css('transition', 'transform '+speedParalax+'ms ease-in-out');
-      startX = startY = offsX = offsY = 0;
-      $('.right-green').css('transform', 'translate3d('+offsX+'rem,'+offsY+'rem,0)');
+      paralaxObj.each(function(){
+        $(this).css('transition', 'transform '+speedParalax+'ms ease-in-out');
+        startX = startY = offsX = offsY = 0;
+        $(this).css('transform', 'translate3d('+offsX+'rem,'+offsY+'rem,0)');
+      });
     });
 
 
     $('body').mousemove(function(event) {
       if (!outWindow) {
-        if (startY != 0) {
-          $('.right-green').css('transform', 'translate3d('+offsX+'rem,'+offsY+'rem,0)');
+        if (startY != 0 && paralaxY) {
+          paralaxObj.each(function(){
+            let layer = +$(this).attr('data-layer'),
+                mult;
+            mult = layer*koefMoving;
+            $(this).css('transform', 'translate3d('+offsX*mult+'rem,'+offsY*mult+'rem,0)');
+          });
           offsY = (startY - event.pageY)/ratio;
         } else {
           startY = event.pageY;
         }
 
-        if (startX != 0) {
-          $('.right-green').css('transform', 'translate3d('+offsX+'rem,'+offsY+'rem,0)');
+        if (startX != 0 && paralaxX) {
+          paralaxObj.each(function(){
+            let layer = +$(this).attr('data-layer'),
+                mult;
+            mult = layer*koefMoving;
+            $(this).css('transform', 'translate3d('+offsX*mult+'rem,'+offsY*mult+'rem,0)');
+          });
           offsX = (startX - event.pageX)/ratio;
         } else {
           startX = event.pageX;
