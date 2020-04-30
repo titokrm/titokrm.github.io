@@ -1,0 +1,77 @@
+:root {
+  font-size: 0.5208vw; // 10px / 1920px * 100%
+  @media screen and (max-width: $tablet) {
+    font-size: 10px;
+  }
+}
+
+body {
+  color: $main-color;
+  font-family: $default-font;
+  font-weight:400;
+  position:relative;
+  min-width: $min-width;
+  min-height: 100vh;
+  background: url('../images/bg.jpg') no-repeat  center;
+  background-color: $black-color;
+  background-size: cover;
+  @media screen and (max-width: $phablet) {
+    background-position: left center !important;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(49,61,90,0.66);
+}
+
+a {
+  color: $link-color;
+  transition: all $animate-time ease-in-out;
+  &:hover {
+    text-decoration-color: transparent;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  padding: 0 4.8rem 0 6rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  @media (max-width: $tablet) {
+    padding: 0 2rem;
+  }
+}
+
+.tyson {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  &__item {
+    position: absolute;
+    width: 78.5rem;
+    height: 98.7rem;
+    left: 4rem;
+    bottom: -1rem;
+    background: url('../images/tyson.png') no-repeat left bottom;
+    background-size: cover;  
+  }
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
