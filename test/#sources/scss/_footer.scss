@@ -1,0 +1,9 @@
+.footer {
+    background-color: $footer-color;
+  &__inner {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,35 @@
+:root {
+  font-size: 14px;
+  line-height: 22px;
+  color: $main-color;
+  font-family: $default-font;
+  font-weight:400;
+}
+
+body {
+  position:relative;
+  min-width: $min-width;
+  min-height: 100vh;
+  background-color: $white-color;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;  
+}
+
+a {
+  color: $link-color;
+  transition: all $animate-time ease-in-out;
+  &:hover {
+    text-decoration-color: transparent;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 1 auto;
+}

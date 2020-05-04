@@ -1,0 +1,9 @@
+.header {
+  background-image: linear-gradient(to bottom, $white-color, $header-color);
+  &__inner {
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

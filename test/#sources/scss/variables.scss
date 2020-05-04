@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$default-font: 'Open Sans', sans-serif;
+
+$main-color: #333;
+$white-color: #fff;
+$black-color: #000;
+$header-color: #FF9900;
+$footer-color: #FFCC66;
+$btn-color: orange;
+$item-color: lightgrey;
+$link-color: $main-color;
+
+/*----WIDTH------*/
+$laptop: 1200px;
+$tablet: 992px;
+$phablet: 768px;
+$phone: 526px;
+
+$min-width: 320px;
+$max-width: 1280px;
+
+$animate-time: .3s;
