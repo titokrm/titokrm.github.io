@@ -5,4 +5,4 @@
 - [https://www.lago.be](https://www.lago.be)
 - [https://www.roeland.be](https://www.roeland.be) (исходник верстки в папке roeland)
 - [https://www.mijn-maatwerk.be](https://www.mijn-maatwerk.be) (исходник верстки в папке mijn-maatwerk)
-- [https://www.gentsegidsen.be](https://www.gentsegidsen.be) (исходник верстки gentse-gidsen)
+- [https://www.gentsegidsen.be](https://www.gentsegidsen.be) (исходник верстки в папке gentse-gidsen)
