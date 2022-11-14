@@ -1,7 +1,6 @@
 # titokrm.github.io
 Некоторые из моих работ
 
-[GitHub Pages](https://pages.github.com/)
 - [https://titokrm.github.io/nm-agency/](https://titokrm.github.io/nm-agency/)
 - [https://titokrm.github.io/sparkle/](https://titokrm.github.io/sparkle/)
 - [https://www.lago.be](https://www.lago.be)
