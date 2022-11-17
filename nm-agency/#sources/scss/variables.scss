@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@font-face {
+    font-family: 'rotondac';
+    src: url('../fonts/rotondac.eot');
+    src: url('../fonts/rotondac.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rotondac.woff2') format('woff2'),
+         url('../fonts/rotondac.woff') format('woff'),
+         url('../fonts/rotondac.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rotondac';
+    src: url('../fonts/rotondac-bold.eot');
+    src: url('../fonts/rotondac-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rotondac-bold.woff2') format('woff2'),
+         url('../fonts/rotondac-bold.woff') format('woff'),
+         url('../fonts/rotondac-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+$default-font: 'rotondac', sans-serif;
+$inter-font: 'Inter', sans-serif;
+
+$main-color: #5E5773;
+$title-color: #333;
+$black-color: #000;
+$white-color: #fff;
+$link-color: #1DAEFF;
+$blued-color: #003480;
+$footer-color: #D8DFE3;
+$steps-border-color:#48CDDD;
+$border-color: #ADADAD;
+$input-border-color: #D8DFE3;
+$breadcrumbs-div-color: #C4C4C4;
+$sky-color: #E3F5FF;
+
+
+/*----WIDTH------*/
+$laptop: 1280px;
+$tablet: 992px;
+$phablet: 767px;
+$phone: 526px;
+
+$min-width: 320px;
+$max-width: 1240px;
+
+$desc-height: 900;
+$desc-width: 1440;
+$mob-width: 320;
+$rem-size: 16;
+
+$animate-time: .3s;
+$rotate-time: 45s;

@@ -1,0 +1,40 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $link-color;
+  color: $white-color;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  padding: 0 (15px);
+  border-radius: (20px);
+  height: (40px);
+  font-size: (18px);
+  &--big {
+    padding: 0 (25px);
+    border-radius: (30px);
+    height: (60px);
+    font-size: (22px);
+  }
+
+  &__icon {
+    height: (11px);
+    margin-left: (8px);
+    svg {
+      display: block;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: $phone) {
+    height: 36px;
+    font-size: 16px;
+    &--big {
+      height: 47px;
+      padding: 0 35px;
+      border-radius: 24px;
+      font-size: 16px;
+    }
+  }
+}

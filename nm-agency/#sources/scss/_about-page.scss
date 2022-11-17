@@ -1,0 +1,27 @@
+.block-about {
+
+  &__text-center {
+    max-width: 794px;
+    margin: 80px auto;
+  }
+}
+.about-text {
+
+  &__inner {
+    margin-bottom: 80px;
+    p {
+      font-size: 16px;
+      line-height: 1.375em;
+      margin-bottom: 1.375em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__slogan {
+    text-align: center;
+    font-size: 30px;
+    color: $main-color;
+  }
+}

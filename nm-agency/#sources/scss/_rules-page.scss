@@ -1,0 +1,36 @@
+.rules-list {
+  position: relative;
+  z-index: 2;
+  &__title {
+    margin: 2em 0 1.27em;
+  }
+  ul {
+    @include no-list;
+    font-size: 14px;
+    line-height: 2em;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li {
+      padding-left: 25px;
+      background: url("../images/rules/li.svg") no-repeat left 10px;
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 2em;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  strong {
+    font-weight: normal;
+    color: $black-color;
+  }
+}

@@ -1,0 +1,213 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+//  background-color: rgba(255, 255, 255, 0.6);
+//  backdrop-filter: blur((20px));
+  transition: transform $animate-time ease-in-out;
+
+  &.js-hide {
+    transform: translateY(-100%);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: (90px);
+  }
+
+  &__logo {
+    height: (66px);
+    //margin-right: (25px);
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &__breadcrumbs {
+    @include no-list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      font-size: 17px;
+      line-height: 1.1765em;
+      padding-left: 76px;
+      position: relative;
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        width: 46px;
+        height: 1px;
+        background-color: $breadcrumbs-div-color;
+      }
+      &:first-child {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    a {
+      color: $title-color;
+      &:hover {
+        color: $link-color;
+        text-decoration-color: transparent;
+      }
+    }
+    b {
+      color: $link-color;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: (17px);
+    line-height: (20px);
+  }
+
+  &__nav {
+    ul {
+      @include no-list;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 25px;
+      li {
+        margin-right: (25px);
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          transition: all $animate-time ease-in-out;
+          &:hover {
+            color: $link-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__user {
+    //margin-left: (25px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__link {
+    margin-right: (25px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    margin-left: (25px);
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__nav {
+      display: none;
+    }    
+    &__btn {
+      margin-left: 30px;
+    }
+  }
+  @media screen and (max-width: $phone) {
+    &__container {
+      height: 74px;
+    }
+    &__logo {
+      height: 59px;
+      margin-right: 10px;
+    }
+    &__btn {
+      margin-left: 10px;
+    }
+    &__user {
+      display: none;
+    }
+    &__breadcrumbs {
+      display: none;
+    }
+  }
+}
+.user-link {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: (1px) solid $link-color;
+  transition: all $animate-time ease-in-out;
+  &__icon {
+    display: block;
+    height: (11px);
+    margin-left: (8px);
+    padding-bottom: (2px);
+    svg {
+      height: 100%;
+      display: block;
+    }
+  }
+  &__text {
+    padding-bottom: (2px);
+    font-weight: bold;
+    position: relative;
+    top: -1px;
+  }
+  &:hover {
+    border-color: transparent;
+  }
+}
+.btn-menu {
+  display: block;
+  width: (50px);
+  height: (50px);
+  background-color: $link-color;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: (3px);
+    background-color: $white-color;
+    left: (12px);
+    border-radius: (2px);
+    transition: all $animate-time ease-in-out;
+    &:nth-child(1) {
+      width: (26px);
+      top: (16px);
+    }
+    &:nth-child(2) {
+      width: (15px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      width: (26px);
+      bottom: (16px);
+    }
+  }
+  &:hover {
+    span {
+      width: (26px);
+    }
+  }
+}
+
+.icon-arrow {
+  fill: currentColor;
+}

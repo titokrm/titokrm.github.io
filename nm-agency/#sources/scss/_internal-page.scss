@@ -1,0 +1,202 @@
+.two-columns {
+  padding: 150px 0 230px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  &__title {
+    width: 100%;
+    margin-bottom: 1em;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__col {
+    width: 44.26%;
+    position: relative;
+    z-index: 1;
+   &--web {
+   }
+
+   &--adv {
+   }
+  }
+
+  &__subtitle {
+    margin-bottom: 1em;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__mediator {
+    position: absolute;
+    z-index: 1;
+    &--1 {
+      right: 65%;
+      top: -98px;
+      width: 72px;
+    }
+    &--2 {
+      left: 29.7%;
+      top: 53.04%;
+      width: 95px;
+    }
+    &--3 {
+      left: 7.519%;
+      top: 62.611%;
+      width: 50px;
+    }
+  }
+
+  &__picture {
+    flex: 1 1 52%;
+    position: relative;
+    z-index: 1;
+    //overflow: hidden;
+  }
+
+  &__mask {
+    position: absolute;
+    width: 101% !important;
+    height: 101% !important;
+    left: 50%;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    animation-name: mask;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0;
+  }
+  
+  @keyframes mask {
+    0% {
+      transform: translate(-50%, -50%) scale(1, 1);      
+    }
+    30% {
+      transform: translate(-50%, -50%) scale(1.05, 1);
+    }
+    60% {
+      transform: translate(-50%, -50%) scale(1, 1.025);      
+    }
+  }
+  
+  &__picture-under-mask {
+    position: relative;
+    padding-bottom: 96%;
+    z-index: 1;
+    overflow: hidden;
+    /*
+    mask-image: url('../images/about/mask.png');
+    mask-size: 100% 100%;      
+    */
+    background-color: #e2f5ff;
+    img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    //object-fit: cover;
+    position: absolute;
+    top: 0;
+    //left: 5.5%;
+//    z-index: 1;
+
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    z-index: 2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0;
+  }
+
+  &__fig1 {
+    left: -10.94%;
+    bottom: 47% + 2.051%;
+    width: 15.789%;
+    animation-name: fig1;
+  }
+
+  &__fig2 {
+    right: 3.459%;
+    bottom: 11.75% + 2.051%;
+    width: 24.06%;
+    animation-name: fig2;
+  }
+
+  &__fig3 {
+    left: 4.3233%;
+    bottom: 6.7%;
+    width: 12.218%;
+    animation-name: fig1;
+  }
+
+  &__fig4 {
+    right: 11.654%;
+    top: 9.883%;
+    width: 18.421%;
+    animation-name: fig2;
+  }
+
+  @keyframes fig1 {
+    0% {
+      transform: translate(0, 0);      
+    }
+    30% {
+      transform: translate(-5%, 5%);
+    }
+    60% {
+      transform: translate(5%, 5%);
+    }
+  }
+  
+  @keyframes fig2 {
+    0% {
+      transform: translate(0, 0);      
+    }
+    30% {
+      transform: translate(4%, -5%);
+    }
+    60% {
+      transform: translate(2%, -5%);
+    }
+  }
+
+  @keyframes fig3 {
+    0% {
+      transform: translate(0, 0);      
+    }
+    30% {
+      transform: translate(3%, 4%);
+    }
+    60% {
+      transform: translate(-8%, 4%);
+    }
+  }
+
+  @media only screen and (orientation: portrait), screen and (max-width: $phablet) {
+    padding: 80px 0;
+    &__col {
+      width: 100%;
+      &--web {
+        order: 2;
+      }
+      &--adv {
+        order: 1;
+        margin-bottom: 72px;
+      }
+    }
+  }
+}

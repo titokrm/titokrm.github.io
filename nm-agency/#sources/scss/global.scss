@@ -1,0 +1,95 @@
+:root {
+  font-size: 16px;
+  @media only screen and (orientation: portrait){
+    //font-size: calc((15 / #{$desc-width}) * 100vw);
+  }
+  @media only screen and (max-width: $phablet) and (orientation: portrait){
+    //font-size: calc((10 / #{$mob-width}) * 100vw);
+  }
+}
+
+body {
+  color: $main-color;
+  font-family: $default-font;
+  font-weight:400;
+  position:relative;
+  min-width: $min-width;
+  min-height: 100vh;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  &.lock {
+    overflow: hidden;
+    height: 100vh;
+  }
+  @media only screen and (max-width: $phablet) and (orientation: portrait){
+    display: block;
+  }
+}
+
+a {
+  color: $link-color;
+  transition: all $animate-time ease-in-out;
+  text-decoration-color: transparent;
+  &:hover {
+    text-decoration-color: $link-color;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 (25px);  
+  @media screen and (max-width: $phone) {
+    padding: 0 18px;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  padding-top: (90px);
+  @media screen and (max-width: $phone) {
+    padding-top: 74px;
+  }
+}
+
+.only-wider-phone {
+  display: none;
+  @media (min-width: $phone + 1) {
+    display: block;
+  }
+}
+
+.only-phone {
+  display: none;
+  @media (max-width: $phone) {
+    display: block;
+  }
+}
+
+@keyframes resize-fig {
+  75% {
+    transform: scale(1.15);  
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.figure {
+  transform: scale(.4);
+}
+
+.js-resize {
+  animation-name: resize-fig;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-delay: 0.2s;
+}

@@ -1,0 +1,127 @@
+.footer {
+  padding: (46px) 0;
+  background-color: $blued-color;
+  color: $footer-color;
+  //display: none;
+  &__container {
+    max-width: (1000px);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    a {
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: all $animate-time ease-in-out;
+      &:hover {
+        text-decoration-color: inherit;
+      }
+    }
+  }
+
+  //&__logo {
+  //}
+
+  &__nav {
+    @include no-list;
+    font-size: (18px);
+    line-height: 1.11em;
+    font-weight: bold;
+    li {
+      margin-bottom: .77em;
+      a {
+        color: $white-color;
+      }
+    }
+  }
+
+  &__docs-link {
+    @include no-list;
+    white-space: nowrap;
+    font-size: (14px);
+    line-height: 1.4285;
+    li {
+      margin-bottom: 0.7143em;
+    }
+    a {
+      color: inherit;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-start;
+    flex: 0 1 38.5%;
+  }
+
+  &__menu-column {
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: (10px);
+    &:last-child {
+      padding-right: 0;
+      padding-left: (10px);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy {
+    font-size: (14px);
+    line-height: 2.143em;
+    order: 1;
+  }
+
+  &__mail {
+    font-size: (16px);
+    line-height: 1.875em;
+    font-weight: bold;
+    flex: 0 1 38.5%;
+    order: 2;
+  }
+  @media (min-width: $tablet + 1) {
+    &__docs-link {
+      transform: translateX(45px);
+    }
+  }
+  @media screen and (max-width: $tablet) and (min-width: $phablet +1) {
+    &__menu {
+      flex: 0 1 45%;
+    }
+    &__mail {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex: 0 1 45%;
+    }
+    &__mail-col {
+      box-sizing: border-box;
+      padding-left: 10px;
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: $phablet) {
+    &__menu, &__mail {
+      flex: 0 1 32%;
+    }
+  }
+  @media screen and (max-width: $phone) {
+  //@media screen and (max-width: $phablet) {
+    padding: 34px 0;
+    &__top, &__bottom {
+      display: block;
+    }
+    &__bottom {
+      margin-top: 15px;
+    }
+    &__docs-link {
+      margin: 24px 0 24px;
+    }
+  }
+}

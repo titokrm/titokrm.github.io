@@ -1,0 +1,58 @@
+.h1 {
+  font-size: (56px);
+  line-height: 1em;
+  font-weight: bold;
+  color: $title-color;
+  @media screen and (max-width: $phone) {
+    font-size: 34px;
+  }
+}
+
+.h2 {
+  font-size: (50px);
+  line-height: 1em;
+  font-weight: bold;
+  color: $title-color;
+  @media screen and (max-width: $phone) {
+    font-size: 30px;
+  }
+}
+
+.h3 {
+  font-size: (36px);
+  line-height: 1em;
+  font-weight: bold;
+  color: $title-color;
+  @media screen and (max-width: $phone) {
+    font-size: 26px;
+  }
+}
+
+.h4 {
+  font-size: (26px);
+  line-height: 1.3846;
+  font-weight: bold;
+  color: $title-color;
+  @media screen and (max-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.h5 {
+  font-size: (22px);
+  line-height: 1.3846;
+  font-weight: bold;
+  @media screen and (max-width: $tablet) {
+    font-size: 18px;
+  }
+}
+
+/*
+.h5 {
+
+}
+*/
+
+p {
+  font-family: $inter-font;
+}
