@@ -1,0 +1,46 @@
+.slogan {
+  padding: calc(81 / $rem-size) * 1rem 0;
+  background-color: #5450EA;
+  color: #D1EA75;
+  font-size: calc(32 / $rem-size) * 1rem;
+  line-height: calc((44 / 32) * 1em);
+  text-align: left;
+  &__container {
+    line-height: inherit;
+  }
+  &__inner {
+    margin: 0 auto;
+    line-height: inherit;
+    max-width: calc(882 / $rem-size) * 1rem;
+  }
+
+  &__logo {
+    width: calc(102 / $rem-size) * 1rem;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob-width) {
+  .slogan {
+    padding: calc(93 / $rem-size) * 1rem 0;
+    font-size: calc(24 / $rem-size) * 1rem;
+    line-height: calc((32 / 24) * 1em);
+    &__inner {
+      max-width: calc(618 / $rem-size) * 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: $xs-mob-width) {
+  .slogan {
+    padding: calc(52 / $rem-size) * 1rem 0;
+    font-size: calc(16 / $rem-size) * 1rem;
+    line-height: calc((22 / 16) * 1em);
+  }
+}

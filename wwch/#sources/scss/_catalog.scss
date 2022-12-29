@@ -1,0 +1,432 @@
+$font-controls: 14;
+$height-dropdown: 325;
+
+.catalog {  
+  &__header {
+    margin-bottom: calc(40 / $rem-size) * 1rem;
+  }
+  &__inner {
+    margin-left: calc($space-cell / -2);
+    margin-right: calc($space-cell / -2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding-left: calc($space-cell / 2);
+    padding-right: calc($space-cell / 2);
+    margin-bottom: $space-cell;
+    width: 25%;
+  }
+}
+.header-colors {
+  margin-top: $height-header * -1;  
+  padding: calc(136 / $rem-size) * 1rem 0 calc(40 / $rem-size) * 1rem;
+  &--for-body {
+    background-color: $bg-forbody;
+    color: black;
+  }
+
+  &__title {
+    margin-bottom: calc(24 / $rem-size) * 1rem;
+  }
+
+  &__text {
+    font-size: calc(16 / $rem-size) * 1rem;
+    line-height: calc((24 / 16) * 1em);
+    font-weight: 500;
+    max-width: calc(725 / $rem-size) * 1rem;
+    margin-bottom: calc(40 / $rem-size) * 1rem;
+  }
+
+  &__set-views {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__filter-setter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: calc(8 / $rem-size) * 1rem;    
+  }
+
+  &__sorting-mode {
+
+  }
+}
+.filter-control {
+  display: inline-block;
+  position: relative;
+  color: black;    
+  font-size: calc($font-controls / $rem-size) * 1rem;
+  line-height: calc((18 / $font-controls) * 1em);
+  &__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;    
+    opacity: .5;
+    display: none;
+  }
+  &:last-child {
+    display: none;    
+  }
+  &.active {
+    z-index: 1001;
+    .filter-control__overlay {
+      display: block;
+    }
+    >.filter-control__dropdown {
+      left: 0;
+      max-height: calc(($height-dropdown + 50) / $rem-size) * 1rem;
+    }
+  }
+  &--xs-mob-filters {
+  }
+
+  &__clickable {
+    display: flex;
+    padding: calc((16 / $font-controls) * 1em) calc((40 / $font-controls) * 1em) calc((16 / $font-controls) * 1em) calc((16 / $font-controls) * 1em);
+    border-radius: calc(4 / $rem-size) * 1rem;
+    background: url("../images/icon-arrow-drop-down.svg") no-repeat right calc(16 / $rem-size) * 1rem center;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    line-height: inherit;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__close {
+    position: absolute;
+    right: calc(24 / $rem-size) * 1rem;
+    top: calc(24 / $rem-size) * 1rem;
+    width: calc(24 / $rem-size) * 1rem;
+    height: calc(24 / $rem-size) * 1rem;
+    display: none;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;    
+    z-index: 2;
+    left: -10000px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    top: 100%;
+    width: calc((244 / $font-controls) * 1em);
+    margin-top: calc(4 / $rem-size) * 1rem;
+    background-color: white;
+    border-radius: calc(4 / $rem-size) * 1rem;
+    box-shadow: 0px 0px 4px rgba(127, 128, 140, 0.25);
+    padding: calc(8 / $rem-size) * 1rem 0;
+  }
+
+  &__name-n-clear {
+    display: flex;
+    justify-content: space-between;
+    font-size: calc((12 / $font-controls) * 1em);
+    line-height: calc((16 / 12) * 1em);
+    padding: calc((8 / 12) * 1em) calc((16 / 12) * 1em);
+    color: #A0A1A4;
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__list {
+    @include no-list;
+    height: 325px;    
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #A0A1A4 white;
+    &::-webkit-scrollbar {
+      width: calc(12 / $rem-size) * 1rem;
+      //height: 50px;
+    }
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #A0A1A4;
+      border-radius: calc(6 / $rem-size) * 1rem;
+      border-left: calc(4 / $rem-size) * 1rem solid white;
+      border-right: calc(4 / $rem-size) * 1rem solid white;
+    }
+
+  }
+
+  &__list-item {
+  }
+}
+
+.custom-chk {
+  cursor: pointer;
+  &__input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    &:checked+span::before {
+      background-position: center;
+    }
+    &:checked+span {
+      font-weight: bold;
+      background-color: $bg-gray;
+    }
+  }
+
+  &__span {
+    display: block;
+    position: relative;
+    padding: calc((16 / $font-controls) * 1em);
+    padding-left: calc((40 / $font-controls) * 1em);
+    font-size: calc($font-controls / $rem-size) * 1rem;
+    line-height: calc((16 / $font-controls) * 1em);
+    font-weight: 500;    
+    &:hover {
+      //text-shadow: 0 0 .1em black;
+      background-color: $bg-gray;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: calc((16 / $font-controls) * 1em);
+      top: calc((14 / $font-controls) * 1em);
+      width: calc((16 / $font-controls) * 1em);
+      height: calc((16 / $font-controls) * 1em);
+      border: calc(1 / $rem-size) * 1rem solid black;
+      border-radius: calc(2 / $rem-size) * 1rem;
+      background: url("../images/chkbox.svg") no-repeat center calc((16 / $font-controls) * -2em);
+    }
+  }
+}
+.sorting-mode {
+  display: inline-block;
+  position: relative;
+  color: black;    
+  font-size: calc($font-controls / $rem-size) * 1rem;
+  line-height: calc((18 / $font-controls) * 1em);
+  &__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .5;
+    display: none;
+  }
+  &.active {
+    z-index: 900;
+    .sorting-mode__overlay {
+      display: block;
+    }
+    .sorting-mode__dropdown {
+      right: 0;
+      left: auto;
+      max-height: calc(($height-dropdown + 50) / $rem-size) * 1rem;
+    }
+  }
+
+  &__clickable {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: calc((16 / $font-controls) * 1em) calc((40 / $font-controls) * 1em) calc((16 / $font-controls) * 1em) calc((16 / $font-controls) * 1em);
+    border-radius: calc(4 / $rem-size) * 1rem;
+    background: url("../images/icon-arrow-drop-down.svg") no-repeat right calc(16 / $rem-size) * 1rem center;
+    background-color: white;
+    position: relative;
+    line-height: inherit;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;    
+    z-index: 2;
+    left: -10000px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    width: calc((210 / $font-controls) * 1em);
+    margin-top: calc(4 / $rem-size) * 1rem;
+    background-color: white;
+    border-radius: calc(4 / $rem-size) * 1rem;
+    box-shadow: 0px 0px 4px rgba(127, 128, 140, 0.25);
+    padding: calc(8 / $rem-size) * 1rem 0;
+  }
+
+  &__name {
+    font-size: calc((12 / $font-controls) * 1em);
+    line-height: calc((16 / 12) * 1em);
+    color: #A0A1A4;
+    padding: calc((8 / 12) * 1em) calc((16 / 12) * 1em);
+  }
+
+  &__list {
+    @include no-list;
+  }
+  &__list-item {
+    a {
+      display: block;      
+      padding: calc((16 / $font-controls) * 1em);
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        background-color: $bg-gray;
+      }
+    }
+    .sorting-mode__icon-mode {
+      display: none;
+    }
+  }
+
+  &__icon-mode {
+    width: calc((16 / $font-controls) * 1em);
+    height: calc((16 / $font-controls) * 1em);
+    margin-right: calc((8 / $font-controls) * 1em);
+    img {
+      display: block;
+      width: 100%;
+    }
+    &--inc {
+      transform: scale(1, -1);
+    }
+  }
+
+}
+
+@media screen and (max-width: $mob-width) {
+  .catalog {  
+    &__inner {
+      margin-left: calc($space-cell-mob / -2);
+      margin-right: calc($space-cell-mob / -2);
+    }
+
+    &__item {
+      padding-left: calc($space-cell-mob / 2);
+      padding-right: calc($space-cell-mob / 2);
+      margin-bottom: $space-cell-mob;
+    }
+  }
+  .header-colors {
+    margin-top: $height-header-mob * -1;
+  }
+}
+
+@media screen and (max-width: $xs-mob-width) {
+  .catalog {  
+    &__item {
+      width: 50%;
+    }
+    &__header {
+      margin-bottom: calc(24 / $rem-size) * 1rem;
+    }
+  }
+  .header-colors {
+    margin-top: $height-header * -1;
+  }
+  .header-colors__set-views {
+    align-items: stretch;
+  }
+  .header-colors__filter-setter, .header-colors__sorting-mode {
+    width: 50%;
+  }
+  .header-colors__filter-setter {
+    padding-right: calc($space-cell-mob / 2);
+  }
+  .header-colors__sorting-mode {
+    padding-left: calc($space-cell-mob / 2);
+  }
+  .header-colors__item {
+    width: 100%;
+    margin-right: 0;
+    &:last-child {
+      display: inline-block;
+    }
+  }
+  .filter-control__close {
+    display: block;
+  }
+  .filter-control.active > .filter-control__dropdown {
+    width: 100%;
+    background: none;
+  }
+  .filter-control .filter-control.active > .filter-control__dropdown {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: $height-header;
+    border-radius: 0;
+    width: 100%;
+    max-height: 100vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    .filter-control__list {
+      height: auto;
+      flex: 1 1 auto;
+    }
+  }
+  .sorting-mode__clickable {
+    span {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .sorting-mode__icon-mode {
+    flex: 0 0 calc((16 / $font-controls) * 1em);
+  }
+  .sorting-mode {
+    font-size: calc(12 / $rem-size) * 1rem;
+  }
+  .sorting-mode__clickable {
+    height: 100%;
+  }
+  .sorting-mode.active .sorting-mode__dropdown {
+    left: calc($space-cell-mob / 2);
+    width: auto;
+  }
+  .filter-control {
+    font-size: calc(12 / $rem-size) * 1rem;
+  }
+  .header-colors__title {
+    margin-bottom: calc(16 / $rem-size) * 1rem;
+  }
+  .header-colors__text {
+    font-size: calc(13 / $rem-size) * 1rem;
+    line-height: calc((18 / 13) * 1em);
+    margin-bottom: calc(24 / $rem-size) * 1rem;
+  }
+  .filter-control + .filter-control {
+    margin-top: calc(8 / $rem-size) * 1rem;
+  }
+  .filter-control__overlay {
+    background-color: black;
+    opacity: .4;
+  }
+}

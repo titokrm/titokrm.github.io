@@ -1,0 +1,22 @@
+$default-font: 'Neue Machina', serif;
+
+$bg-forbody: #D6E885;
+$bg-gray: #FAFAFA;
+$bg-btn: #F2F2F2;
+
+/*----Size const------*/
+$container: 1440px;
+$width-container: 1342;
+
+$desk-sm-width: 1220px; // 989-1200
+//$tab-width: 989px;
+$mob-width: 989px; // 720-989
+$xs-mob-width: 720px;  // 0 720
+$rem-size: 16;
+
+$animate-time: .3s;
+
+:root {
+  font-size: $rem-size * 1px;
+  height: 100%;
+}

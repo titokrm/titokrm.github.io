@@ -1,0 +1,123 @@
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: $default-font;
+  font-weight: normal;
+  font-style: normal;
+  min-width: 320px;
+  justify-content: space-between;
+}
+
+[class*="__container"] {
+  max-width: calc($width-container / $rem-size) * 1rem;  
+  margin: 0 auto;
+  padding: 0 calc(24 / $rem-size) * 1rem;  
+}
+
+.wrapper {
+  max-width: calc(1440 / $rem-size) * 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.h1 {
+  font-size: calc(56 / $rem-size) * 1rem;
+  line-height: calc((64 / 56) * 1em);
+  margin-bottom: calc((64 / 56) * 1em);
+  font-weight: bold;
+  font-style: normal;
+}
+.h2 {
+  font-size: calc(40 / $rem-size) * 1rem;
+  line-height: calc((44 / 40) * 1em);
+  margin-bottom: calc((44 / 40) * 1em);
+  font-weight: bold;
+  font-style: normal;
+}
+.h3 {
+  font-size: calc(28 / $rem-size) * 1rem;
+  line-height: calc((32 / 28) * 1em);
+  margin-bottom: calc((32 / 28) * 1em);
+  font-weight: bold;
+}
+.h4 {
+  font-size: calc(24 / $rem-size) * 1rem;
+  line-height: calc((32 / 24) * 1em);
+  font-weight: bold;
+  margin-bottom: calc((32 / 24) * 1em);
+}
+.h5 {
+  font-size: calc(20 / $rem-size) * 1rem;
+  line-height: calc((24 / 20) * 1em);
+  margin-bottom: calc((24 / 20) * 1em);
+  font-weight: bold;
+  font-style: normal;
+}
+.h6 {
+  font-size: calc(18 / $rem-size) * 1rem;
+  line-height: calc((24 / 18) * 1em);
+  margin-bottom: calc((24 / 18) * 1em);
+  font-weight: bold;
+  font-style: normal;
+}
+.h7 {
+  font-size: calc(16 / $rem-size) * 1rem;
+  line-height: calc((24 / 16) * 1em);
+  margin-bottom: calc((24 / 16) * 1em);
+}
+.h8 {
+  font-size: calc(14 / $rem-size) * 1rem;
+  line-height: calc((20 / 14) * 1em);
+  margin-bottom: calc((20 / 14) * 1em);
+}
+.h9 {
+  font-size: calc(12 / $rem-size) * 1rem;
+  line-height: calc((16 / 12) * 1em);
+  margin-bottom: calc((16 / 12) * 1em);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(14 / $rem-size) * 1rem;
+  line-height: calc((20 / 14) * 1em);
+  text-decoration: none;
+  font-weight: bold;
+  font-style: normal;
+  white-space: nowrap;
+  &--black {
+    color: white;
+    background-color: black;
+    border-radius: calc((4 / 14) * 1em);
+    height: calc((50 / 14) * 1em);
+    padding: 0 calc((52 / 14) * 1em);
+  }
+}
+
+@media screen and (max-width: $desk-sm-width) {
+  [class*="__container"] {
+    padding: 0 calc(52 / $rem-size) * 1rem;    
+  }
+}
+
+@media screen and (max-width: $mob-width) {
+  [class*="__container"] {
+    padding: 0 calc(16 / $rem-size) * 1rem;    
+  }
+}
+
+@media screen and (max-width: $xs-mob-width) {
+  .h2 {
+    font-size: calc(24 / $rem-size) * 1rem;
+    line-height: calc((32 / 24) * 1em);
+    margin-bottom: calc((32 / 24) * 1em);
+  }
+  .h7 {
+    font-size: calc(14 / $rem-size) * 1rem;
+    line-height: calc((18 / 14) * 1em);
+    margin-bottom: calc((18 / 14) * 1em);
+  }
+}

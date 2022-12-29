@@ -1,0 +1,128 @@
+$label-lh: 24;
+$label-lh-xs: 12;
+
+.instagram-gallery {
+  text-align: center;
+  overflow: hidden;
+  padding-top: calc(64 / $rem-size) * 1rem;
+  padding-bottom: calc(64 / $rem-size) * 1rem;
+  &__title {
+    margin-bottom: calc(24 / $rem-size) * 1rem;
+  }
+
+  &__text {
+    font-size: calc(16 / $rem-size) * 1rem;
+    line-height: calc((24 / 16) * 1em);
+    font-weight: normal;
+  }
+
+  &__slider {
+    margin-top: calc(64 / $rem-size) * 1rem;
+    display: flex;
+    margin-left: calc($space-cell / -2);
+    //width: 10000px;
+  }
+
+  &__item {
+    padding: calc($label-lh / $rem-size) * 1rem calc($space-cell / 2);
+    &:nth-child(even) {
+      padding-top: calc((80 + $label-lh) / $rem-size) * 1rem;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    img {
+      display: block;
+      border-radius: calc(4 / $rem-size) * 1rem;
+    }
+    & + .instagram-gallery__picture {
+      margin-top: $space-cell;
+    }
+  }
+
+  &__label {
+    position: absolute;    
+    font-size: calc(16 / $rem-size) * 1rem;
+    line-height: calc($label-lh / $rem-size) * 1rem;
+    font-weight: 500;
+    color: #F2AAC5;
+   &--before {
+    left: 0;
+    top: calc($label-lh / $rem-size) * -1rem;
+   }
+
+   &--after {
+    right: 0;
+    bottom: calc($label-lh / $rem-size) * -1rem;
+   }
+  }
+}
+
+.heart-big {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(38 / $rem-size) * 1rem;
+  margin-left: calc(10 / $rem-size) * 1rem;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.slick-initialized .slick-slide.instagram-gallery__item {
+  flex-direction: column;
+}
+
+@media screen and (max-width: $mob-width) {
+  .instagram-gallery {
+    &__slider {
+      margin-left: calc($space-cell-mob / -2);
+    }
+    &__item {
+      padding-left: calc($space-cell-mob / 2);
+      padding-right: calc($space-cell-mob / 2);
+    }
+  }
+}
+
+@media screen and (max-width: $xs-mob-width) {
+  .instagram-gallery {
+    padding: calc(48 / $rem-size) * 1rem 0;
+    &__text {
+      font-size: calc(14 / $rem-size) * 1rem;
+      line-height: calc((20 / 14) * 1em);
+    }
+    &__slider {
+      margin-top: calc(48 / $rem-size) * 1rem;
+      margin-left: calc($space-cell-mob / -2);
+    }
+    &__label {
+      font-size: calc(8 / $rem-size) * 1rem;
+      line-height: calc($label-lh-xs / $rem-size) * 1rem;
+      &--before {
+        top: calc($label-lh-xs / $rem-size) * -1rem;
+      }
+      &--after {
+        bottom: calc($label-lh-xs / $rem-size) * -1rem;
+      }
+    }
+    &__item {
+      padding: calc($label-lh-xs / $rem-size) * 1rem calc($space-cell-mob / 2);
+      &:nth-child(even) {
+        padding-top: calc((63 + $label-lh-xs) / $rem-size) * 1rem;
+      }
+    }
+
+  }
+  .instagram-gallery__picture {
+    img {
+      max-width: calc(100 / $rem-size) * 1rem;
+    }
+    &--big {
+      img {
+        max-width: calc(210 / $rem-size) * 1rem;
+      }      
+    }
+  }
+}

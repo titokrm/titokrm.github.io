@@ -1,0 +1,20 @@
+@media screen and (max-width: $mob-width) {
+  .slider-cards {
+    margin-right: -2rem;
+    padding-bottom: calc(48 / $rem-size) * 1rem;    
+  }
+}
+
+@media screen and (max-width: $xs-mob-width) {
+  #slider-forbody-inner, #slider-formakeup-inner {
+    //display: none;
+  }
+  .slider-cards {
+    margin-right: -4rem;
+    margin-left: calc($space-cell-mob / -2);
+    &__item {
+      padding-left: calc($space-cell-mob / 2);
+      padding-right: calc($space-cell-mob / 2);
+    }
+  }
+}

@@ -1,0 +1,340 @@
+.product-card-detail {
+  padding-top: calc(40 / $rem-size) * 1rem;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: calc(40 / $rem-size) * 1rem 38.95% 1fr;
+    grid-template-rows: auto;
+    grid-gap: $space-cell;
+  }
+
+  &__big-picture-place {
+  }
+
+  &__info {
+    background-color: $bg-gray;
+  }
+
+  &__previews {
+  }
+}
+.big-picture {
+  padding-bottom: 133.39%;  
+  position: relative;
+  background-color: #e7e8ea;
+  border-radius: calc(4 / $rem-size) * 1rem;
+  overflow: hidden;
+  >img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__likes {
+    position: absolute;
+    z-index: 5;
+    right: $space-cell-mob;
+    top: $space-cell-mob;
+    display: flex;
+    align-items: center;
+    font-size: calc(14 / $rem-size) * 1rem;
+    line-height: calc((18 / 14) * 1em);
+    a {
+      width: calc(24 / $rem-size) * 1rem;
+      display: block;
+      margin-right: calc($space-cell-mob / 2);
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+.info-product {
+  padding: calc(40 / $rem-size) * 1rem;
+  &__detail-info {
+
+  }
+
+  &__title {
+    margin-bottom: calc(18 / $rem-size) * 1rem;    
+  }
+
+  &__rating {
+    margin-bottom: calc(16 / $rem-size) * 1rem;
+    display: flex;
+    font-size: calc(12 / $rem-size) * 1rem;
+    line-height: calc((16 / 12) * 1em);
+    color: #3F5747;
+    font-weight: normal;    
+    align-items: center;
+  }
+
+  &__reviews-place {
+    display: flex;
+    align-items: center;
+    margin-left: .5em;
+    padding-top: .1em;
+  }
+
+  &__rating-number {
+    font-weight: bold;
+  }
+
+  &__line {
+    width: calc(1 / $rem-size) * 1rem;
+    height: calc(10 / $rem-size) * 1rem;
+    background-color: #CCCCCC;
+    margin: 0 .5em;
+  }
+
+  &__reviews {
+  }
+
+  &__description {
+    font-size: calc(16 / $rem-size) * 1rem;
+    line-height: calc((24 / 16) * 1em);
+    margin-bottom: calc(24 / $rem-size) * 1rem;    
+  }
+
+  &__color-selector {
+    display: flex;
+    margin-bottom: calc(24 / $rem-size) * 1rem;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__submit {
+    margin-left: calc(8 / $rem-size) * 1rem;
+  }
+
+  &__count-input {
+    width: calc(80 / $rem-size) * 1rem;
+  }
+}
+.accordion {
+
+  &__item {
+    padding: $space-cell 0;
+    border-bottom: calc(1 / $rem-size) * 1rem solid #D1D3D7;
+    position: relative;
+    &.active {
+      .accordion__btn {
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+      .accordion__text {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: calc(15 / $rem-size) * 1rem;
+    width: calc(36 / $rem-size) * 1rem;
+    height: calc(36 / $rem-size) * 1rem;
+    padding: calc(12 / $rem-size) * 1rem;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      left: calc(12 / $rem-size) * 1rem;
+      top: calc(12 / $rem-size) * 1rem;
+      right: calc(12 / $rem-size) * 1rem;
+      bottom: calc(12 / $rem-size) * 1rem;
+      background: url("../images/icon-plus.svg") no-repeat center;
+      background-size: 100% auto;
+      opacity: 1;
+    }
+    &:after {
+      background: url("../images/icon-minus.svg") no-repeat center;
+      background-size: 100% auto;      
+      opacity: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    margin-right: $space-cell + calc(24 / $rem-size) * 1rem;
+  }
+
+  &__text {
+    display: none;
+    padding-top: calc(16 / $rem-size) * 1rem;
+  }
+
+  .accordion__item:first-child {
+    .accordion__btn {
+      display: none;
+    }
+    .accordion__text {
+      display: block;
+    }
+  }
+}
+.article {
+  p, ul, ol {
+    font-size: 1em;
+    line-height: calc((21 / 14) * 1em);
+    &:not(:last-child) {
+      margin-bottom: calc((21 / 14) * 1em);
+    }    
+  }
+  ul, ol {
+    @include no-list;
+  }
+  ul {
+    li {
+      padding-left: $space-cell-mob * 1.5;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        height: calc((2.5 / 14) * 1em);
+        width: calc((2.5 / 14) * 1em);
+        border-radius: 50%;
+        background-color: black;
+        left: calc((7 / 14) * 1em);
+        top: calc((6 / 14) * 1em);
+      }
+    }
+  }
+  ol {
+    counter-reset: counterLi;
+    li {
+      padding-left: $space-cell-mob * 1.5;
+      position: relative;
+      &:before {
+        counter-increment: counterLi;
+        content: counter(counterLi)'.';
+        position: absolute;
+        left: .2em;
+        top: .2em;
+        font-size: .7em;
+        line-height: inherit;
+      }
+    }    
+  }
+}
+.rating {
+
+  &--small {
+  }
+
+}
+.custom-radio-color {
+  margin-right: calc(8 / $rem-size) * 1rem;
+  display: block;
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__span {
+    display: block;
+    width: calc(24 / $rem-size) * 1rem;
+    height: calc(24 / $rem-size) * 1rem;
+    overflow: hidden;
+    border-radius: calc(4 / $rem-size) * 1rem;
+    img {
+      width: 100%;
+      display: block;      
+    }
+  }
+  &__input:checked + &__span {
+    background-color: white;
+    border: calc(1 / $rem-size) * 1rem solid black;
+    img {
+      border-radius: calc(3 / $rem-size) * 1rem;
+      border: calc(1 / $rem-size) * 1rem solid white;
+    }
+  }
+}
+.count-input {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  border: calc(1 / $rem-size) * 1rem solid #D1D3D7;
+  border-radius: calc(4 / $rem-size) * 1rem;
+  font-size: calc(14 / $rem-size) * 1rem;
+  height: calc((50 / 14) * 1em);
+  overflow: hidden;
+  &__dec, &__inc {
+    flex: 0 0 calc((28 / 14) * 1em);
+    cursor: pointer;
+    background: url("../images/icon-minus.svg") no-repeat center;
+    background-size: calc((8 / 14) * 1em) auto;
+    &.disabled {
+      opacity: .3;
+    }
+  }
+  &__inc {
+    background: url("../images/icon-plus.svg") no-repeat center;
+    background-size: calc((8 / 14) * 1em) auto;
+  }
+
+  &__input {
+    display: block;
+    line-height:1;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    height: 100%;
+    font-size: inherit;
+    transition: border-color s ease-in-out;
+    color: black;
+    background-color: inherit;
+    text-align: center;
+  }
+
+}
+.previews {
+
+  &__item {
+    margin-bottom: calc(8 / $rem-size) * 1rem;
+    border-radius: calc(4 / $rem-size) * 1rem;
+    overflow: hidden;
+    a {
+      display: block;
+      position: relative;
+      padding-bottom: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.active {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: calc(2 / $rem-size) * 1rem solid black;
+        z-index: 2;
+        border-radius: calc(3 / $rem-size) * 1rem;
+      }      
+    }
+  }
+}
