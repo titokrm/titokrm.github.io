@@ -1,0 +1,185 @@
+.slider {
+  color: #fff;
+  &__controls {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-top: rem(20);
+  }
+
+  &__btn-prev {
+    margin: 0 rem(15);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all $animate-time ease-in-out;
+    outline: 1px solid transparent; 
+    @include fontrem(18, 21);
+    &:hover {
+      outline: 1px solid #fff; 
+    }    
+  }
+
+  &__btn-next {
+    margin: 0 rem(15);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all $animate-time ease-in-out;
+    outline: 1px solid transparent; 
+    @include fontrem(18, 21);
+    &:hover {
+      outline: 1px solid #fff; 
+    }    
+  }
+
+  &__btn-place {
+    position: relative;
+    z-index: 2;
+    margin-top: rem(30);
+    display: flex;
+    justify-content: center;
+    color: inherit;
+    @include fontrem(18, 21);
+    filter: drop-shadow( 0 0 .1em $link-default-color);
+  }
+
+  @include min($mob-width + 1) {
+    overflow: visible;
+    &__wrap {
+      position: relative;
+      height: rem(400);
+    }
+
+    &__item {
+      position: absolute;
+      transition: all var(--timeSlider) linear;
+      img {
+        display: block;
+        height: rem(307);
+      }
+      &--num-1 {
+        top: 0;
+        left: rem(-145);
+        z-index: 1;
+      }
+      &--num-2 {
+        top: rem(74);
+        left: rem(53);
+        z-index: 1;
+      }
+      &--num-3 {
+        top: 0;
+        left: rem(282);
+        z-index: 1;
+      }
+      &--top {
+        z-index: 10;
+      }
+      &.virash-1-2, &.virash-2-1 {
+  /*      animation-name: one-two;
+        animation-duration: calc(var(--timeSlider));
+        animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-delay: 0;*/
+        animation: one-two calc(var(--timeSlider)) linear 1 forwards;
+      }
+
+      &.virash-2-3, &.virash-3-2 {
+  /*      animation-name: two-three;
+        animation-duration: calc(var(--timeSlider));
+        animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-delay: 0;*/
+        animation: two-three calc(var(--timeSlider)) linear 1 forwards;
+      }
+
+      &.virash-2-1, &.virash-3-2 {
+        animation-direction: reverse;
+      }
+
+      @keyframes one-two {
+        0% {
+          top: 0;
+          left: rem(-145);
+        }
+        50% {
+          top: rem(74);
+          left: rem(-145);
+        }
+        100% {
+          top: rem(74);
+          left: rem(53);
+        }
+      }
+      
+      @keyframes two-three {
+        0% {
+          top: rem(74);
+          left: rem(53);
+        }
+        50% {
+          top: rem(74);
+          left: rem(282);
+        }
+        100% {
+          top: 0;
+          left: rem(282);
+        }
+      }
+      
+
+    }
+
+    &__wrap {
+//      transition: all calc(var(--timeSlider) / 2) ease-in-out;
+    }
+  }
+
+  @include max($mob-width) {
+    margin: 0 rem($padding-container-mob * -1);
+    overflow: hidden;
+    &__wrap {
+      height: rem(220);
+      position: relative;
+      left: -35px;
+    }
+
+    &__item {
+      //position: relative;
+      transition: none;
+      img {
+        height: auto;
+        width: 100%;
+      }
+      top: auto;
+      left: auto;
+      right: auto;
+    }
+
+    &__controls {
+      margin-top: 0;
+    }
+
+    &__btn-prev {
+      margin: 0 rem(7.5);
+      @include fontrem(14, 16);
+    }
+
+    &__btn-next {
+      margin: 0 rem(7.5);
+      @include fontrem(14, 16);
+    }
+
+    &__btn-place {
+      @include fontrem(14, 16);
+      margin-top: rem(12.4);
+      filter: none;
+      color: $link-default-color;
+    }
+
+  }
+}

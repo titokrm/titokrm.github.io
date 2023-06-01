@@ -1,0 +1,18 @@
+.picture-with-shadow {
+  position: relative;
+  &__img {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+  &:before {
+    content: '';
+    @include absolute-center();
+    width: perc(496, 536);
+    height: 100%;
+    z-index: 1;
+    background: #38382A;
+    opacity: 0.5;
+    filter: blur(rem(91));
+  }
+}

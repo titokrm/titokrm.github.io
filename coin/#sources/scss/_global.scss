@@ -1,0 +1,185 @@
+:root {
+  font-size: calc($rem-size / 1920) * 100vw;
+  height: 100%;
+  @media only screen and (orientation: portrait) {
+    font-size: calc($rem-size / $min-width) * 100vw;
+  }
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  font-family: $default-font;
+  background-color: $back-default-color;
+  color: $text-default-color;
+  font-weight: normal;
+  font-style: normal;
+  //min-width: $min-width * 1px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+//[class*="container"] {
+.container {  
+  max-width: rem($width-container + $padding-container * 2);
+  margin: auto;
+  width: 100%;
+  padding: 0 rem($padding-container);
+  flex: 1 1 auto;
+  @include max($tab-width) {
+    padding: 0 rem($padding-container-tab);
+    max-width: rem($width-container + $padding-container-tab * 2);
+  }
+  @media only screen and (orientation: portrait) {
+    padding: 0 rem($padding-container-mob);
+    max-width: rem($width-container + $padding-container-mob * 2);
+  }
+  @include max($xs-mob-width) {
+    padding: 0 rem($padding-container-xs);
+    max-width: rem($width-container + $padding-container-xs * 2);
+  }
+}
+
+body.scroll-lock {
+  position: fixed;
+	left: 0;
+	width: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+body.js-waiting:after {
+  position: fixed;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: url("../images/loading.gif") no-repeat center;
+  background-size: 3.13rem auto;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.wrapper-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 1 auto;
+  background: url("../images/bg.png") no-repeat center;
+  background-size: cover;
+}
+body.scroll-lock .wrapper-global {
+  overflow-y: scroll;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+.sidebar {
+}
+
+.burger {
+}
+
+a {
+  color: $link-default-color;
+  text-decoration: $link-decoration;
+  transition: all $animate-time ease-in-out;
+  &:hover {
+    color: $link-hover-default-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  fill: none;
+  transition: stroke $animate-time ease-in-out, fill $animate-time ease-in-out;
+  &--burger {
+    @include sizerem(41, 41);
+    stroke: $text-default-color;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+
+  &--transfer {
+    @include sizerem(24, 24);
+    stroke: $text-default-color;
+    stroke-width: 1.5;
+  }
+
+  &--money {
+    @include sizerem(24, 24);
+    stroke: $text-default-color;
+    stroke-width: 1.5;
+  }
+
+  &--shield {
+    @include sizerem(24, 24);
+    stroke: $text-default-color;
+    stroke-width: 1.5;
+  }
+
+  &--deal {
+    @include sizerem(24, 24);
+    stroke: $text-default-color;
+    stroke-width: 1.5;
+  }
+
+  &--help {
+    @include sizerem(24, 24);
+    fill: $text-default-color;
+  }
+
+  &--time {
+    @include sizerem(24, 24);
+    stroke: $text-default-color;
+    stroke-width: 1.5;
+  }
+
+  &--scan {
+    @include sizerem(17, 15);
+    fill: #A0A0A0;
+    display: block;
+  }
+
+  &--exchange {
+    @include sizerem(32, 32);
+    stroke: #3F66F4;
+    stroke-width: 2;
+  }
+
+  &--exchange-small {
+    @include sizerem(10, 10);
+    stroke: $text-default-color;
+    stroke-width: 1.5;
+    display: block;
+  }
+
+  &--sent-fast {
+    @include sizerem(39, 39);
+    stroke: #fff;
+    stroke-width: 2.35749;
+    stroke-linecap: round;
+    display: block;
+  }
+
+  &--close {
+    @include sizerem(22, 22);
+    fill: $link-default-color;
+    display: block;
+  }
+
+  &--diamond {
+    @include sizerem(24, 24);
+    stroke: #fff;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+}

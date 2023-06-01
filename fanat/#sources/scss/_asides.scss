@@ -1,0 +1,490 @@
+.contents-list {
+  margin-bottom: rem(32);
+  &__title {
+  }
+
+  &__list {    
+    font-size: rem(14);
+    line-height: em(20, 14);    
+  }
+
+  &__list-item {
+    padding-left: rem(36);
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: rem(8);
+      width: rem(8);
+      height: rem(8);
+      border-radius: rem(2);
+      top: rem(6);
+      background-color: $c-borbtnwhite;
+    }
+    &.active, &:hover {
+      color: $c-link;
+      &:before {
+        background-color: $c-link;
+      }
+    }
+  }
+
+  &__link-go {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.right-side .contents-list__list {
+  display: block !important;
+}
+.aside-title {
+  margin-bottom: rem(16);
+  font-size: rem(18);
+  line-height: em(24, 18);
+  font-weight: 900;
+}
+
+.main-content-block {
+  .contents-list__title {
+    font-size: rem(22);
+    line-height: em(26, 22);
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+  .contents-list__list {
+    margin-top: 1.25rem;
+    @media screen and (max-width: $xs-mob-width) {
+      margin-top: 1rem;
+    }
+  }
+  .aside-title {
+    font-size: rem(22);
+    line-height: em(26, 18);
+  }
+}
+
+.accordion-contents-list {
+
+  &__title {
+    position: relative;
+    padding-right: rem(24);
+    &:after {
+      content: '';
+      position: absolute;
+      width: rem(24);
+      height: rem(24);
+      right: 0;
+      top: 50%;
+      margin-top: rem(-10);
+      background: url("../images/icon-arrowdown.svg") no-repeat center;
+      background-size: 100% auto;
+      transition: transform .3s ease-in-out;      
+      display: none;
+    }
+  }
+  &__item.active {
+    .accordion-contents-list__title {
+      &:after {
+        transform: scaleY(-1);
+      }
+    }
+  }
+  @include max(1570) {
+    &__title {
+      cursor: pointer;
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.bonuses-block {
+  margin-bottom: 2rem;
+  &__title {
+  }
+
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(12);
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &__item {
+    flex: 0 0 calc(50% - rem(6));
+    display: flex;
+    flex-direction: column;
+    border-radius: rem(8);
+    background-color: #fff;
+    border: rem(1) solid $c-borbtnwhite;
+    padding: rem(16) rem(12) rem(12);
+  }
+
+  &__bkmk-icon {
+    margin: 0 auto rem(8);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;    
+    flex: 1 1 auto;
+  }
+
+  &__descrpition {
+    font-size: rem(12);
+    line-height: em(16, 12);
+    margin-bottom: rem(8);
+    text-align: center;
+    color: #636F7D;
+  }
+
+  &__btns {
+  }
+
+  &__btn-bonus {
+    width: 100%;
+    background-color: $c-bginput-dis;
+    position: relative;
+    padding-left: rem(28);
+    padding-right: rem(8);
+    margin-bottom: rem(8);
+    color: inherit;
+    font-size: rem(18);
+    .btn__icon {
+      left: rem(4);
+      top: rem(6);
+      position: absolute;
+    }
+  }
+
+  &__get-bonus {
+    width: 100%;
+  }
+}
+
+.sticky {
+  top: rem(32);
+  position: sticky;
+  padding-bottom: 1rem;
+  &.no-sticky {
+    position: static;
+    padding-bottom: 0;
+  }
+}
+
+.bonuses-block-mob, .contents-list-mob, .top-bookmaker-mob, .breadcrumbs-mob {
+  display: none;
+}
+
+/**********************temporary************************/
+section.breadcrumbs-mob:not(.content-block--no-round-mob) {
+  padding-top: 0;
+  margin-top: -0.25rem;
+  .breadcrumbs {
+    margin-bottom: 0;
+  }
+}
+/**********************************************/
+.helpful-links {
+
+  &__title {
+  }
+
+  &__list-single {
+    margin-bottom: rem(20);
+  }
+
+  &__accordion {
+  }
+}
+
+.helpful-list {
+  font-size: rem(14);
+  line-height: em(20, 14);
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+    &.active {
+      .helpful-list__title {
+        font-weight: 600;
+        &:before {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: $c-link;
+    }
+  }
+
+  &__title {
+    margin-left: rem(-20);
+    padding-left: rem(20);
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      left: 0;
+      position: absolute;
+      top: .5rem;
+      border-left: rem(4) solid transparent;
+      border-right: rem(4) solid transparent;
+      border-top: rem(4) solid $c-link;
+      transition: transform .3s ease-in-out;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__collapsed-block {
+    margin-left: rem(20);
+    padding-top: rem(12);
+    display: none;
+  }
+}
+.accordion-helpful {
+  font-size: rem(14);
+  line-height: em(20, 14);
+
+  &__item {
+    padding: rem(20) 0;
+    border-top: rem(1) solid $c-borbtnwhite;
+    &:last-child {
+      border-bottom: rem(1) solid $c-borbtnwhite;
+    }
+    &.active {
+      .accordion-helpful__title {
+        &:after {
+          transform: scaleY(-1);
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 700;
+    padding-right: rem(28);
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      width: rem(20);
+      height: rem(20);
+      right: 0;
+      top: 50%;
+      margin-top: rem(-10);
+      background: url("../images/icon-arrowdown.svg") no-repeat center;
+      background-size: 100% auto;
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &__collapsed-block {
+    margin-left: rem(20);
+    padding-top: rem(12);
+    display: none;
+  }
+
+  &__sub {
+
+  }
+  @media screen and (max-width: $tab-width) {
+    &__item {
+      padding-top: rem(12);
+      padding-bottom: rem(12);
+    }    
+  }
+}
+
+.top-bookmaker {
+  &:not(:last-child) {
+    margin-bottom: rem(32);
+  }  
+  
+  &__item:not(:last-child) {
+    margin-bottom: rem(12);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(20);
+  }
+  @media screen and (max-width: 1570px) and (min-width: 601px) {
+    &__items {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-left: -.375rem;      
+      margin-right: -.375rem;            
+    }
+    &__item {
+      margin-bottom: .75rem;
+      margin-left: .375rem;
+      margin-right: .375rem;
+      flex: 0 0 calc(33.33% - .75rem);
+    }
+  }
+  @media screen and (max-width: $mob-width) and (min-width: 601px) {
+    &__scroll {
+      overflow: auto;
+      padding-bottom: rem(8);
+      width: 100%;
+      min-width: 0;
+    }
+    &__item {
+      flex: 0 0 rem(300);
+      margin-left: 0;
+      margin-right: .75rem;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__items {
+      flex-wrap: nowrap;
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: flex-start;
+    }
+  }
+}
+.top-bookmaker-card {
+  padding: rem(12);
+  background-color: #fff;
+  border-radius: rem(8);
+  display: grid;
+  grid-template-columns: rem(44) 1fr rem(80);
+  grid-template-rows: rem(44) rem(40);
+  gap: rem(12);
+  &__bkmk-icon {
+    width: rem(44);
+    height: rem(44);
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+  }
+
+  &__label {
+    font-size: rem(12);
+    line-height: em(16, 12);
+    color: #636F7D;
+  }
+
+  &__name-bkmk {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: rem(18);
+    line-height: em(20, 18);
+    font-weight: 700;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: rem(18.65);
+    background-color: #fff;
+    .rating__stars {
+      margin-right: 0;
+    }
+    .rating__nums {
+      font-size: rem(12);
+      b {
+        font-size: em(16, 12);
+      }
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(8);
+    grid-template-rows: rem(40);
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+
+@include max(1570) {
+  .bonuses-block-mob, .contents-list-mob, .top-bookmaker-mob {
+    margin-bottom: rem(40);
+    display: block;
+    padding-bottom: 1px;
+  }
+  .bonuses-block__btn-bonus .btn__icon {
+    left: 1.15rem;
+  }
+  .bonuses-block__layout {
+    flex-wrap: nowrap;
+  }
+  .bonuses-block__item {
+    flex: 0 0 calc(25% - .5625rem);
+  }
+  .bonuses-block-mob {
+    margin-top: rem(40);
+  }
+}
+
+@media screen and (max-width: $mob-width) {
+  .bonuses-block__btn-bonus .btn__icon {
+    left: 0.25rem;
+  }
+  .bonuses-block__scroll {
+    overflow: auto;
+    padding-bottom: rem(12);
+  }
+  .bonuses-block__layout {
+    //min-width: rem(665);
+  }
+  .bonuses-block__item {
+    min-width: rem(144);
+  }
+}
+
+@media screen and (max-width: $xs-mob-width) {
+  .bonuses-block__layout {
+    //width: rem(600);
+  }
+  section.content-block.breadcrumbs-mob {
+    display: block;
+    padding-bottom: rem(8);
+    margin-bottom: rem(12);
+    overflow: auto;
+    margin-right: -1rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  @media screen and (max-width: $mob-width) {
+    .bonuses-block__item {
+      &:not(:last-child) {
+        margin-right: .75rem;
+      }
+    }
+  }
+}

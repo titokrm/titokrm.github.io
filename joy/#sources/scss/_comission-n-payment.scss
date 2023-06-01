@@ -1,0 +1,27 @@
+.comission-n-payment {
+  background-color: #191E22;
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: rem(56);
+  }
+
+  &__types {
+    padding-bottom: rem(80);
+  }
+
+  &__payment {
+    
+  }
+
+  @include max($mob-width) {
+    padding-top: rem(40);
+    &__title {
+      margin-bottom: rem(32);
+    }
+    &__types {
+      padding-bottom: rem(7.5);
+    }
+  }
+}

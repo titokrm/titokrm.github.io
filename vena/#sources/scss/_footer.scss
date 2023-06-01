@@ -1,0 +1,6 @@
+.footer {
+  padding: rem(68) 0;
+  @include max($mob-width) {
+    padding: rem(40) 0 rem(20);
+  }
+}

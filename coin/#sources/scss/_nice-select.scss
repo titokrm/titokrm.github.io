@@ -1,0 +1,320 @@
+// Default variables
+$font_size: rem(18) !default;
+$font_size_small: rem(18) !default;
+$font_size_mob: rem(16) !default;
+$font_size_small_mob: rem(16) !default;
+
+$input_border_radius: rem(5) !default;
+$input_border_radius_small: 0 !default;
+$input_border_width: 1px !default;
+$input_border_width_small: 0 !default;
+$input_height: rem(86) !default;
+$input_height_small: rem(36) !default;
+$input_height_mob: rem(61) !default;
+$input_height_small_mob: rem(36) !default;
+$dropdown_padding: rem(18) !default;
+$dropdown_padding_small: rem(2) !default;
+$dropdown_padding_mob: rem(13) !default;
+$dropdown_padding_small_mob: rem(2) !default;
+
+$gray_dark: #444 !default;
+$gray: #999 !default;
+$gray_light: rgba(225, 224, 225, 0.55) !default;
+$gray_lighter: rgba(61, 189, 236, 0.1) !default;
+$primary_light: #ECEEF5 !default;
+$arrow_color: $gray !default;
+
+$space_for_arrow: rem(12);
+$space_for_arrow_small: rem(22);
+
+// Style the dropdown
+.nice-select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
+  border-radius: $input_border_radius;
+  border: solid $input_border_width $gray_light; 
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  //display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  font-family: inherit;
+  font-size: $font_size;
+  font-weight: normal;
+  height: $input_height;
+  line-height: $input_height - rem(2);
+  outline: none;
+  padding-left: $dropdown_padding;
+  padding-right: $dropdown_padding + $space_for_arrow;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  &:hover {
+    border-color: darken($gray_light, 5%);
+  }
+  &:active, &:focus {
+    border-color: $primary_light;
+  }
+  // Arrow
+  &:after { 
+    /*
+    border-bottom: 2px solid $arrow_color;
+    border-right: 2px solid $arrow_color;
+    content: '';
+    display: block; 
+    height: 5px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute; 
+    right: 12px; 
+    top: 50%; 
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 5px;
+    */
+    content: '';
+    display: block; 
+    pointer-events: none;
+    position: absolute; 
+    right: 0; 
+    top: 50%; 
+    transform-origin: 50% 40%;
+    transform: scaleY(1);
+    transition: all 0.15s ease-in-out;
+  }
+  
+  &.open {
+    @extend :active;
+    &:after {
+      transform: scaleY(-1);
+    }
+    .list {
+      &:not(.toTop) {
+        top: 100%; 
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1) translateY(0);
+      }
+      &.toTop {
+        top: auto;
+        bottom: 100%; 
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1) translateY(0);
+      }
+    }
+  }
+  &.disabled {
+    border-color: lighten($gray_light, 2%);
+    color: $gray;
+    pointer-events: none;
+    &:after { 
+      border-color: lighten($arrow_color, 20%);
+    }
+  }
+  
+  // Modifiers
+  &.wide {
+    width: 100%;
+    .list {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+  &.right {
+    float: right;
+    .list {
+      left: auto;
+      right: 0;
+    }
+  }
+  &.small {
+    font-size: $font_size_small;
+    height: $input_height_small;
+    line-height: $input_height_small - rem(2);
+    border-radius: $input_border_radius_small;
+    border-width: $input_border_width_small;
+    padding-left: $dropdown_padding_small;
+    padding-right: $dropdown_padding_small + $space_for_arrow_small;
+    &:after { 
+      @include sizerem(15, 10);
+    }
+    .option {
+      line-height: $input_height_small - rem(2);
+      min-height: $input_height_small - rem(2);
+    }
+  }
+  
+  // List and options
+  .list {
+    background-color: #fff;
+    border-radius: $input_border_radius;
+    box-shadow: 0 0 0 1px rgba($gray_dark, .11);
+    box-sizing: border-box;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    transition: transform .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+    z-index: 9;
+
+
+    &:hover .option:not(:hover) {
+      background-color: transparent !important;
+    }
+    &:not(.toTop) {
+      margin-top: 4px;
+//      top: 100%; 
+      top: -1000vh;
+      transform-origin: 0 0;
+      transform: scale(.75) translateY(calc($input_height / -2));
+    }
+    &.toTop {
+      margin-bottom: 4px;
+//      bottom: 100%; 
+      top: -1000vh;      
+      transform-origin: 0 100%;
+      transform: scale(.75) translateY(calc($input_height / 2));
+    }
+  }
+  .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: $input_height - 2;
+    list-style: none;
+    min-height: $input_height - 2;
+    outline: none;
+    padding-left: $dropdown_padding;
+    padding-right: $dropdown_padding;
+    text-align: left;
+    transition: all 0.2s;
+    &:hover, &.focus, &.selected.focus { 
+      background-color: $gray_lighter;
+    }
+    &.selected { 
+      font-weight: bold;
+    }
+    &.disabled {
+      background-color: transparent;
+      color: $gray;
+      cursor: default;
+    }
+  }
+}
+
+.select-lang {
+  .nice-select {
+    background-color: transparent;
+    border-color: transparent;
+    &:after {
+      margin-top: rem(-5);
+      @include sizerem(15, 10);
+      background: url('data:image/svg+xml,\
+      <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg"> \
+        <path d="M9.58223 2.31812L4.71165 2.31812C4.0428 2.31812 3.68986 3.11019 4.1371 3.60752L6.57239 6.31548C6.87937 6.65683 7.41451 6.65683 7.72148 6.31548L10.1568 3.60752C10.604 3.11019 10.2511 2.31812 9.58223 2.31812Z" fill="%23A0A0A0"/> \
+      </svg>') no-repeat center;      
+      background-size: contain;
+    }
+  }
+}
+
+.select-currency {
+  .nice-select {
+    .current {
+      flex: 1 1 auto;
+      font-weight: 600;
+    }
+    &:after {      
+      right: rem(17);
+      margin-top: rem(-7.5);
+      @include sizerem(22, 15);
+      background: url('data:image/svg+xml,\
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"> \
+      <path d="M13.8335 3.56757L8.16583 3.56757C6.78394 3.56757 6.05472 5.20407 6.97877 6.23158L9.81261 9.38273C10.4469 10.088 11.5525 10.088 12.1867 9.38273L15.0206 6.23158C15.9446 5.20407 15.2154 3.56757 13.8335 3.56757Z" fill="%23111111"/> \
+      </svg>') no-repeat center;
+      background-size: contain;
+    }
+    width: 100%;
+    .list {
+      min-width: 100%;
+    }
+  }
+}
+
+// Use display instead of opacity for IE <= 10
+.no-csspointerevents .nice-select {
+  .list {
+    display: none;
+  }
+  &.open {
+    .list {
+      display: block;
+    }
+  }
+}
+
+.item-with-icon {
+  display: flex;
+  align-items: center;
+  .icon-select {
+    flex: 0 0 rem(53);
+    margin-right: rem(20);
+    position: relative;
+    img {
+      max-width: 100%;
+      min-width: rem(36);
+      display: block;
+    }
+  }
+}
+
+.select-lang .img-select {
+  @include sizerem(24, 24);
+  margin-right: rem(17);
+}
+
+@media only screen and (orientation: portrait) {
+  .nice-select {
+    height: $input_height_mob;
+    line-height: $input_height_mob - rem(2);
+    font-size: $font_size_mob;
+    padding-left: $dropdown_padding_mob;
+    padding-right: $dropdown_padding_mob + $space_for_arrow;
+  }
+  .nice-select {
+    .list {
+      &:not(.toTop) {
+        
+      }
+    }
+  }
+  .item-with-icon {
+    .icon-select {
+      flex: 0 0 rem(38);
+      img {
+        min-width: rem(30);
+        max-height: rem(30);
+      }
+    }
+  }
+  .select-currency {
+    .nice-select {
+      &:after {      
+        right: rem(13);
+        margin-top: rem(-5);
+        @include sizerem(16, 10);
+        background-size: 100% auto;
+      }
+    }
+  }
+
+}

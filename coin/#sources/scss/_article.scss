@@ -1,0 +1,38 @@
+.article {
+
+  &__title {
+    margin-bottom: rem(63);
+  }
+
+  &__subtitle {
+    @include fontrem(32, 38.98, 600);
+    margin-bottom: rem(9);
+  }
+  p {
+    @include fontrem(22, 26.8);
+    color: #8C8C8C;
+    &:not(:last-child) {
+      margin-bottom: rem(21.8);
+    }
+  }
+  @media only screen and (orientation: portrait) {
+    &__title {
+      margin-bottom: rem(13);
+    }
+
+    &__subtitle {
+      @include fontrem(22, 26.8);
+      margin-bottom: rem(10);
+    }
+    p {
+      @include fontrem(14, 17.05);
+      text-align: justify;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+    p + &__subtitle {
+      margin-top: rem(24);
+    }
+  }
+}

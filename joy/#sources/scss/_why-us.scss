@@ -1,0 +1,30 @@
+.why-us {
+  background-color: #2B2B33;
+  padding: rem(120) 0;
+  overflow: hidden;
+  &__container {
+
+  }
+
+  &__title {
+    margin-bottom: rem(56);
+  }
+
+  &__list-features {
+  }
+
+  &__btn {
+    margin-top: rem(80);
+    margin-bottom: 0;
+  }
+  @include max($mob-width) {
+    padding: rem(40) 0 0;
+    &__title {
+      margin-bottom: rem(28);
+    }
+    &__btn {
+      margin-top: rem(44);
+      margin-bottom: rem(44);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.field-wrap {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  &--radiobtn {
+    display: flex;
+  }
+
+  &__radio {
+    &:not(:last-child) {
+      margin-right: rem(11);
+    }
+  }
+
+  &__icon-txt {
+    @include fontrem(16, 19.36, 600);
+    font-family: $Inter;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    position: absolute;
+    right: rem(-10);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: rem(10);
+  }
+
+  @media only screen and (orientation: portrait) {
+    &--radiobtn {
+    }
+
+    &__icon-txt {
+      @include fontrem(12, 14.52);
+    }
+
+    &__radio {
+      &:not(:last-child) {
+        margin-right: rem(4.58);
+      }
+    }
+  }
+}

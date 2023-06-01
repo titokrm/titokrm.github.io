@@ -1,0 +1,83 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__text {
+    @include fontrem(18, 24.48);
+    margin-bottom: rem(24.48);
+  }
+
+  &__author {
+    display: flex;
+  }
+
+  &__logo {
+    flex: 0 0 rem(100);
+    margin-right: rem(20);
+  }
+
+  &__rounded {
+    display: flex;
+    @include sizerem(100, 100);
+    background-color: #232B7C;
+    border-radius: 50%;
+    padding: rem(2);
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &__name {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include fontrem(20, 26, 700);    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__icon {
+    margin-top: rem(20);
+    display: block;
+  }
+
+  &__link {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+  @include max($mob-width) {
+    &__text {
+      @include fontrem(16, 21.76);
+      margin-bottom: rem(21.76);
+    }
+
+    &__author {
+      display: block;
+    }
+
+    &__logo {
+      margin-bottom: rem(12);
+    }
+
+    &__rounded {
+      @include sizerem(55, 55);
+    }
+
+    &__name {
+      @include fontrem(16, 20.8);
+    }
+
+    &__icon {
+      margin-top: rem(8);
+    }
+
+  }
+}

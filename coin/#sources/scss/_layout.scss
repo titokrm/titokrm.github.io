@@ -1,0 +1,47 @@
+.layout {
+  position: relative;
+  &--two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: rem(36);
+    row-gap: rem(36);
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__icon {
+    @include absolute-center();
+    @include sizerem(60, 60);
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 rem(3.90162) rem(19.6667) rem(3.27778) rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  @media only screen and (orientation: portrait) {
+    &--two-column {
+      display: block;
+    }
+
+    &__item {
+    }
+
+    &__icon {
+      @include sizerem(27.57, 27.57);
+      box-shadow: 0 rem(3.04194) rem(15.3333) rem(2.55556) rgba(0, 0, 0, 0.05);
+      .icon--exchange {
+        @include sizerem(14.68, 14.68);
+      }
+      top: auto;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.faq {
+  padding: rem(120) 0 rem(60);
+  overflow: hidden;
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: rem(56);
+  }
+
+  &__columns {
+    flex-direction: row-reverse;
+  }
+
+  @include max($mob-width) {
+    padding: rem(48) 0;
+    &__container {
+    }
+
+    &__title {
+      margin-bottom: rem(32);
+    }
+
+    &__columns {
+      display: block;
+    }
+
+  }
+}

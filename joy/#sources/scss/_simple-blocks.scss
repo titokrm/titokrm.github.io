@@ -1,0 +1,63 @@
+.h3 {
+  @include fontrem(48, 58.51, 700);
+}
+.title-section {
+  @include fontrem(48, 58, 700);  
+}
+.description-section {
+  @include fontrem(24, 32);
+}
+.simple-text {
+  @include fontrem(16, 20.8);
+  color: #999;
+  &:not(:last-child) {
+    margin-bottom: rem(20.8);
+  }
+  strong {
+    font-weight: 700;
+    color: #fff;
+  }
+}
+.title-main {
+  @include fontrem(61, 74.36, 800);
+}
+.text-main {
+  @include fontrem(28, 36);
+}
+
+.icon-bg {
+  @include sizerem(92, 92);
+  border-radius: rem(8);
+  background: rgba(153, 153, 153, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terms-text {
+  padding: rem(120) 0;
+  background-color: #2B2B33;
+}
+@include max($mob-width) {
+  .h3 {
+    @include fontrem(24, 32.64);
+  } 
+  .terms-text {
+    padding: rem(40) 0;
+  }
+  .title-main {
+    @include fontrem(32, 39);
+  }
+  .text-main {
+    @include fontrem(16, 19.5);
+  }
+  .title-section {
+    @include fontrem(32, 39);
+  }
+  .description-section {
+    @include fontrem(16, 19.5);
+  }
+  .icon-bg {
+    @include sizerem(60, 60);
+  }
+}

@@ -1,0 +1,216 @@
+:root {
+  font-size: $rem-size * 1px;
+  height: 100%;
+  @include min($mob-width + 1, $desk-sm-width) {
+    font-size: calc(16 / $desk-sm-width) * 100vw;
+  }
+  @include max($mob-width) {
+    font-size: calc(16 / $min-width) * 100vw;
+  }
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  font-family: $default-font;
+  background-color: $back-default-color;
+  color: $text-default-color;
+  font-weight: normal;
+  font-style: normal;
+  min-width: $min-width * 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="container"] {
+  max-width: rem($width-container + $padding-container * 2);
+  margin: auto;
+  width: 100%;
+  padding: 0 rem($padding-container);
+  @include max($tab-width) {
+    padding: 0 rem($padding-container-tab);
+    max-width: rem($width-container + $padding-container-tab * 2);
+  }
+  @include max($mob-width) {
+    padding: 0 rem($padding-container-mob);
+    max-width: rem($width-container + $padding-container-mob * 2);
+  }
+  @include max($xs-mob-width) {
+    padding: 0 rem($padding-container-xs);
+    max-width: rem($width-container + $padding-container-xs * 2);
+  }
+}
+
+body.scroll-lock {
+  position: fixed;
+	left: 0;
+	width: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+body.js-waiting:after {
+  position: fixed;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: url("../images/loading.gif") no-repeat center;
+  background-size: 3.13rem auto;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.wrapper-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 1 auto;
+  @include max($mob-width) {
+    padding-bottom: rem(51);
+  }
+}
+body.scroll-lock .wrapper-global {
+  overflow-y: scroll;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding-top: rem(132);
+  @include max($mob-width) {
+    padding-top: 0;
+  }
+}
+
+a {
+  color: $link-default-color;
+  text-decoration: $link-decoration;
+  transition: all $animate-time ease-in-out;
+  &:hover {
+    color: $link-hover-default-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  fill: none;
+  transition: stroke $animate-time ease-in-out, fill $animate-time ease-in-out;
+  &--close {
+    @include sizerem(27, 27); //sizerem(width,[height])
+    stroke: #8A8A8A;
+    stroke-width: 2;
+    display: block;
+  }
+
+  &--prev {
+    @include sizerem(68, 68);
+    stroke: #fff;
+    display: block;
+    filter: drop-shadow( 0 0 .1em $link-default-color);
+  }
+
+  &--next {
+    @include sizerem(68, 68);
+    stroke: #fff;
+    display: block;
+    filter: drop-shadow( 0 0 .1em $link-default-color);
+  }
+
+  &--play {
+    @include sizerem(68, 68);
+    //stroke: $link-default-color;
+    stroke: #fff;
+//    filter: drop-shadow( 0 0 .1em #fff);
+    filter: drop-shadow( 0 0 .1em $link-default-color);
+  }
+
+  &--download {
+    @include sizerem(68, 67);
+//    stroke: $link-default-color;
+    stroke: #fff;
+//    filter: drop-shadow( 0 0 .1em #fff);
+    filter: drop-shadow( 0 0 .1em $link-default-color);
+  }
+
+  &--position {
+    @include sizerem(68, 81);
+//    stroke: $link-default-color;
+    stroke: #fff;
+//    filter: drop-shadow( 0 0 .1em #fff);
+    filter: drop-shadow( 0 0 .1em $link-default-color);
+  }
+
+  &--vk {
+    @include sizerem(32, 20);
+    display: block;
+    fill: #7A7A7A;
+  }
+
+  &--ok {
+    @include sizerem(27, 27);
+    display: block;
+    fill: #7A7A7A;
+  }
+
+  &--cross {
+    @include sizerem(68, 68);
+    stroke: #47093E;
+    display: block;
+  }
+
+  &--paper {
+    @include sizerem(68, 59);
+    stroke: #47093E;
+    display: block;
+  }
+
+  &--pill {
+    @include sizerem(68, 58);
+    stroke: #47093E;
+    display: block;
+  }
+
+  &--star {
+    @include sizerem(124, 123);
+    stroke: #fff;
+    @include absolute-center();
+  }
+
+  &--spiral {
+    @include sizerem(149, 166);
+    stroke: #fff;
+    @include absolute-center(-32%);
+  }
+
+  &--target {
+    @include sizerem(48, 48);
+    @include absolute-center();
+    stroke: #fff;
+  }
+
+  @include max($mob-width) {
+    &--prev, &--next {
+      @include sizerem(34, 34);
+      stroke: $link-default-color;
+      filter: none;
+    }
+    &--close {
+      @include sizerem(9, 9);
+    }
+    &--star {
+      @include sizerem(65, 65);
+    }
+
+    &--spiral {
+      @include sizerem(83, 92.91);
+    }
+
+    &--target {
+      @include sizerem(27, 27);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.article {
+
+  p {
+    @include fontrem(24, 32);
+    color: #999;
+    &:not(:last-child) {
+      margin-bottom: rem(32);
+    }
+  }
+  p.article-intro {
+    color: inherit;
+  }
+  p + .h3 {
+    margin-top: rem(56);
+  }
+  .h3 {
+    margin-bottom: rem(16);
+  }
+
+  @include max($mob-width) {
+    p {
+      @include fontrem(16, 20.8);
+      &:not(:last-child) {
+        margin-bottom: rem(20.8);
+      }
+    }
+    .article-intro {
+      line-height: rem(20);
+      margin-bottom: rem(20);
+    }
+    p + .h3 {
+      margin-top: rem(28);
+    }
+    .h3 {
+      margin-bottom: rem(12);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: rem(31);
+  padding-bottom: rem(31);
+  background-color: #fff;
+  transition: box-shadow $animate-time ease-in-out;
+  &:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: rem(95);
+    content: '';
+    background-color: #fff;
+    z-index: 2015;
+  }
+  &__mooving {
+    animation: mooving-wave 10s linear infinite forwards;
+  }
+  @keyframes mooving-wave {
+      0% {transform: translateX(0)}
+    100% {transform: translateX(var(--tx))}
+  }
+  &__navigation-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #fff;
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2020;
+  }
+
+  &__logo {
+    margin-right: rem(20);
+  }
+
+  &__logo-img {
+    display: block;
+    @include sizerem(203);
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__where-buy {
+    margin-right: rem(52);
+  }
+
+  &__navigation {
+//    display: none;
+  }
+  @include min($mob-width + 1) {
+    &.header--mooved {
+      box-shadow: 0 0 rem(15) rgba(0,0,0,.2);  
+    }
+  }
+  @include max($mob-width) {
+    top: auto;
+    bottom: 0;
+    padding: rem(12) 0;
+    box-shadow: 0 0 rem(15) rgba(0,0,0,.2);
+    height: rem(51);
+    &:before {
+      height: 100%;      
+    }
+    &__mooving {
+      animation-duration: 5s;
+    }
+    &__logo-img {
+      @include sizerem(135);
+    }
+    &__where-buy {
+      margin-right: rem(14);
+    }
+  }
+}

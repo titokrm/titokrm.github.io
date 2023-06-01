@@ -1,0 +1,84 @@
+.faq-main {
+
+  &__header {
+  }
+
+  &__accordion {
+  }
+}
+.accordion {
+
+  &__item {
+    border-radius: rem(12);
+    background-color: #fff;
+    border: rem(1) solid $c-borbtnwhite;
+    margin-bottom: rem(12);
+    transition: box-shadow .3s ease-in-out;
+    &:hover {
+      box-shadow: 0 rem(2) rem(16) rgba(21, 28, 34, 0.16);
+      .accordion__title {
+        color: $c-link;
+      }
+    }
+    &.active {
+      .accordion__title {
+        &:after {
+          transform: scaleY(-1);
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding: rem(20) rem(64) rem(20) rem(24);
+    font-size: rem(22);
+    line-height: em(26, 22);
+    font-weight: 700;
+    position: relative;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      width: rem(28);
+      height: rem(28);
+      right: rem(24);
+      top: 50%;
+      margin-top: rem(-14);
+      background: url("../images/icon-arrowdown.svg") no-repeat center;
+      background-size: 100% auto;
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &__collapsed-block {
+    padding: 0 rem(20) rem(20);
+    font-size: rem(16);
+    line-height: em(26, 16);
+    display: none;
+    p:not(:last-child) {
+      margin-bottom: em(26, 16);
+    }
+  }
+  @media screen and (max-width: $xs-mob-width) {
+    &__item {
+      margin-bottom: rem(8);      
+    }
+    &__title {
+      padding: rem(16) rem(48) rem(16) rem(20);
+      font-size: rem(18);
+      line-height: em(22, 18);
+      &:after {
+        width: rem(24);
+        height: rem(24);
+        right: rem(12);
+        margin-top: rem(-12);
+      }
+    }
+    &__collapsed-block {
+      padding: 0 rem(20) rem(4);
+      font-size: rem(14);
+      line-height: em(22, 14);
+    }
+  }
+}

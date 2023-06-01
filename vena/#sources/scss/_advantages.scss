@@ -1,0 +1,26 @@
+.advantages {
+  padding: rem(64) 0;
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;    
+  }
+
+  &__item {
+    padding-right: rem(15);
+    flex: 0 0 33.33%;
+  }
+
+  @include max($mob-width) {
+    padding: rem(24) 0;
+    &__container {
+      display: block;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        padding-bottom: rem(20);
+      }
+    }
+  }
+}

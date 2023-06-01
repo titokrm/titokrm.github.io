@@ -1,0 +1,46 @@
+.history-operations {
+  padding: rem(46) rem(29);
+
+  &--empty {
+    padding: 0;
+  }
+  &__title {
+    margin-bottom: rem(37);
+    &--empty {
+      margin-bottom: rem(29.5);
+    }
+  }
+
+  &__info {
+    padding: rem(28) rem(38);
+    @include fontrem(22, 26.8, 600);
+    background: #FFFFFF;
+    border: 1px solid rgba(225, 224, 225, 0.55);
+    border-radius: rem(14);
+  }
+
+  @media only screen and (orientation: portrait) {
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    &__title {
+      margin-bottom: rem(21);
+      &--empty {
+        margin-bottom: rem(7);
+      }
+    }
+
+    &__info {
+      padding: rem(21);
+      @include fontrem(14, 17.05);
+      background: #FFFFFF;
+      border: 1px solid rgba(225, 224, 225, 0.55);
+      border-radius: rem(9.89);
+    }
+    &__scroll {
+      max-height: rem(314);
+      margin-right: rem(-15);
+      padding-right: rem(15);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+  #svg {
+//    outline: 1px solid red;
+  }
+
+  .bottom-inner {
+    animation: delta-period 10s ease-in-out infinite;
+    /*transform: translateX(-500px);*/
+    //display: none;
+  }
+
+  .top-inner {
+    animation: delta-period 10s 5s ease-in-out infinite;
+  }
+
+  .wave {
+    animation: wave-moving var(--t) linear infinite;
+  }
+
+  .wave.wave--bottom {
+    animation: wave-moving-bottom var(--t) linear infinite;
+  }
+
+  @keyframes delta-period {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(calc(var(--tx) * 0.5));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes wave-moving {
+      0% {transform: translateX(0)}
+    100% {transform: translateX(var(--tx))}
+  }    
+
+  @keyframes wave-moving-bottom {
+      0% {transform: translateX(var(--dtx))}
+    100% {transform: translateX(calc(var(--tx) + var(--dtx)))}
+  }    
+

@@ -1,0 +1,21 @@
+.rounded-block {
+
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid #FAFAFA;
+  box-shadow: 0 rem(4) rem(30) rem(6) rgba(129, 128, 134, 0.06);
+  border-radius: rem(30);
+
+  &__picture {
+    display: block;
+    width: 100%;
+    border-radius: rem(30) rem(30) 0 0;
+  }
+
+
+  @media only screen and (orientation: portrait) {
+    border-radius: rem(22);
+    &__picture {
+      border-radius: rem(21) rem(21) 0 0;
+    }
+  }
+}

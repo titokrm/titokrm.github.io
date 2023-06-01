@@ -1,0 +1,69 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all $animate-time ease-in-out;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  &--size {
+    &--normal {
+      border-radius: rem(8);
+      height: rem(72);
+      @include fontrem(24, 40, 800);
+      padding: 0 rem(56);
+    }
+    &--small {
+      border-radius: rem(4);
+      height: rem(44);
+      @include fontrem(16, 22, 800);
+      padding: 0 rem(25);
+    }
+    @include max($mob-width) {
+      &--normal {
+        @include fontrem(14, 20);
+        height: rem(44);
+        border-radius: rem(4);
+        padding: 0 rem(30);
+      }
+      &--small {
+        @include fontrem(7.64, 10.5);
+        height: rem(24);
+        border-radius: rem(2);
+        padding: 0 rem(12);
+      }
+    }
+  }
+
+  &--color {
+    &--transp {
+      background-color: transparent;
+      color: currentColor;
+      border: 1px solid currentColor;
+      outline: 1px solid transparent;
+      &:hover {
+        outline: 1px solid currentColor;
+        color: currentColor;
+      }
+    }
+    &--default {
+      background-color: $gold-color;
+      color: $back-default-color;
+      box-shadow: 0px 0px em(15, 16) rgba(241, 195, 68, 0.45);
+      &:hover {
+        box-shadow: 0px 0px em(15, 16) rgba(241, 195, 68, 0.8);
+        color: $back-default-color;
+      }
+    }
+  }
+  @include max($mob-width) {
+    &--full-mob {
+      width: 100%;
+    }
+  }
+}

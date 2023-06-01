@@ -1,0 +1,42 @@
+.btn-n-picture {
+  display: flex;
+  &__btn-place {
+    flex: 0 0 rem(368);
+    position: relative;
+    z-index: 2;
+    padding-top: rem(40);
+  }
+
+  &__picture-place {
+    flex: 1 1 auto;
+    position: relative;
+    z-index: 1;
+    height: rem(681);
+  }
+  &__img {
+    @include absolute-center(-48.5%, -54%);
+    //translate(-44.5%, -54%)
+    //@include sizerem(1358, 1024);
+    @include sizerem(1102, 618);
+  }
+
+  @include max($mob-width) {
+    display: block;
+    &__btn-place {
+      padding-top: 0;
+    }
+    &__picture-place {
+      height: auto;
+    }
+    &__img {
+      position: relative;
+      top: auto;
+      height: rem(214);
+//      height: 214px;
+      transform: translateX(-49%);
+      width: auto;
+//      margin-top: 72px;
+      margin-top: rem(72);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.about-drug {
+  border-top: 1px solid $link-default-color;
+  &__item {
+    padding: rem(30) rem(30) rem(30) rem(98);
+    border-bottom: 1px solid $link-default-color;
+  }
+
+  @include max($mob-width) {
+    &__item {
+      padding: rem(20);
+    }
+
+  }
+}

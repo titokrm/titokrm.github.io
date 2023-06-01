@@ -1,0 +1,151 @@
+:root {
+  font-size: $rem-size * 1px;
+  height: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    font-size: 15px;
+  }  
+}
+
+@media screen and (max-width: 359px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: $default-font;
+  font-weight: normal;
+  font-style: normal;
+  min-width: 320px;
+  justify-content: space-between;
+  color: $c-main;
+  background-color: $c-bg-gray;
+}
+
+[class*="__container"], .layout {
+  max-width: rem($width-container);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem($padding-container);
+  @media screen and (max-width: $tab-width) {
+    padding: 0 rem($padding-container-mob);
+  }
+}
+
+.layout {
+  &--without-sidebar {
+    &:before {
+      content: '';
+      flex: 0 0 rem(296);
+      min-width: 0;
+      order: 1;      
+    }
+    &:after {
+      content: '';
+      flex: 0 0 rem(320);
+      min-width: 0;
+      order: 3;      
+    }
+    @media screen and (max-width: $tab-width) {
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@include min(1201) {
+  .layout {
+    padding-left: 0;
+  }
+}
+
+.wrapper {
+  max-width: rem(1440);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.left-side {
+  flex: 0 0 rem(296);
+  min-width: 0;
+  order: 1;
+}
+.right-side {
+  flex: 0 0 rem(320);
+  min-width: 0;
+  order: 3;
+}
+.main-content-block {
+  flex: 1 1 auto;
+  margin-left: rem(40);
+  margin-right: rem(40);
+  min-width: 0;
+  order: 2;
+}
+
+main.main-content-block {
+  padding-top: rem(20);
+}
+
+aside.left-side {
+  background-color: #fff;
+  border-top: rem(1) solid $c-borbtnwhite;
+  padding: rem(32) rem(24) rem(32);
+}
+
+aside.right-side {
+  padding-top: rem(32);
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+.color-link {
+  color: $c-link;
+}
+
+@media screen and (max-width: $desk-medium-width) {
+  .right-side {
+    display: none;
+  }
+  .main-content-block {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $tab-width) {
+  .left-side {
+    display: none;
+  }
+  .main-content-block {
+    margin-left: 0;
+  }
+  .layout {
+    padding-top: rem($height-header-mob);
+  }
+}
+
+a {
+  color: $c-link;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+    color: $c-link-hover;
+  }
+}

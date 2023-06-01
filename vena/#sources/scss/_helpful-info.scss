@@ -1,0 +1,123 @@
+.helpful-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: rem(30);
+  &__cell {
+    overflow: hidden;
+    border-radius: rem(18);
+    position: relative;
+    padding: rem(28);
+    &:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      content: '';
+      z-index: 10;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+   &--one {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    &:before {
+      background: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%);
+    }
+   }
+
+   &--two {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    &:before {
+      background: linear-gradient(180.79deg, rgba(71, 9, 62, 0.8) 0.68%, rgba(71, 9, 62, 0) 99.32%);
+    }
+   }
+
+   &--three {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    min-height: rem(282);
+    &:before {
+      display: none;
+    }
+   }
+
+   &--four {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    background-color: $link-default-color;
+    min-height: rem(165);
+    &:before {
+      display: none;
+    }
+   }
+
+   &--btn-place {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    padding: rem(16) 0 0;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+    color: $link-default-color;
+    &:before {
+      display: none;
+    }
+   }
+   
+  }
+
+  &__title {
+    @include fontrem(36, 36, 300);
+    color: #fff;
+    max-width: rem(218);
+    position: relative;
+    z-index: 15;
+  }
+
+  @include max($mob-width) {
+    grid-template-columns: 100%;
+    &__cell {
+      min-height: 165px;
+    &--one {
+      grid-column: 1 / 2;
+      grid-row:  1 / 2;      
+    }
+
+    &--two {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--three {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    &--four {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+    }
+
+    &--btn-place {
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+      min-height: 0;
+    }
+    }
+
+    &__title {
+      @include fontrem(28, 28);
+    }
+  }
+}

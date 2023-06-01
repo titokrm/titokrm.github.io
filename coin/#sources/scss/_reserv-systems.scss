@@ -1,0 +1,86 @@
+.reserv-systems {
+  display: grid;
+  grid-template-rows: auto;
+  &--fiat {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: rem(80);
+    row-gap: rem(34);
+    padding-top: rem(50);
+  }
+
+  &--crypto {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: rem(35);
+    row-gap: rem(34);
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__icon {
+    display: flex;
+    margin: 0 auto rem(15);
+    @include sizerem(94, 84);
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto auto;
+    }
+  }
+
+  &__sum {
+    @include fontrem(22, 26.8, 600);
+    margin-bottom: rem(15);
+  }
+
+  &__name {
+    @include fontrem(16, 19.49);
+    color: #5B5757;
+
+  }
+
+  @media only screen and (orientation: portrait) {
+    &--fiat {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: rem(35);
+      row-gap: rem(60);
+      padding-top: rem(20);
+    }
+
+    &--crypto {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: rem(10);
+      row-gap: rem(25);
+      .reserv-systems__icon {
+        @include sizerem(47, 47);
+      }
+    }
+
+    &__item {
+      text-align: center;
+    }
+
+    &__icon {
+      display: flex;
+      margin: 0 auto rem(11);
+      @include sizerem(65, 55);
+      img {
+        display: block;
+        max-width: 100%;
+        margin: auto;
+      }
+    }
+
+    &__sum {
+      @include fontrem(15, 18.27);
+      margin-bottom: rem(11);
+    }
+
+    &__name {
+      @include fontrem(11, 13.4);
+      color: #5B5757;
+    }
+  }
+}

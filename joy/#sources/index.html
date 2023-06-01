@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+@@if (minCss === '.min') {
+@@include('./_head.htm', {
+    "min": ".min"
+  })
+}
+@@if (minCss !== '.min') {
+@@include('./_head.htm', {
+    "min": ""
+  })
+}
+
+<body>
+  <div class="wrapper-global">
+    @@include('./_header.htm')
+    <main class="main">
+      <section class="joy-winner">
+        <div class="joy-winner__container">          
+          <div class="joy-winner__text">            
+            <h1 class="joy-winner__title title-main">
+              <img src="images/joy-winner.svg" alt="Joy Winner">
+              Affiliate Program
+            </h1>
+            <p class="joy-winner__description text-main">
+              Become a partner and make money by referring people to <a href="#">Joywinner.com</a>
+            </p>
+            <a href="#" class="btn btn--size--normal btn--color--default">Become our partner</a>
+          </div>
+          <div class="joy-winner__picture">
+            <picture>
+              <source type="image/webp" srcset="images/game-devices.webp 1x, images/game-devices@2x.webp 2x">
+              <img src="images/game-devices.png" alt="" srcset="images/game-devices.png 1x, images/game-devices@2x.png 2x">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="comission-n-payment">
+        <div class="comission-n-payment__container">
+          <h3 class="comission-n-payment__title title-section">Commisions & payments</h3>
+          <div class="comission-n-payment__types types-comission">
+            <div class="types-comission__item">
+              <h4 class="types-comission__name">
+                Revenue Share
+              </h4>
+              <h5 class="types-comission__profit">
+                Up to 50%
+              </h5>
+              <p class="types-comission__description simple-text">NNCO Lifetime Revenue</p>
+            </div>
+            <div class="types-comission__item">
+              <h4 class="types-comission__name">
+                CPA
+              </h4>
+              <h5 class="types-comission__profit">
+                Up to 400
+              </h5>
+              <p class="types-comission__description simple-text">Commision Depends <br>On Targeted Geos And Traffic Sources</p>
+            </div>
+            <div class="types-comission__item">
+              <h4 class="types-comission__name">
+                Hybrid
+              </h4>
+              <h5 class="types-comission__profit">
+                CPA + RS
+              </h5>
+              <p class="types-comission__description simple-text">Negotiated On An Individual Basis</p>
+            </div>
+            <div class="types-comission__item">
+              <h4 class="types-comission__name">
+                Sub-Affiliate
+              </h4>
+              <h5 class="types-comission__profit">
+                5%
+              </h5>
+              <p class="types-comission__description simple-text">Lifetime Revenue</p>
+            </div>
+          </div>
+        </div>
+        <div class="comission-n-payment__payment payment">
+          <div class="payment__container">
+            <div class="payment__item">
+              <div class="payment__percent">30%</div>
+              <div class="payment__name">
+                from NGR                
+              </div>
+              <p class="payment__text simple-text">
+                0-5 FTD per month
+              </p>
+              <div class="payment__label"></div>
+            </div>
+            <div class="payment__item">
+              <div class="payment__percent">35%</div>
+              <div class="payment__name">
+                from NGR                
+              </div>
+              <p class="payment__text simple-text">
+                6-10  FTD per month
+              </p>
+              <div class="payment__label"></div>
+            </div>
+            <div class="payment__item">
+              <div class="payment__percent">40%</div>
+              <div class="payment__name">
+                from NGR                
+              </div>
+              <p class="payment__text simple-text">
+                11-20 FTD per month
+              </p>
+              <div class="payment__label"></div>
+            </div>
+            <div class="payment__item">
+              <div class="payment__percent">45%</div>
+              <div class="payment__name">
+                from NGR                
+              </div>
+              <p class="payment__text simple-text">
+                21-30 FTD per month
+              </p>
+              <div class="payment__label"></div>
+            </div>
+            <div class="payment__item">
+              <div class="payment__percent">50%</div>
+              <div class="payment__name">
+                from NGR                
+              </div>
+              <p class="payment__text simple-text">
+                31+ FTD per month
+              </p>
+              <div class="payment__label"></div>
+            </div>
+            <div class="payment__btn-place">
+              <a href="#" class="btn btn--size--normal btn--color--default btn--full-mob">Become our partner</a>
+            </div>
+            <ul class="payment__method">
+              <li class="payment__method-item">
+                <img src="images/payments/1.svg" alt="Skrill" class="skrill">
+              </li>
+              <li class="payment__method-item">
+                <img src="images/payments/2.svg" alt="Neteller" class="neteller">
+              </li>
+              <li class="payment__method-item">
+                <img src="images/payments/3.svg" alt="Bank transfer" class="bank-transfer">
+              </li>
+              <li class="payment__method-item">
+                <img src="images/payments/4.svg" alt="CoinsPaid" class="coinsPaid">
+              </li>
+              <li class="payment__method-item">
+                <img src="images/payments/5.svg" alt="Bitcoin" class="bitcoin">
+              </li>
+            </ul>
+            <p class="payment__description simple-text">Payment methods for partner’s withdrawals</p>
+          </div>
+        </div>
+      </section>
+      <section class="why-us">
+        <div class="why-us__container text-n-picture">
+          <div class="text-n-picture__text">
+            <h3 class="why-us__title title-section">Why Us?</h3>
+            <ul class="why-us__list-features list-features">
+              <li class="list-features__item">
+                <div class="list-features__icon-place">
+                  <div class="icon-bg">
+                    <svg class="icon icon--hand-money" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#hand-money"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-features__text-place">
+                  <h5 class="list-features__title">Quick Payouts</h5>
+                  <p class="list-features__description simple-text">We aim to process your hard-earned commission within the first week of the month.</p>
+                </div>
+              </li>
+              <li class="list-features__item">
+                <div class="list-features__icon-place">
+                  <div class="icon-bg">
+                    <svg class="icon icon--wallet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#wallet"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-features__text-place">
+                  <h5 class="list-features__title">Payment Methods</h5>
+                  <p class="list-features__description simple-text">Various payment methods for withdrawals in fiat or crypto currencies. Bank transfer, Neteller, Skrill, CoinsPaid</p>
+                </div>
+              </li>
+              <li class="list-features__item">
+                <div class="list-features__icon-place">
+                  <div class="icon-bg">
+                    <svg class="icon icon--man" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#man"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-features__text-place">
+                  <h5 class="list-features__title">VIP Manager</h5>
+                  <p class="list-features__description simple-text">Every partner has a personal VIP manager to assist with all queries.</p>
+                </div>
+              </li>
+              <li class="list-features__item">
+                <div class="list-features__icon-place">
+                  <div class="icon-bg">
+                    <svg class="icon icon--chip" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#chip"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-features__text-place">
+                  <h5 class="list-features__title">Top Game Lobbies</h5>
+                  <p class="list-features__description simple-text">We pride ourselves on the quality and quantity of games within our game lobbies for your player. We have something for everyone.</p>
+                </div>
+              </li>
+              <li class="list-features__item">
+                <div class="list-features__icon-place">
+                  <div class="icon-bg">
+                    <svg class="icon icon--diagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#diagram"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-features__text-place">
+                  <h5 class="list-features__title">Powerful analytics</h5>
+                  <p class="list-features__description simple-text">As a Joyrevenue Partner, you will receive detailed and flexible reporting tools with a user-friendly interface and real-time, reliable and transparent statistics.</p>
+                </div>
+              </li>
+              <li class="list-features__item">
+                <div class="list-features__icon-place">
+                  <div class="icon-bg">
+                    <svg class="icon icon--exchange" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#exchange"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="list-features__text-place">
+                  <h5 class="list-features__title">Flexible commission plans</h5>
+                  <p class="list-features__description simple-text">Get up to 50% commission! Lifetime revenue share on all players or a set CPA rate.</p>
+                </div>
+              </li>
+            </ul>
+            <a class="why-us__btn btn btn--color--default btn--size--normal btn--full-mob" href="#">Start Earning</a>
+          </div>
+          <div class="text-n-picture__picture">
+            <picture>
+              <source type="image/webp" srcset="images/casino-devices.webp 1x, images/casino-devices@2x.webp 2x">
+              <img class="text-n-picture__picture-with-shadow" src="images/casino-devices.png" alt="" srcset="images/casino-devices.png 1x, images/casino-devices@2x.png 2x">
+            </picture>
+          </div>
+        </div>        
+      </section>
+      <section class="about-joy">
+        <div class="about-joy__container">
+          <h3 class="about-joy__title title-section">About Joywinner.com</h3>
+          <p class="about-joy__text">Joywinner is a new rapidly growing online casino offering various payment methods, world’s top game providers and promos to suit any player’s needs.</p>
+          <ul class="about-joy__column list-features">
+            <li class="list-features__item list-features__item--no-icon">
+              <div class="list-features__text-place">
+                <h5 class="list-features__title">Product</h5>
+                <p class="list-features__description simple-text">Slots, Live Casino, Table Games</p>
+              </div>
+            </li>
+            <li class="list-features__item list-features__item--no-icon">
+              <div class="list-features__text-place">
+                <h5 class="list-features__title">Payment Methods</h5>
+                <p class="list-features__description simple-text">Visa, MasterCard, Neteller, Interac, Skrill, Bank Transfer, EcoPayz, eZeeWallet, Jeton, Flexepin, BTC, BCH, ETH, LTC, DOG, USDT, XRP, Piastrix, MuchBetter, MiFinity, CashtoCode, NeoSurf.</p>
+              </div>
+            </li>
+            <li class="list-features__item list-features__item--no-icon">
+              <div class="list-features__text-place">
+                <h5 class="list-features__title">Software</h5>
+                <p class="list-features__description simple-text">BGaming, Pragmatic Play, Evolution, Quickfire, Play’N Go, Relax gaming, QuickSpin, Spinomenal, Nolimit City, Amatic, EGT, Endorphina, Yggdrasil, iGTech, iSoftBet, Booming Games, Platipus, Betsoft, Nucleus, Ezugi, Playson, Boongo, 3oaks, KA Gaming, Belatra, Wazdan, Netent, Push Gaming, Playtech, Thunderkick, Red Tiger, GameBeat, Zillion, Mascot, NetGame, Evoplay.</p>
+              </div>
+            </li>
+          </ul>
+          
+          <ul class="about-joy__column list-features">
+            <li class="list-features__item list-features__item--no-icon">
+              <div class="list-features__text-place">
+                <h5 class="list-features__title">Languages</h5>
+                <p class="list-features__description simple-text">English, German,</p>
+              </div>
+            </li>
+            <li class="list-features__item list-features__item--no-icon">
+              <div class="list-features__text-place">
+                <h5 class="list-features__title">Currencies</h5>
+                <p class="list-features__description simple-text">EUR, USD, CAD, AUD, NZD, BTC, LTC, ETH, BCH, DOG, USDT, RUB, KZT, NOK, JPY, PLN.</p>
+              </div>
+            </li>
+            <li class="list-features__item list-features__item--no-icon">
+              <div class="list-features__text-place">
+                <h5 class="list-features__title">Restricted countries</h5>
+                <p class="list-features__description simple-text">United States of America, United Kingdom, Spain, France and its overseas territories (Guadeloupe, Martinique, French Guiana, Réunion, Mayotte, St. Martin, French Polynesia, Wallis and Futuna, New Caledonia), Netherlands, Israel, Lithuania, Dutch West Indies, Curacao, Gibraltar, Jersey, Greece, Czech Republic, Portugal, Hungary, Serbia.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="about-joy__btn-n-picture btn-n-picture">
+            <div class="btn-n-picture__btn-place">
+              <a href="#" class="btn btn--size--normal btn--color--default btn--full-mob">Start Earning</a>
+            </div>
+            <div class="btn-n-picture__picture-place">
+              <picture>
+                <source type="image/webp" srcset="images/gadgets-simple.webp 1x, images/gadgets-simple@2x.webp 2x">
+                <img class="btn-n-picture__img" src="images/gadgets-simple.png" alt="Phone and notebook" srcset="images/gadgets-simple.png 1x, images/gadgets-simple@2x.png 2x">
+              </picture>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section class="testimonials">
+        <div class="testimonials__container">          
+          <h3 class="testimonials__title title-section">Testimonials</h3>
+          <div class="testimonials__inner swiper">
+            <div class="testimonials__items swiper-wrapper">
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  N1 has been super easy to work with from the very start. The great deals and gaming experiences make it a high converting partner for us. The managers are always happy to help us out and put as much effort as possible to make it a successful partnership. Don’t miss out on this opportunity.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  N1 has been super easy to work with from the very start. The great deals and gaming experiences make it a high converting partner for us. 
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item review swiper-slide">
+                <p class="review__text">
+                  Promoting Slothunter is a no-brainer, with a responsive site, a large selection of games, and good player assistance. We look forward to a long and fruitful collaboration. Slothunter is one of the best products out there currently when it comes to overall quality.
+                </p>
+                <div class="review__author">
+                  <div class="review__logo">
+                    <div class="review__rounded">
+                      <img src="images/mockups/casino-logo.png" alt="Casinopilot24">
+                    </div>
+                  </div>
+                  <div class="review__name">
+                    <a href="#" class="review__link">casinopilot24.com</a>
+                    <svg class="review__icon icon icon--arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials__btn-place">
+            <a href="#" class="testimonials__btn btn btn--color--default btn--size--normal">All Testimonials</a>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq__container">
+          <h3 class="faq__title title-section">Faq</h3>
+          <div class="faq__columns text-n-picture">
+            <div class="text-n-picture__text accordion">
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>What is an affiliate program?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi corrupti atque nihil velit dolor ad provident reiciendis sit at ipsum inventore sed incidunt eos veritatis quibusdam nam obcaecati, consequuntur, odit quisquam necessitatibus perferendis. Eveniet recusandae hic voluptatem voluptates quaerat.</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>How much does it cost to join?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, minus placeat. Cupiditate iusto nesciunt eos est possimus corrupti voluptate. Impedit neque dolores deleniti.</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item">
+                <div class="accordion__title">
+                  <span>Can I still join if I don't have a website?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>It happens rear but if the client is not satisfied with the final paper, they should request a revision. We offer free and unlimitrd amendments if they do not contradict the inial instructions</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>What is an affiliate program?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi corrupti atque nihil velit dolor ad provident reiciendis sit at ipsum inventore sed incidunt eos veritatis quibusdam nam obcaecati, consequuntur, odit quisquam necessitatibus perferendis. Eveniet recusandae hic voluptatem voluptates quaerat.</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>What is an affiliate program?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi corrupti atque nihil velit dolor ad provident reiciendis sit at ipsum inventore sed incidunt eos veritatis quibusdam nam obcaecati, consequuntur, odit quisquam necessitatibus perferendis. Eveniet recusandae hic voluptatem voluptates quaerat.</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>What is an affiliate program?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi corrupti atque nihil velit dolor ad provident reiciendis sit at ipsum inventore sed incidunt eos veritatis quibusdam nam obcaecati, consequuntur, odit quisquam necessitatibus perferendis. Eveniet recusandae hic voluptatem voluptates quaerat.</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>What is an affiliate program?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi corrupti atque nihil velit dolor ad provident reiciendis sit at ipsum inventore sed incidunt eos veritatis quibusdam nam obcaecati, consequuntur, odit quisquam necessitatibus perferendis. Eveniet recusandae hic voluptatem voluptates quaerat.</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="accordion__item ">
+                <div class="accordion__title">
+                  <span>What is an affiliate program?</span>
+                  <div class="accordion__btn">
+                    <svg class="icon icon--plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon icon--minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="images/sprite.svg#minus"></use>
+                    </svg>
+                  </div>
+                </div>            
+                <div class="accordion__collapsed-block">
+                  <div class="accordion__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi corrupti atque nihil velit dolor ad provident reiciendis sit at ipsum inventore sed incidunt eos veritatis quibusdam nam obcaecati, consequuntur, odit quisquam necessitatibus perferendis. Eveniet recusandae hic voluptatem voluptates quaerat.</p>
+                  </div>
+                </div>            
+              </div>
+            </div>
+            <div class="text-n-picture__picture text-n-picture__picture--faq">
+              <picture>
+                <source type="image/webp" srcset="images/questions.webp 1x, images/questions@2x.webp 2x">
+                <img class="text-n-picture__picture-with-shadow text-n-picture__picture-with-shadow--faq" src="images/questions.png" alt="Faq" srcset="images/questions.png 1x, images/questions@2x.png 2x">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('./_section-contact-us.htm')
+    </main>
+    @@include('./_footer.htm')
+  </div>
+
+@@if (production === true) {
+  @@scriptStr
+} 
+@@if (production === false) {
+  @@include('./_scripts.htm')
+}
+</body>
+</html>

@@ -1,0 +1,43 @@
+.slide-nav {
+  
+    @keyframes hidemenu {
+      0% {
+        opacity: 0;        
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: rem(94);
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    z-index: 2010;
+    animation-name: hidemenu;
+    animation-duration: $animate-time * 2;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    transition: transform $animate-time ease-in-out;
+    overflow: auto;
+
+    &.active {
+      transform: translateY(0);
+      //box-shadow: 0 0 rem(20) rgba(0,0,0,0.7);
+    }
+  @include max($mob-width) {
+    top: 0;
+    transform: translateY(100%);
+    bottom: rem(50);
+    &.active {
+      transform: translateY(0);      
+    }
+  }
+}

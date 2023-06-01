@@ -1,0 +1,51 @@
+.menu {
+  /*
+  background: url("../images/menu-bg.svg") no-repeat center 2rem;
+  background-size: 100% auto;
+  background-color: #fff;
+  */
+  display: flex;
+  flex-direction: column;
+  padding: rem(40) 0;
+  overflow: auto;
+  &__list {
+    @include no-list;
+    @include fontrem(16, 16, 700);
+    font-family: $merriweather;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(91);
+    }
+    &.active {
+      .menu__link {
+        color: $link-default-color;          
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+    transition: all $animate-time ease-in-out;
+    &:hover {
+      color: $link-default-color;
+    }
+  }
+  @include max($mob-width) {
+    padding: rem(20) 0;
+    background-position: left top;
+    background-size: auto 100%;
+    &.active {
+      box-shadow: none;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: rem(59);
+      }
+    }
+  }
+}

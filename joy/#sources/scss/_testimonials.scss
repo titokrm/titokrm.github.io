@@ -1,0 +1,72 @@
+.testimonials {
+  background-color: #fff;
+  color: $back-default-color;
+  padding: rem(105) 0 rem(120);
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: rem(56);
+  }
+
+  &__inner {
+    margin-bottom: rem(56);
+  }
+
+  &__item {
+    border: 1px solid #E0E0E0;
+    border-radius: rem(8);
+    padding: rem(32);
+    //min-height: rem(420);
+  }
+  
+  &__btn-place {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include min($mob-width + 1) {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-gap: rem(45);
+      gap: rem(45);
+    }
+  }
+  @include max($mob-width) {
+    //padding-top: 50px;
+    padding-top: rem(50);
+    &__container {
+    }
+
+    &__title {
+      margin-bottom: rem(32);
+    }
+
+    &__inner {
+      margin-bottom: rem(24);
+      margin-right: rem(-$padding-container-mob);
+    }
+
+    &__items {
+    }
+
+    &__item {
+//      margin-right: rem(16);
+//      width: calc(240 / 360) * 100vw;
+//      flex: 0 0 calc(240 / 360) * 100vw;
+      //min-height: 0;
+      padding: rem(20);
+      height: auto;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__btn {
+      min-width: rem(255);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.form-recovery {
+  padding: rem(40) rem(29) rem(49);
+  &__title {
+    margin-bottom: rem(36);
+  }
+
+  &__field {
+    margin-bottom: rem(23);
+  }
+
+  &__note {
+    margin-bottom: rem(36);
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: rem(473);
+    margin: 0 auto;
+    display: block;
+  }
+
+  @media only screen and (orientation: portrait) {
+     padding: rem(12) rem(15) rem(40);
+    &__title {
+      margin-bottom: rem(11.5);
+    }
+
+    &__field {
+      margin-bottom: rem(26.5);
+    }
+
+    &__note {
+      margin-bottom: rem(16);
+    }
+
+    &__btn {
+
+    }
+  }
+}

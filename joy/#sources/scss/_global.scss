@@ -1,0 +1,212 @@
+:root {
+  //font-size: $rem-size * 1px;
+  height: 100%;
+  /*@include min($mob-width + 1, $desk-sm-width) {
+    font-size: calc(16 / $desk-sm-width) * 100vw;
+  }*/
+  font-size: calc($rem-size / 1920) * 100vw;
+  @include max($mob-width) {
+    font-size: calc(16 / $min-width) * 100vw;
+  }
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  font-family: $default-font;
+  background-color: $back-default-color;
+  color: $text-default-color;
+  font-weight: 500;
+  font-style: normal;
+  min-width: $min-width * 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="container"] {
+  max-width: rem($width-container + $padding-container * 2);
+  margin: auto;
+  width: 100%;
+  padding: 0 rem($padding-container);
+  @include max($tab-width) {
+    padding: 0 rem($padding-container-tab);
+    max-width: rem($width-container + $padding-container-tab * 2);
+  }
+  @include max($mob-width) {
+    padding: 0 rem($padding-container-mob);
+    max-width: rem($width-container + $padding-container-mob * 2);
+  }
+  @include max($xs-mob-width) {
+    padding: 0 rem($padding-container-xs);
+    max-width: rem($width-container + $padding-container-xs * 2);
+  }
+}
+
+body.scroll-lock {
+  position: fixed;
+	left: 0;
+	width: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+body.js-waiting:after {
+  position: fixed;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: url("../images/loading.gif") no-repeat center;
+  background-size: 3.13rem auto;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.wrapper-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 1 auto;
+}
+body.scroll-lock .wrapper-global {
+  overflow-y: scroll;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.two-column {
+  display: flex;
+  &__main {
+    flex: 1 1 auto;
+  }
+
+  &__sidebar {
+    flex: 0 0 rem(335);
+    margin-left: rem(40);
+  }
+
+  @include max($mob-width) {
+    display: block;
+    &__main {
+    }
+
+    &__sidebar {
+      &--nav-place {
+        display: none;
+      }
+    }
+
+  }
+}
+
+
+a {
+  color: $link-default-color;
+  text-decoration: $link-decoration;
+  transition: all $animate-time ease-in-out;
+  &:hover {
+    color: $link-hover-default-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  transition: stroke $animate-time ease-in-out, fill $animate-time ease-in-out;
+  &--close {
+    @include sizerem(22, 22);
+    fill: $gold-color;
+  }
+  &--burger {
+    @include sizerem(27, 18);
+    fill: $gold-color;
+    display: block;
+  }
+
+  &--arrow {
+    @include sizerem(36, 36);
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  &--plus {
+    @include sizerem(28, 28);
+    stroke: $gold-color;
+    stroke-width: 3;
+    fill: none;
+  }
+
+  &--minus {
+    @include sizerem(28, 4);
+    stroke: #16151A;
+    stroke-width: 3;
+    fill: none;
+  }
+
+  &--hand-money,
+  &--wallet,
+  &--man,
+  &--chip,
+  &--diagram,
+  &--exchange,
+  &--mail,
+  &--skype,
+  &--present,
+  &--hieroglyph,
+  &--money,
+  &--game,
+  &--card,
+  &--award,
+  &--thumbs-up,
+  &--currency-exchange,
+  &--head-phone,
+  &--telegram {
+    @include sizerem(58, 58);
+    stroke: $gold-color;
+    stroke-width: 2;
+    fill: none;
+  }
+  &--hieroglyph {
+    @include sizerem(54, 54);
+    fill: $gold-color;  
+    stroke: none;
+  }
+
+  @include max($mob-width) {
+    &--plus {
+      @include sizerem(20, 20);
+    }
+    &--minus {
+      @include sizerem(20);
+    }
+    &--hand-money,
+    &--wallet,
+    &--man,
+    &--chip,
+    &--diagram,
+    &--exchange,
+    &--mail,
+    &--skype,
+    &--present,
+    &--hieroglyph,
+    &--money,
+    &--game,
+    &--card,
+    &--award,
+    &--thumbs-up,
+    &--currency-exchange,
+    &--head-phone,
+    &--telegram {
+      @include sizerem(38, 38);
+    }
+    &--hieroglyph {
+      @include sizerem(35.22, 35.22);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.footer {
+  @include fontrem(16, 34, 400);
+  &__container {
+    padding-top: rem(48);
+    padding-bottom: rem(68);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: rem($padding-container);
+      right: rem($padding-container);
+      top: 0;
+      height: 1px;
+      background: #4F4F4F;
+    }
+  }
+
+  &__copy {
+  }
+
+  &__terms {
+    color: inherit;
+    text-decoration: none;
+    transition: all $animate-time ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @include max($mob-width) {
+    &__container {
+      padding-top: rem(40);
+      padding-bottom: rem(18);
+      display: block;
+      text-align: center;
+      &:before {
+        left: rem($padding-container-mob);
+        right: rem($padding-container-mob);
+      }
+    }
+    &__copy {
+      margin-bottom: rem(20);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.verify {
+
+  &__column {
+
+   &--data {
+    padding: rem(48) rem(29);
+   }
+
+   &--text {
+   }
+  }
+
+  &__text {
+    padding: rem(26) rem(24);
+    text-align: center;
+    color: #8C8C8C;
+    p {
+      @include fontrem(18, 21.92);
+      &:not(:last-child) {
+        margin-bottom: rem(21.92);
+      }
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__text-title {
+    margin-bottom: rem(16);
+  }
+
+  @media only screen and (orientation: portrait) {
+    &__column {
+
+      &--data {
+        padding: rem(12) rem(15) rem(50);
+        margin-bottom: rem(14);
+      }
+
+      &--text {
+      }
+    }
+
+    &__text {
+      padding: rem(19) rem(10) rem(34);
+      p {
+        @include fontrem(14, 17.05);
+        margin-right: rem(22);
+        margin-left: rem(22);
+      }
+    }
+
+    &__text-title {
+      margin-bottom: rem(20);
+    }
+  }
+}

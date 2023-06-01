@@ -1,0 +1,63 @@
+.form-account {
+
+  &__title {
+    margin-bottom: rem(40);
+  }
+
+  &__field {
+    margin-bottom: rem(47);
+   &--passw-login {
+    margin-bottom: rem(24);
+   }
+  }
+
+  &__note {
+    &--forgot-passw {
+      margin-bottom: rem(94);
+      text-align: right;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: rem(37);
+    margin-top: rem(43);
+  }
+
+  &__link {
+    color: #3F66F4;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: #3F66F4;
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    &__title {
+      margin-bottom: rem(13);
+    }
+    &__field {
+      margin-bottom: rem(12.5);
+      &--passw-login {
+        margin-bottom: rem(9.5);
+      }
+    }
+
+    &__note {
+      margin-top: rem(18.5);
+      &--forgot-passw {
+        margin-bottom: rem(17);
+      }
+    }
+
+    &__btn {
+      margin-top: rem(16);
+      margin-bottom: rem(16);
+    }
+
+    &__link {
+    }
+  }
+}

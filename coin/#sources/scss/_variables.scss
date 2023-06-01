@@ -1,0 +1,28 @@
+$default-font: 'ProximaNova', sans-serif;
+$Inter: 'Inter', serif;
+
+//*----Color const-----*/
+$back-default-color: #edf8ff;
+$text-default-color: #111;
+
+$link-default-color: #8C8C8C;
+$link-hover-default-color: #8C8C8C;
+$link-decoration: underline;
+$link-hover-decoration: none;
+//*----Size const------*/
+$rem-size: 16;
+
+$width-container: 1620;
+$padding-container: 0;
+$padding-container-tab: 0;
+$padding-container-mob: 10;
+$padding-container-xs: 10;
+
+//*----media const------*/
+$desk-sm-width: 1200;
+$tab-width: 992;
+$mob-width: 768;
+$xs-mob-width: 575;
+$min-width: 390;
+
+$animate-time: .2s;

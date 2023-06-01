@@ -1,0 +1,40 @@
+.advantag-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  &__img {
+    flex: 0 0 rem(68);
+    margin-right: rem(30);
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    @include fontrem(16, 24.77, 700);
+    font-family: $merriweather;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__hint {
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+    color: $link-default-color;
+    border-radius: 50%;
+    width: em(30, 16);
+    height: em(30, 16);
+    border: 1px solid $link-default-color;
+  }
+
+  @include max($mob-width) {
+    &__img {
+    }
+
+    &__text {
+      @include fontrem(14, 20);
+    }    
+  }
+}

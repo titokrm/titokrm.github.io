@@ -1,0 +1,318 @@
+.footer {
+  padding-top: rem(48);
+  padding-bottom: rem(24);
+  font-size: rem(12);
+  line-height: em(16, 12);
+  background-color: #fff;
+  &__container {
+    display: flex;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    &:before {
+      content: '';
+      flex: 0 0 rem(296);
+      min-width: 0;
+      order: 1;
+    }        
+    &:after {
+      order: 3;
+      content: '';
+      flex: 0 0 rem(320);
+      min-width: 0;    
+    }
+    @media screen and (max-width: $desk-medium-width) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: rem(168) 1fr;
+    grid-template-rows: auto;
+  }
+
+  &__menus {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding-bottom: rem(40);
+    border-bottom: rem(1) solid $c-borbtnwhite;
+  }
+
+  &__menus-item {
+    flex: 0 0 20%;
+    padding-right: 1.5rem;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: em(16, 12);
+    font-weight: 700;
+    color: $c-link;
+  }
+
+  &__menu {
+    @include no-list;
+    font-weight: 500;
+    li:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        color: $c-link;
+      }
+    }
+  }
+
+  &__logo {
+    grid-column: 1 / 2;
+    padding: rem(14) 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: rem(1) solid $c-borbtnwhite;
+    img {
+      width: rem(128);
+      display: block;
+    }
+  }
+
+  &__nav-n-trust {
+    grid-column: 2 / 3;
+    padding: rem(14) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rem(1) solid $c-borbtnwhite;
+  }
+
+  &__about-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 700;
+    li:not(:last-child) {
+      margin-right: rem(24);
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        color: $c-link;
+      }
+    }
+  }
+
+  &__trust {
+    img {
+      display: block;
+      width: rem(100);
+    }
+  }
+
+  &__bottom {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: rem(32);
+  }
+
+  &__note-n-logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1 1 auto;
+  }
+
+  &__note {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    margin-right: rem(12);
+    img {
+      display: block;
+      width: rem(44);
+      margin-right: rem(12);
+    }
+    p {
+      font-weight: 400;
+      max-width: rem(700);
+    }
+  }
+
+  &__partners-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    div + div {
+      margin-left: rem(18);
+    }
+    img {
+      display: block;
+      width: 100%;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .gordon-moody {
+      img {
+        max-width: rem(100);
+      }      
+    }
+    .begambleware {
+      img {
+        max-width: rem(148);
+      }      
+    }
+  }
+
+  &__copy {
+    flex: 0 0 100%;
+    padding-top: rem(32);
+  }
+
+  @media screen and (max-width: $tab-width) {
+    &__container {
+      &:before {
+        display: none;
+      }
+    }
+    .main-content-block {
+      margin-left: .75rem;
+      margin-right: .75rem;
+    }
+  }
+  @media screen and (max-width: $mob-width) {
+    padding-top: rem(40);
+    padding-bottom: rem(24);
+    &__menus {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      flex-wrap: wrap;
+      padding-bottom: 0;
+    }
+    &__logo {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      border: none;
+      justify-content: center;
+      padding-bottom: rem(32);
+      padding-top: 0;
+      img {
+        width: rem(178);
+      }
+    }
+    &__nav-n-trust {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+      padding: rem(24) 0;
+    }
+    &__bottom {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+      padding-top: rem(24);
+    }
+    &__menus-item {
+      flex: 0 0 33.33%;
+      padding-right: 1rem;
+      padding-bottom: rem(32);
+      &:nth-child(even) {
+        padding-right: 0;
+      }
+    }
+    &__note-n-logos {
+      flex-wrap: wrap;      
+    }
+    &__note {
+      flex-wrap: wrap;
+      margin-right: 0;
+      margin-bottom: rem(20);
+      img {
+        margin: 0 auto rem(16);
+        width: rem(44);
+      }
+      p {
+        flex: 0 0 100%;
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+    &__partners-logo {
+      flex: 0 0 100%;
+      div {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        padding: 0 1rem;
+        min-width: 0;
+        img {
+          max-width: 100%;
+        }
+      }
+      div + div {
+        margin-left: 0;
+      }
+    }
+    &__copy {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: $xs-mob-width) {
+    &__menus-item {
+      flex: 0 0 50%;
+    }
+    &__nav-n-trust {
+      flex-wrap: wrap;      
+    }
+    &__about-menu, &__trust {
+      flex: 0 0 100%;
+    }
+    &__trust {
+      display: flex;
+      justify-content: center;      
+      order: 1;
+      margin-bottom: rem(20);
+    }
+    &__about-menu {
+      order: 2;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      text-align: center;
+      li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: rem(8);
+      }
+    }
+    &__partners-logo {
+      gap: rem(16);
+      div {
+        padding: 0;
+      }
+    }
+  }
+  
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    @media screen and (max-width: $mob-width) {
+      &__partners-logo {
+        div {
+          &:first-child {
+            padding-right: rem(8);
+          }
+          &:last-child {
+            padding-left: rem(8);
+          }
+        }
+      }
+    }
+  }
+}

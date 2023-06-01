@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+@@if (minCss === '.min') {
+@@include('./_head.htm', {
+    "min": ".min"
+  })
+}
+@@if (minCss !== '.min') {
+@@include('./_head.htm', {
+    "min": ""
+  })
+}
+
+<body>
+  <div class="wrapper-global">
+    <div class="container container-grid">
+      @@include('./_header.htm')
+      <div class="mob-info-block"></div>
+      <main class="container-grid__main main main--exchange">
+        <div class="scroll scroll--change">
+          <form action="#" class="main__layout form-exchange layout layout--two-column">
+            <div class="form-exchange__column form-exchange__column--send layout__item rounded-block">
+              <h4 class="form-exchange__title block-title title-gradient">Отдаю</h4>
+              <div class="form-exchange__field form-exchange__field--select field-wrap select-currency">
+                <select name="currency-recive">
+                  <option value="btc">Bitcoin</option>
+                  <option value="xmr">XMR</option>
+                  <option value="card">Visa MasterCard</option>
+                </select>
+              </div>
+              <div class="form-exchange__field form-exchange__field--radio field-wrap field-wrap--radiobtn">
+                <label class="field-wrap__radio custom-radio"><input type="radio" class="custom-radio__input" name="currency-radio-1" data-currency="btc" checked id=""><span class="custom-radio__text">btc</span></label>
+              </div>
+              <div class="form-exchange__field form-exchange__field--input-sum field-wrap">
+                <input type="text" class="form-exchange__input input-text input-text--currency" name="" placeholder="Сумма" value="0.01">
+                <div class="field-wrap__icon-txt">
+                  btc
+                </div>
+              </div>
+              <div class="form-exchange__note">
+                Min: 0.001 BTC Max: 14.50 BTC <br>
+                <b>1 BTC = 1 511 754 RUB</b>
+              </div>
+              <div class="form-exchange__field form-exchange__field--email field-wrap">
+                <input type="email" class="form-exchange__input input-text" name="" placeholder="Email">
+              </div>
+            </div>
+
+            <div class="form-exchange__column layout__item rounded-block">
+              <h4 class="form-exchange__title block-title title-gradient">Получаю</h4>
+              <div class="form-exchange__field form-exchange__field--select field-wrap select-currency">
+                <select name="currency-recive">
+                  <option value="btc">Bitcoin</option>
+                  <option value="xmr">XMR</option>
+                  <option value="card">Visa MasterCard</option>
+                </select>
+              </div>
+              <div class="form-exchange__field form-exchange__field--radio field-wrap field-wrap--radiobtn">
+                <label class="field-wrap__radio custom-radio"><input type="radio" class="custom-radio__input" name="currency-radio-2" data-currency="uah" checked id=""><span class="custom-radio__text">uah</span></label>
+                <label class="field-wrap__radio custom-radio"><input type="radio" class="custom-radio__input" name="currency-radio-2" data-currency="usd" id=""><span class="custom-radio__text">usd</span></label>
+                <label class="field-wrap__radio custom-radio"><input type="radio" class="custom-radio__input" name="currency-radio-2" data-currency="eur" id=""><span class="custom-radio__text">eur</span></label>
+                <label class="field-wrap__radio custom-radio"><input type="radio" class="custom-radio__input" name="currency-radio-2" data-currency="rub" id=""><span class="custom-radio__text">rub</span></label>
+              </div>
+              <div class="form-exchange__field form-exchange__field--input-sum field-wrap">
+                <input type="text" class="form-exchange__input input-text input-text--currency" name="" placeholder="Сумма" value="1 511.75">
+                <div class="field-wrap__icon-txt">
+                  UAH
+                </div>
+              </div>
+              <div class="form-exchange__note">Резервы: 7243109.89 RUB</div>
+              <div class="form-exchange__text">
+                Требуется два подтверждения от сети Bitcoin. <br>Перевод только на банковские карты Европы.
+              </div>
+              <div class="form-exchange__field form-exchange__field--input-names field-wrap">
+                <input type="text" class="form-exchange__input input-text" name="" placeholder="ФИО получатея">
+              </div>
+              <div class="form-exchange__field form-exchange__field--input-card field-wrap">
+                <div class="field-wrap__icon">
+                  <svg class="icon icon--scan" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="images/sprite.svg#scan"></use>
+                  </svg>
+                </div>
+                <input type="text" class="form-exchange__input input-text" name="" placeholder="Номер карты">
+              </div>
+              <div class="form-exchange__note form-exchange__note--terms">
+                При нажатии на кнопку "Обменять" Вы соглашаетесь c <a href="#">пользовательским соглашением</a> нашего ресурса
+              </div>
+              <a href="#" class="form-exchange__btn btn btn--color--default btn--size--normal">Обменять</a>
+            </div>
+            <div class="layout__icon" data-da=".form-exchange__column--send,portrait,last">
+              <svg class="icon icon--exchange" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#exchange"></use>
+              </svg>
+            </div>
+          </form>
+        </div>
+      </main>
+      <aside class="container-grid__sidebar sidebar slide-nav js-slideblock">
+        <button class="sidebar__close js-close-menu">
+          <svg class="icon icon--close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <nav class="sidebar__nav navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item active">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon icon icon--transfer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/sprite.svg#transfer"></use>
+                </svg>
+                Обменять
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon icon icon--money" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/sprite.svg#money"></use>
+                </svg>
+                Резервы
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon icon icon--shield" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/sprite.svg#shield"></use>
+                </svg>
+                Crypto проверка
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon icon icon--deal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/sprite.svg#deal"></use>
+                </svg>
+                Партнерам
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon icon icon--help" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/sprite.svg#help"></use>
+                </svg>
+                FAQ
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon icon icon--time" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="images/sprite.svg#time"></use>
+                </svg>
+                История
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__autoexchange autoexchange" data-da=".mob-info-block,portrait,0">
+          <img class="autoexchange__icon" src="images/time-stars.svg" alt="">
+          <div class="autoexchange__text">Быстрый, автоматический способ обмена</div>
+        </div>
+      </aside>
+      <div class="container-grid__footer-select footer-select">
+        <div class="footer-select__select select-lang" data-da=".sidebar,portrait,last">
+          <select name="lang" class="small">
+            <option value="en">English</option>
+            <option value="ru" selected>Русский</option>
+            <option value="ua">Українська</option>
+          </select>
+        </div>
+      </div>
+      @@include('./_footer.htm')
+    </div>
+    <div class="call-support" data-da=".mob-info-block,(orientation: portrait) and (max-width: 768px),1">
+      <div class="call-support__btn hover-tremor">
+        <svg class="hover-tremor__target icon icon--sent-fast" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <use xlink:href="images/sprite.svg#sent-fast"></use>
+        </svg>
+      </div>
+      <div class="call-support__text">
+        Support 24/7
+      </div>
+    </div>
+  </div>
+
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/jquery-migrate-3.4.0.min.js"></script>
+<script src="js/jquery.nice-select.js"></script>
+<script src="js/simplebar.min.js"></script>
+
+@@if (production === true) {
+  @@scriptStr
+} 
+@@if (production === false) {
+  @@include('./_scripts.htm')
+}
+</body>
+</html>

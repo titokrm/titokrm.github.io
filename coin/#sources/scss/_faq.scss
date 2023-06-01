@@ -1,0 +1,112 @@
+.faq {
+  position: relative;
+
+  &__scroll {
+  }
+
+  &__title-block {
+    margin-bottom: rem(29.52);
+  }
+
+  &__title {
+    @include fontrem(22, 26.8, 600);    
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(8.73);
+    }
+    cursor: pointer;
+    padding: rem(28) rem(38);
+    padding-right: rem(35 + 22);
+    background-color: #fff;
+    border-radius: rem(14);
+    border: 1px solid rgba(225, 224, 225, 0.55);
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      top: rem(35); 
+      transform-origin: 50% 50%;
+      transform: scaleY(1);
+      transition: all 0.15s ease-in-out;
+      right: rem(17);
+      @include sizerem(22, 15);
+      background: url('data:image/svg+xml,\
+      <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"> \
+      <path d="M13.8335 3.56757L8.16583 3.56757C6.78394 3.56757 6.05472 5.20407 6.97877 6.23158L9.81261 9.38273C10.4469 10.088 11.5525 10.088 12.1867 9.38273L15.0206 6.23158C15.9446 5.20407 15.2154 3.56757 13.8335 3.56757Z" fill="%23111111"/> \
+      </svg>') no-repeat center;  
+      background-size: 100% 100%;    
+    }
+    @media only screen and (orientation: landscape) {
+      &:hover {
+        .faq__title {
+          background: linear-gradient(92.77deg, #2D59FB 2.15%, #3DBDEB 126.09%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &.active {
+      .faq__title {
+        background: linear-gradient(92.77deg, #2D59FB 2.15%, #3DBDEB 126.09%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:after {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  &__collapsed {
+    height: 0;
+    overflow: hidden;
+    transition: height $animate-time ease-in-out;    
+    @include fontrem(18, 21.92);
+    color: #8C8C8C;
+    p {
+      padding-top: rem(16.49);
+      @include fontrem(18, 21.92);
+      &:not(:last-child) {
+        margin-bottom: rem(21.92 - 16.49);
+      }
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    &__scroll {
+      padding-right: rem(15);
+    }
+    
+    &__title-block {
+      margin-bottom: rem(8);
+    }
+    &__title {
+      @include fontrem(14, 17.05);
+    }
+
+    &__item {
+      padding: rem(20);
+      padding-right: rem(35);
+      &:after {
+        @include sizerem(16, 10);
+        top: rem(24);
+      }
+      &:not(:last-child) {
+        margin-bottom: rem(4);
+      }
+    }
+
+    &__collapsed {
+      @include fontrem(12, 14.62);
+      p {
+        padding-top: rem(12);
+        @include fontrem(12, 14.62);
+        &:not(:last-child) {
+          margin-bottom: rem(2.62);
+        }
+      }
+    }
+  }
+}

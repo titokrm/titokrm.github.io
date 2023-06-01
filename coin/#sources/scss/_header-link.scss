@@ -1,0 +1,65 @@
+.header-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: $text-default-color;
+  &__icon {
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(16);
+    @include sizerem(45, 45);
+    flex: 0 0 rem(45);
+  }
+
+  &__icon-img {
+    @include sizerem(29, 29);
+    display: block;
+    position: relative;
+    left: rem(2);
+    fill: url(#paint0_linear_169_1815);
+  }
+  
+  &__text {
+    @include fontrem(18, 21.92);
+    flex: 1 1 auto;
+  }
+
+  &:hover, &.active {
+    color: $text-default-color;
+    .header-link__icon {
+      background: linear-gradient(146.59deg, #3DBDEB 3.97%, #2D59FB 78.95%);
+      background-color: #2d6cf9;
+      box-shadow: 0 rem(3.57098) rem(18) rem(3) rgba(129, 128, 134, 0.08);
+    }
+    .header-link__text {
+      color: $text-default-color;
+      background: linear-gradient(180deg, #2D59FB 0%, #3DBDEB 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-link__icon-img {
+      fill: #fff;
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    &__icon {
+      margin-right: 0;
+      @include sizerem(34, 34);      
+      flex: 0 0 rem(34);
+    }
+
+    &__icon-img {
+      @include sizerem(18.51, 18.51);
+      left: rem(1.31);   
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+}

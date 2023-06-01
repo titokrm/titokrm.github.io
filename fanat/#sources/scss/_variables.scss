@@ -1,0 +1,32 @@
+$default-font: 'Inter', sans-serif;
+
+/*----Size const------*/
+$rem-size: 16;
+$width-container: 1900;
+$padding-container: 20;
+$padding-container-mob: 12;
+$height-header: 72;
+$height-header-mob: 56;
+
+/*----color const------*/
+$c-link: #0094FF;
+$c-link-hover: #0071C2;
+$c-bgbtn-hover: #0094FF;
+$c-bgbtndark-hover: #151C22;
+$c-borbtnwhite: rgba(99, 111, 125, 0.12);
+$c-borinput-hover: rgba(99, 111, 125, 0.56);
+$c-bginput-dis: rgba(24, 72, 107, 0.03);
+$c-borinput-error: #FF3D12;
+$c-bg-gray: #f5f5f5;
+$c-main: #151C22;
+$shadow-drop: 0 rem(4) rem(16) rgba(21, 28, 34, 0.24);
+
+/*----media const------*/
+$desk-medium-width: 1570px;
+$desk-sm-width: 1400px; // 1200-1400
+$tab-width: 1200px;     // 768-1200
+$mob-width: 880px; // 480-768
+$xs-mob-width: 600px;  // 0 480
+
+$animate-time: .3s;
+

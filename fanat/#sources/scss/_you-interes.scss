@@ -1,0 +1,125 @@
+.you-interested {
+  &__scroll {
+    overflow: visible;
+  }
+  &__layout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: rem(20);
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: rem(12);
+    padding: rem(20);
+    border: rem(1) solid $c-borbtnwhite;
+    font-size: rem(14);
+    line-height: em(20, 14);
+    color: #636F7D;
+    background: url("../images/rectangl.png") no-repeat right top;
+    background-size: rem(80) auto;
+    background-color: $c-main;
+    min-width: 0;
+    transition: top .3s ease-in-out, box-shadow .3s ease-in-out;
+    top: 0;
+
+   &--three {
+    flex: 1 1 calc(41.6% - .8333rem);
+   }
+
+   &--one {
+    flex: 1 1 calc(22.56% - .8333rem);
+   }
+
+   &--two {
+    flex: 1 1 calc(31.41% - .8333rem);
+   }
+   @include min(881) {
+    &:hover {
+      box-shadow: 0 rem(4) rem(16) rgba(21, 28, 34, 0.2);
+      //transform: translateY(rem(-4));
+      top: rem(-4);
+      color: #636F7D;
+    }
+   }
+  }
+
+  &__icon {
+    position: absolute;
+    width: rem(40);
+    height: rem(40);
+    right: rem(8);
+    top: rem(8);
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    color: #fff;
+    font-size: rem(24);
+    line-height: em(26, 24);
+    font-weight: 700;
+    margin-bottom: rem(8);
+    margin-right: rem(40);
+  }
+
+  &__statistics {
+    font-size: rem(12);
+    line-height: em(16, 12);
+    color: $c-link;
+    font-weight: 500;
+    margin-bottom: rem(8);
+    margin-right: rem(40);
+  }
+  @media screen and (max-width: $mob-width) {
+    &__scroll {
+      overflow: auto;
+      padding-bottom: rem(8);
+    }
+    &__layout {
+      flex-wrap: nowrap;
+      min-width: 0;
+    }
+    &__item {
+      flex: 0 0 43vw;
+    }
+  }
+  @media screen and (max-width: $xs-mob-width) {
+    &__layout {
+      gap: rem(8);
+    }
+    &__item {
+      flex: 0 0 73.33vw;
+      font-size: rem(12);
+      padding: 1rem;
+    }
+    &__statistics {
+      font-size: inherit;
+    }
+    &__header {
+      margin-bottom: 1rem;
+    }
+  }
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    @media screen and (max-width: $mob-width) {
+      &__item {
+        &:not(:last-child) {
+          margin-right: rem(20);
+        }
+      }
+    }
+    @media screen and (max-width: $xs-mob-width) {
+      &__item {
+        &:not(:last-child) {
+          margin-right: rem(8);
+        }
+      }
+    }
+  }
+}

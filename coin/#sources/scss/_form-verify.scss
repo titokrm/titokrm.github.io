@@ -1,0 +1,52 @@
+.form-verify {
+
+  &__title {
+    margin-bottom: rem(28);
+  }
+
+  &__field {
+
+   &--select {
+    margin-bottom: rem(35);
+   }
+
+   &--input-vallet {
+    margin-bottom: rem(64);
+   }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 0 rem(68);
+    width: 100%;
+  }
+
+  &__btn-diamond {
+    position: absolute;
+    right: rem(18);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media only screen and (orientation: portrait) {
+    &__title {
+      margin-bottom: rem(14);
+    }
+
+    &__field {
+
+      &--select {
+        margin-bottom: rem(20);
+      }
+
+      &--input-vallet {
+        margin-bottom: rem(38.41);
+      }
+    }
+
+    &__btn {
+    }
+
+    &__diamond {
+    }
+  }
+}

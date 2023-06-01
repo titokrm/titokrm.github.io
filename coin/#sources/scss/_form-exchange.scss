@@ -1,0 +1,118 @@
+.form-exchange {
+  &__column {
+    padding: rem(47) rem(28);
+  }
+
+  &__title {
+    margin-bottom: rem(28);
+  }
+  
+  &__field {
+   &--select {
+    margin-bottom: rem(23);
+   } 
+   &--radio {
+    margin-bottom: rem(32);
+   }
+   &--input-sum {
+    margin-bottom: rem(21);
+   }
+   &--input-names {
+    margin-bottom: rem(26);
+   }
+   &--input-card {
+    margin-bottom: rem(25);
+   }
+   &--email {
+    margin-top: rem(68);
+   }
+  }
+
+  &__input {
+  }
+
+  &__note {
+    @include fontrem(18, 21.92);
+    color: #A0A0A0;
+    margin-bottom: rem(31);
+    b {
+      font-weight: 600;
+    }
+   &--terms {
+    @include fontrem(16, 19.49);
+    text-align: center;
+    margin-bottom: rem(23);
+   }
+  }
+
+  &__text {
+    @include fontrem(18, 21.92);
+    margin-bottom: rem(15);
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+  }
+
+  @media only screen and (orientation: portrait) {
+
+    &__column {
+      padding: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      &--send {
+        padding-bottom: rem(32);
+        border-bottom: 1px solid #EFEEEE;
+        margin-bottom: rem(18.9);
+      }
+    }
+
+    &__title {
+      margin-bottom: rem(9);
+    }
+
+    &__field {
+
+      &--email {
+        margin-top: rem(12);
+      }
+      &--select {
+        margin-bottom: rem(9);
+      }
+      &--radio {
+        margin-bottom: rem(6);
+      }
+      &--input-sum {
+        margin-bottom: rem(14.41);
+      }
+      &--input-names {
+        margin-bottom: rem(15);
+      }
+      &--input-card {
+        margin-bottom: rem(14);
+      }
+    }
+
+    &__input {
+    }
+
+    &__note {
+      @include fontrem(12, 14.42);
+      margin-bottom: rem(14);
+      &--terms {
+      }
+    }
+
+    &__text {
+      @include fontrem(13, 15.83);
+      margin-bottom: rem(13);
+    }
+
+    &__btn {
+      margin-top: rem(16);
+    }
+  }
+}

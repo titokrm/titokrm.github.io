@@ -1,0 +1,28 @@
+$default-font: 'Roboto', sans-serif;
+$merriweather: 'Merriweather', serif;
+
+//*----Color const-----*/
+$back-default-color: #fff;
+$text-default-color: #000;
+
+$link-default-color: #590D56;
+$link-hover-default-color: #590D56;
+$link-decoration: underline;
+$link-hover-decoration: none;
+//*----Size const------*/
+$rem-size: 16;
+
+$width-container: 1140;
+$padding-container: 20;
+$padding-container-tab: 20;
+$padding-container-mob: 15;
+$padding-container-xs: 15;
+
+//*----media const------*/
+$desk-sm-width: 1200;
+$tab-width: 992;
+$mob-width: 980;
+$xs-mob-width: 575;
+$min-width: 320;
+
+$animate-time: .2s;

@@ -1,0 +1,30 @@
+//$default-font: 'Montserrat', sans-serif;
+//$default-font: "Exo2.0", sans-serif;
+$default-font: "neuemachina", sans-serif;
+//----Color const-----*/
+$back-default-color: #212121;
+$text-default-color: #fff;
+$gold-color: #F5C647;
+
+$link-default-color: $gold-color;
+$link-hover-default-color: $gold-color;
+$link-decoration: underline;
+$link-hover-decoration: none;
+//----Size const------*/
+$rem-size: 16;
+
+$width-container: 1440;
+$padding-container: 20;
+$padding-container-tab: 20;
+$padding-container-mob: 15;
+$padding-container-xs: 15;
+
+//----media const------*/
+$desk-sm-width: 1520;
+$tab-width: 992;
+$mob-width: 768;
+$xs-mob-width: 575;
+$min-width: 360;
+
+$animate-time: .2s;
+

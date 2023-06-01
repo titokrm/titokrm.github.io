@@ -1,0 +1,12 @@
+.reserve {
+  padding: rem(48) rem(63);
+  &__title {
+    margin-bottom: rem(25);
+  }
+  @media only screen and (orientation: portrait) {
+    padding: rem(12) rem(15) rem(42);
+    &__title {
+      margin-bottom: rem(9);
+    }
+  }
+}

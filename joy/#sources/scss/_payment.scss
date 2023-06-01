@@ -1,0 +1,173 @@
+.payment {
+  padding-top: rem(31);
+  padding-bottom: rem(70);
+  background: url("../images/graphik.svg") no-repeat center rem(235.5);
+  background-size: auto rem(478);
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding-right: rem(50);
+    flex: 0 0 20.8%;
+    @include min($mob-width + 1) {
+      &:nth-child(1) {
+        margin-top: rem(116);      
+      }
+      &:nth-child(2) {
+        margin-top: rem(88);
+      }
+      &:nth-child(3) {
+        margin-top: rem(58);
+      }
+      &:nth-child(4) {
+        margin-top: rem(28);
+      }
+      &:nth-child(5) {
+        padding-right: 0;
+        //padding-left: rem(8);
+        flex: 1 1 auto;
+      }
+    }
+    &:after {
+      display: block;
+      content: '';
+      box-sizing: border-box;
+      @include sizerem(32, 32); //sizerem(width,[height])
+      border: rem(6) solid #fff;
+      border-radius: 50%;
+      background-color: $gold-color;
+      margin-top: rem(50);
+    }
+  }
+
+  &__percent {
+    @include fontrem(48, 63, 700);
+    color: $gold-color;    
+  }
+
+  &__name {
+    @include fontrem(32, 43, 700);
+  }
+
+  &__text {
+    margin-top: rem(12);
+  }
+
+  &__btn-place {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(40);
+    margin-top: rem(56);
+  }
+
+  &__method {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include no-list;
+    margin: 0 auto rem(18);
+  }
+
+  &__method-item {
+    margin: 0 rem(15) rem(10);
+    img {
+      display: block;
+      max-height: rem(50);
+    }
+  }
+
+  &__description {
+    flex: 0 0 100%;
+    color: #fff;
+    text-align: center;
+  }
+
+  .skrill {
+    @include sizerem(73);
+  }
+  .neteller {
+    @include sizerem(144);
+  }
+  .bank-transfer {
+    @include sizerem(187);
+  }
+  .coinsPaid {
+    @include sizerem(179);
+  }
+  .bitcoin {
+    @include sizerem(122);
+  }
+
+  @include max($mob-width) {
+    .skrill {
+      @include sizerem(52);
+    }
+    .neteller {
+      @include sizerem(102);
+    }
+    .bank-transfer {
+      @include sizerem(132);
+    }
+    .coinsPaid {
+      @include sizerem(111);
+    }
+    .bitcoin {
+      @include sizerem(76);
+    }
+
+    padding-top: rem(116);    
+    padding-bottom: rem(40);
+    background: url("../images/graphik-portrait.svg") no-repeat center top;
+    background-size: 100% auto;
+    &__container {
+      display: block;
+    }
+    &__item {
+      padding: 0;
+      padding-left: rem(30);
+      margin-top: 0;
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: rem(24);
+      }
+
+      &:after {
+        @include sizerem(20, 20);
+        border-width: rem(4);
+        box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
+        left: 0;
+        top: rem(12);
+        position: absolute;
+        margin-top: 0;
+      }
+    }
+    &__percent {
+      @include fontrem(32, 43.52);
+    }
+    &__name {
+      @include fontrem(24, 32);
+    }
+    &__text {
+      margin-top: rem(8);
+    }
+    &__btn-place {
+      margin-top: rem(40);
+      margin-bottom: rem(40);
+    }
+    &__method {
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      margin-left: rem(-10);
+      margin-right: rem(-10);
+    }
+    &__method-item {
+      margin: 0 rem(10) rem(20);
+    }
+  }
+}
+

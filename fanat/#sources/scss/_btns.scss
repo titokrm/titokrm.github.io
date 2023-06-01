@@ -1,0 +1,98 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: rem(4);
+  font-size: rem(14);
+  line-height: em(24, 14);
+  font-weight: 700;
+  height: rem(40);
+  min-width: rem(103);
+  padding: 0 1rem;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+  white-space: nowrap;
+  border: none;
+  svg * {
+    transition: fill .3s ease-in-out, fill-opacity .3s ease-in-out;
+  }
+  &__icon {
+    width: rem(24);
+    margin-right: rem(8);
+    svg, img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &--blue {
+    background-color: $c-link;
+    color: white;
+  }
+  &--white {
+    background-color: #fff;
+    border: rem(1) solid $c-borbtnwhite;
+    color: $c-link;
+  }
+  &--dark {
+    background-color: $c-main;
+    color: #fff;
+    padding: 0 rem(24);
+    //padding: 0 rem(24) 0 rem(12);    
+  }
+  &--dark-w-border {
+    border: rem(1) solid rgba(99, 111, 125, 0.24);
+  }
+  &--disabled {
+    opacity: .4;
+    background-color: $c-link;
+  }
+
+  &--square {
+    padding: 0;
+    min-width: 0;
+    width: rem(40);    
+  }
+
+  &--small {
+    height: rem(32);
+    min-width: rem(92);
+    &.btn--square {
+      padding: 0;
+      min-width: 0;
+      width: rem(32);
+    }
+  }
+  &--big {
+    height: rem(48);
+    font-size: rem(16);
+    line-height: em(24, 16);
+    &.btn--square {
+      width: rem(48);
+    }
+  }
+
+}
+
+a.btn, button.btn, input.btn {
+  &--blue {
+    &:hover {
+      background-color: #0080DD;      
+      color: #fff;
+    }
+  }
+  &--white {
+    &:hover {
+      border-color: $c-link;
+      color: $c-link;
+    }
+  }
+  &--dark {
+    &:hover {
+      background-color: #000;
+      color: #fff;
+//      .fill {
+//        fill: $c-link;
+//      }
+    }    
+  }
+}

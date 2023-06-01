@@ -1,0 +1,10 @@
+.mob-info-block {
+  display: none;
+  @media only screen and (orientation: portrait) {
+    display: block;
+    padding-top: rem(79);
+    padding-bottom: rem(15);
+    display: flex;
+    justify-content: space-between;
+  }
+}

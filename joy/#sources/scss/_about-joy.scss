@@ -1,0 +1,74 @@
+.about-joy {
+  background: url("../images/shadow.svg") no-repeat 68% 118%;
+  background-size: rem(1014) auto;
+  background-color: #212121;
+  padding: rem(120) 0 0;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    height: rem(519);
+    background-color: #fff;
+    z-index: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 perc(300, 519));
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+    flex: 1 1 auto;
+  }
+
+  &__text {
+    @include fontrem(24, 32);
+    flex: 0 0 rem(988);
+    margin-bottom: rem(58);
+  }
+
+  &__column {
+    flex: 0 0 perc(698, 1440);
+  }
+
+  &__btn-n-picture {
+    flex: 1 1 auto;
+    margin-top: rem(40);
+    position: relative;
+    z-index: 2;
+    margin-bottom: rem(-36);
+  }
+  @include max($mob-width) {
+    padding-top: 0;
+    background-color: #2B2B33;
+    background-size: rem(490) auto;
+    background-position: 60% 105%;
+    &:after {
+      height: rem(141);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 40.8%);
+    }
+    &__container {
+      display: block;
+    }
+    &__title {
+      margin-bottom: rem(12);
+    }
+    &__text {
+      @include fontrem(16, 19.5);
+      margin-bottom: rem(28);
+    }
+    &__btn-n-picture {
+      margin-top: rem(44);
+      margin-bottom: 0;
+    }
+    .about-joy__column + .about-joy__column {
+      margin-top: rem(28);
+    }
+  }
+}

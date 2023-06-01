@@ -1,0 +1,44 @@
+.menu {
+  @include fontrem(16, 19.5, 700);
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    @include no-list;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: rem(40);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #999;
+    transition: all $animate-time ease-in-out;
+    &:hover {
+      color: #fff;
+    }
+  }
+  @include min($mob-width + 1) {
+    &__link {
+      white-space: nowrap;
+    }
+  }
+  @include max($mob-width) {
+    @include fontrem(20, 24.38);
+    text-align: center;
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      margin-right: 0;
+      margin-bottom: rem(40);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

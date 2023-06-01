@@ -1,0 +1,11 @@
+.form-note {
+  text-align: center;
+  color: #A0A0A0;
+  @include fontrem(20, 24.36);
+  b {
+    font-weight: 600;
+  }
+  @media only screen and (orientation: portrait) {
+    @include fontrem(14, 17.05);
+  }
+}

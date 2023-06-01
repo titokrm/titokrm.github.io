@@ -1,0 +1,106 @@
+.accordion {
+
+  &__item {
+    color: #999;
+    border: 1px solid #999999;
+    border-radius: rem(8);
+    overflow: hidden;
+    &.active {
+      color: #fff;
+      .accordion__btn {
+        background-color: $gold-color;
+      }
+      .icon--plus {
+        visibility: hidden;
+      }
+      .icon--minus {
+        visibility: visible;
+      }
+      .accordion__title {
+        background-color: transparent;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    padding: rem(22) rem(31);
+    background-color: #2B2B33;
+    cursor: pointer;
+    @include fontrem(32, 43.52, 700);
+    span {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 0 0 rem(60);
+    @include sizerem(60, 60);
+    border: 2px solid $gold-color;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: rem(30);
+    cursor: pointer;
+    .icon--minus {
+      @include absolute-center();
+      visibility: hidden;
+    }
+  }
+
+  &__collapsed-block {
+    height: 0;
+    overflow: hidden;
+    background-color: #2B2B33;
+    border-top: 1px solid #999;
+    border-width: 0;
+    transition: height $animate-time ease-in-out;
+    &.active {
+      border-width: 1px;
+    }
+  }
+
+  &__text {
+    padding: rem(26) rem(36);
+      p {
+        @include fontrem(18, 24.48);
+        &:not(:last-child) {
+          margin-bottom: rem(24.48);
+        }
+      }
+  }
+
+  @include max($mob-width) {
+    &__item {
+
+    }
+
+    &__title {
+      padding: rem(12) rem(20);
+      @include fontrem(22, 30);
+    }
+
+    &__btn {
+      flex: 0 0 rem(40);
+      @include sizerem(40, 40);
+    }
+
+    &__text {
+      padding: rem(20);
+      p {
+        @include fontrem(16, 21.76);
+        &:not(:last-child) {
+          margin-bottom: rem(21.76);
+        }
+      }
+    }
+
+  }
+}

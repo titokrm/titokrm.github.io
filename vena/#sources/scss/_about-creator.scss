@@ -1,0 +1,27 @@
+.about-creator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  &__img {
+    flex: 0 0 rem(90);
+    img {
+      width: 100%;
+      display: block;
+    }
+    margin-right: rem(15);
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    @include fontrem(16, 20, 400);
+  }
+  
+  @include max($mob-width) {
+
+    &__img {
+    }
+
+    &__text {
+    }
+  }
+}

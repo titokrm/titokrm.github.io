@@ -1,0 +1,36 @@
+.add-btn {
+  display: inline-flex;
+  color: inherit;
+  @include fontrem(18, 21);
+  &__icon-place {
+    flex: 0 0 rem(68);
+    margin-right: rem(30);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    //color: $link-default-color;
+    color: #fff;
+    text-decoration: underline;
+    filter: drop-shadow( 0 0 .3em $link-default-color);
+    transition: all $animate-time ease-in-out;
+  }
+
+  &:hover {
+    .add-btn__text {
+      text-decoration: none;
+      //text-shadow: none;
+    }
+  }
+
+  @include max($mob-width) {
+    &__icon-place {
+    }
+
+    &__text {
+    }
+
+  }
+}

@@ -1,0 +1,23 @@
+.title-gradient {
+  background: linear-gradient(180deg, #2D59FB 0%, #3DBDEB 100%);
+  background-clip: text;  
+  -webkit-text-fill-color: transparent;
+  &--horisontal {
+    background: linear-gradient(92.77deg, #2D59FB 2.15%, #3DBDEB 126.09%);
+    background-clip: text;  
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.block-title {
+  @include fontrem(42, 51.16, 600);
+  &--subtitle {
+    @include fontrem(28.5, 34.1);
+  }
+  @media only screen and (orientation: portrait) {
+    @include fontrem(29, 35.32);
+    &--subtitle {
+      @include fontrem(22, 26.8);
+    }
+  }
+}

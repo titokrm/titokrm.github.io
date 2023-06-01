@@ -1,0 +1,85 @@
+.about-joy-detail {
+  padding: rem(120) 0 rem(107);
+  background-color: #2B2B33;
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: rem(205);
+      @include sizerem(860, 1104);
+      transform: translate(-21%, -16.48%);
+      z-index: 1;
+      background: url("../images/shadow-vert.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 100%;
+    margin-bottom: rem(16);
+  }
+
+  &__description {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 rem(988);
+    margin-bottom: rem(56);
+  }
+
+  &__column {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 rem(700);
+  }
+
+  &__btn-place {
+    position: relative;
+    z-index: 2;
+    margin-top: rem(80);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-start;
+    flex: 0 0 100%;
+  }
+
+  @include max($mob-width) {
+    padding: rem(40) 0;
+    &__container {
+      display: block;
+      &:before {
+        display: none;
+      }
+    }
+
+    &__title {
+      margin-bottom: rem(12);
+    }
+
+    &__description {
+      margin-bottom: rem(28);
+    }
+
+    &__column {
+      & + .about-joy-detail__column {
+        margin-top: rem(32);
+      }
+    }
+
+    &__btn-place {
+      margin-top: rem(44);
+    }
+
+    &__btn {
+    }
+
+  }
+}

@@ -1,0 +1,365 @@
+.table-bookmaker-rating {
+  position: relative;
+  margin-top: rem(44);
+  &__flextd {
+    //position: relative;
+    &--n {
+      //flex: 0 0 rem(44);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      min-width: 0;
+      //margin-right: rem(16);
+      text-align: center;
+      .table-bookmaker-rating__th {
+        margin-left: 1rem;
+      }
+    }
+    &--bookmaker {
+      //flex: 0 0 rem(100);
+      //margin-right: rem(16);
+      min-width: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &--rating {
+      //flex: 1 1 auto;
+      background-color: #fff;
+      min-width: 7.2125rem;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-gap: rem(16);
+    grid-template-columns: auto auto auto rem(220);
+    grid-template-rows: auto;
+    padding: rem(16);
+    border-radius: rem(8);
+    box-shadow: 0 rem(2) rem(12) rgba(21, 28, 34, 0.12);
+    background-color: #fff;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+    &--best {
+      .label-best {
+        display: block;
+      }
+    }
+    &:first-child {
+      .table-bookmaker-rating__th {
+        display: block;
+      }
+    }
+  }
+
+  &__th {
+    font-size: rem(12);
+    line-height: em(16, 12);
+    color: #636F7D;
+    position: absolute;
+    top: calc((.25rem + 100%) * -1);    
+    display: none;
+  }
+
+  &__td {
+    position: relative;
+    &--n-bookmk-rating {
+      display: grid;
+      grid-template-columns: rem(44) 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: rem(16)
+      //display: flex;
+      //justify-content: flex-start;
+      //align-items: center;
+    }    
+   &--bonus {
+    font-size: rem(20);
+    line-height: em(24, 20);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: rem(135);
+    .btn {
+      margin-right: rem(12);
+    }
+   }
+
+   &--app {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   }
+  }
+
+  &__num {
+    display: inline-flex;
+    width: rem(40);
+    height: rem(40);
+    border-radius: rem(4);
+    background-color: rgba(24, 72, 107, 0.03);
+    color: #636F7D;
+    border: rem(1) solid $c-borbtnwhite;
+    font-size: rem(18);
+    line-height: em(24, 18);
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    &--best {
+      background: none;
+      border: none;
+      color: #FFCC18;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: rem(48);
+        height: rem(40);
+        transform: translate(-50%, -50%);
+        //--bg-best: url("../images/best.svg");
+        background-image: var(--bg-best, url("../images/best.svg"));
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .table-bookmaker-rating__num-best-bg {
+        display: block;
+      }
+    }
+
+  }
+
+  &__num-best-bg {
+    display: none;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    max-width: rem(96);
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__name {
+    font-size: rem(16);
+    line-height: em(20, 16);
+    font-weight: 700;
+    margin-bottom: rem(4);
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__rating {
+    font-size: rem(14);
+  }
+
+  &__app:not(:last-child) {
+    margin-right: rem(8);
+  }
+
+  &__td--btns-place  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    > div:not(:last-child) {
+      margin-right: rem(8);
+    }
+  }
+  @media screen and (max-width: $mob-width) {
+//    .table-bookmaker-rating__row {
+//      grid-template-columns: 2fr 1fr 1fr;
+//    }
+//    .table-bookmaker-rating__td--btns-place {
+//      grid-column: 1 / 4;
+//      justify-content: space-around;
+//    }
+//  }
+//  @include max(720) {
+    margin-top: rem(12);
+    .table-bookmaker-rating__th, .table-bookmaker-rating__row:first-child .table-bookmaker-rating__th {
+      display: none;
+    }
+    .table-bookmaker-rating__row {
+      margin-bottom: rem(12);
+      .table-bookmaker-rating__td--bonus, .table-bookmaker-rating__td--app, .table-bookmaker-rating__td--btns-place {
+        position: relative;
+        padding-top: 1.25rem;
+        .table-bookmaker-rating__th {
+          display: block;
+          left: 0;
+          right: 0;
+          top: 0;
+          text-align: center;
+        }
+      }
+    }
+    .table-bookmaker-rating__row {
+      grid-template-columns: 1fr 1fr rem(215);
+    }
+    .table-bookmaker-rating__td--n-bookmk-rating {
+      grid-column: 1 / 4;
+      grid-template-columns: 1fr 1fr rem(215);
+    }
+    .table-bookmaker-rating__flextd--rating {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .table-bookmaker-rating__flextd--bookmaker, .table-bookmaker-rating__flextd--n {
+      justify-content: center;
+    }
+    .table-bookmaker-rating__name {
+      width: auto;
+    }
+    .table-bookmaker-rating__td--btns-place {
+      grid-column: 3 / 4;
+//      display: grid;
+//      grid-template-columns: 1fr 1fr;
+//      grid-template-rows: auto;
+//      grid-gap: rem(16);
+      display: flex;
+      justify-content: flex-end;
+      > div:last-child {
+        //display: flex;
+        //flex: 0 0 50%;
+        //margin-left: .5rem;
+        //justify-content: center;
+      }            
+    }
+    .table-bookmaker-rating__td--bonus, .table-bookmaker-rating__td--app {
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: $xs-mob-width) {
+    .table-bookmaker-rating__row {
+      grid-template-columns: 1fr 1fr;
+      padding: rem(12);
+      grid-gap: rem(8);
+    }
+    .table-bookmaker-rating__td--bonus {
+      grid-column: 1 / 2;
+    }
+    .table-bookmaker-rating__td--app {
+      grid-column: 2 / 3;
+    }
+    .table-bookmaker-rating__td--btns-place {
+      grid-column: 1 / 3;
+    }
+    .table-bookmaker-rating__td--n-bookmk-rating {
+      grid-template-columns: rem(44) 1fr 1fr;
+      grid-column: 1 / 3;
+      grid-gap: rem(8);
+      padding-bottom: rem(4);
+    }
+    .table-bookmaker-rating__flextd--n {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    .table-bookmaker-rating__flextd--rating {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      display: block;
+    }
+    .table-bookmaker-rating__flextd--bookmaker {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+    .table-bookmaker-rating__td--bonus, .table-bookmaker-rating__td--app {
+      justify-content: flex-start;
+    }
+    .table-bookmaker-rating__row {
+      .table-bookmaker-rating__td--bonus, .table-bookmaker-rating__td--app, .table-bookmaker-rating__td--btns-place {
+        padding-top: rem(20);
+        .table-bookmaker-rating__th {
+          text-align: left;
+        }
+      }
+      .table-bookmaker-rating__td--btns-place {
+        padding-top: rem(12);
+      }
+    }
+    .table-bookmaker-rating__td--btns-place {
+      > div {
+        display: flex;
+        flex: 0 0 50%;
+        padding-right: .25rem;
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 0;
+        &:last-child {
+          padding-left: .25rem;          
+          padding-right: 0;
+        }
+        .btn {
+          width: 100%;
+        }
+      }            
+    }
+  }
+}
+
+.bookmaker-rating {
+  &__header {
+    margin-bottom: rem(16);
+  }
+
+  &__description {
+    font-size: rem(14);
+    line-height: em(22, 14);
+    p:not(:last-child) {
+      margin-bottom: em(22, 14);
+    }    
+  }
+  &__btn-load {
+    margin-top: rem(20);
+    margin-bottom: -2.75rem;
+  }
+  @media screen and (max-width: $xs-mob-width) {
+    &.content-block {
+      margin-bottom: rem(40);
+    }
+    
+    &__description {
+      font-size: rem(12);
+    }
+    &__header {
+      margin-bottom: rem(8);
+    }
+  }
+}
+
+.label-best {
+  position: absolute;
+  font-size: rem(12);
+  line-height: em(16, 12);
+  color: #fff;
+  font-weight: 500;
+  height: em(16, 12);
+  top: em(-4, 12);
+  left: em(-8, 12);  
+  background-color: $c-borinput-error;
+  padding: 0 em(4, 12);
+  //display: none;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: em(8, 12);
+    height: em(8, 12);
+    background: url("../images/triangl.svg") no-repeat left top;
+    background-size: contain;
+  }
+}

@@ -1,0 +1,28 @@
+.type-operation {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__label {
+    min-width: rem(77);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__divider {
+    margin: 0 rem(28);
+  }
+
+  @media only screen and (orientation: portrait) {
+    &__label {
+      min-width: 0;
+    }
+    &__divider {
+      margin: 0 rem(3);
+      .icon--exchange-small {
+        @include sizerem(6, 6);
+      }
+    }
+  }
+}

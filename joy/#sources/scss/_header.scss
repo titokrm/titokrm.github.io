@@ -1,0 +1,104 @@
+.header {
+  background-color: $back-default-color;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform $animate-time ease-in-out;
+
+  &.header--hidden {
+    transform: translateY(-100%);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+  }
+  &__logo {
+    //@include sizerem(195.57); //sizerem(width,[height])
+    @include sizerem(179);
+    display: block;
+    margin-right: rem(60 + (195.57 - 179));
+    //margin-right: rem(60);
+  }
+
+  &__logo-img {
+    display: block;
+    width: 100%;
+  }
+
+  &__navigation {
+    flex: 1 1 auto;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: rem(60);
+  }
+
+  &__login {
+    margin-right: rem(20);
+    min-width: rem(120);
+  }
+
+  &__register {
+    min-width: rem(135);
+  }
+  &__menu-toggle-btn {
+    display: none;
+    position: relative;
+    .icon--close {
+      @include absolute-center();
+      visibility: hidden;
+    }
+    &.active {
+      .icon--burger {
+        visibility: hidden;
+      }
+      .icon--close {
+        visibility: visible;
+      }
+    }
+  }
+
+  @include max($mob-width) {
+    &__container {
+      height: rem(60);
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $back-default-color;
+        z-index: 45;
+        content: '';
+      }
+    }
+    &__logo {
+      @include sizerem(134); //sizerem(width,[height])
+      margin-right: 0;
+      position: relative;
+      z-index: 47;
+    }
+    &__buttons {
+      margin-left: 0;
+      position: relative;
+      z-index: 47;
+    }   
+    &__login, &__register {
+      min-width: 0;
+      margin-right: rem(12);
+    }
+    &__menu-toggle-btn {
+      display: block;
+    }
+  }
+
+}

@@ -1,0 +1,51 @@
+.types-comission {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: rem(40);
+  gap: rem(40);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(32);
+    background-color: #2B2B33;
+    border: 1px solid #4F4F4F;
+    backdrop-filter: blur(rem(17.5));
+    border-radius: rem(8);
+    min-height: rem(280)
+  }
+
+  &__name {
+    @include fontrem(24, 31, 500);
+    color: #999;
+    margin-bottom: rem(20);
+  }
+
+  &__profit {
+    @include fontrem(32, 43, 700);
+    color: $gold-color;
+    margin-bottom: auto;
+  }
+
+  &__description {
+    
+  }
+  @include max($mob-width) {
+    grid-template-columns: 1fr;
+    grid-gap: rem(16);
+    gap: rem(16);
+    &__item {
+      min-height: rem(180);
+      padding: rem(20);
+    }
+    &__name {
+      @include fontrem(18, 23.4);
+      margin-bottom: rem(12);
+    }
+    &__profit {
+      @include fontrem(24, 32.64);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.footer {
+  @media only screen and (orientation: landscape) {
+    @include fontrem(12, 14.62, 600);
+    padding-top: rem(26);
+    padding-bottom: rem(26);
+    height: calc((130 / 1080) * 100vh);
+    max-height: rem(188);
+    min-height: rem(126);
+  }
+  &__links {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: rem(12);
+  }
+
+  &__link {
+    color: #9B9797;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+    &:not(:last-child) {
+      margin-right: rem(30);
+    }
+  }
+
+  &__text {
+    color: #B3B0B0;
+  }
+
+  @media only screen and (orientation: portrait) {
+    @include fontrem(12, 14.62, 600);
+    padding: rem(18) 0 rem(48);
+
+    &__links {
+      justify-content: space-between;
+      margin-bottom: rem(18);
+    }
+
+    &__link:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+}

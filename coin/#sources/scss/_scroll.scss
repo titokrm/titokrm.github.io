@@ -1,0 +1,107 @@
+.scroll {
+//  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.39);
+  border: 1px solid rgba(225, 224, 225, 0.4);
+  border-radius: rem(17);
+  width: rem(13);
+}
+
+.simplebar-scrollbar {
+  min-height: rem(21);
+  &:before {
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    background: url('data:image/svg+xml,\
+    <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg"> \
+    <line y1="0.5" x2="5" y2="0.5" stroke="white" stroke-opacity="0.66"/> \
+    <line y1="3.5" x2="5" y2="3.5" stroke="white" stroke-opacity="0.66"/> \
+    <line y1="6.5" x2="5" y2="6.5" stroke="white" stroke-opacity="0.66"/> \
+    </svg>') no-repeat center;
+    background-size: rem(5) auto;
+    background-color: #3D67F5;
+    border-radius: rem(17);
+  }
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.scroll--change {
+  height: rem(700);
+  margin-right: rem(-60);
+  padding-right: rem(60);
+  @media only screen and (orientation: portrait) {
+    margin-right: rem(-15);
+    padding-right: rem(15);
+    .simplebar-track.simplebar-vertical {
+      right: rem(3);
+      width: rem(9);
+      border-radius: rem(7);
+    }
+    .simplebar-scrollbar:before {
+      background-size: rem(3);
+      border-radius: rem(5);
+    }
+  }
+}
+
+.scroll--history-operations {
+  height: rem(463);
+  margin-right: rem(-29);
+  padding-right: rem(29);
+  .simplebar-track.simplebar-vertical {
+    top: 0;
+    bottom: 0;
+    right: rem(8);
+  }
+  @media only screen and (orientation: portrait) {
+    margin-right: rem(-15);
+    padding-right: rem(15);
+    .simplebar-track.simplebar-vertical {
+      top: 0;
+      bottom: 0;
+      right: rem(3);
+      width: rem(9);
+      border-radius: rem(7);
+    }
+    .simplebar-scrollbar:before {
+      background-size: rem(3);
+      border-radius: rem(5);
+    }
+  }
+}
+
+.scroll--faq {
+  height: rem(500);
+  padding-right: rem(90);
+  .simplebar-track.simplebar-vertical {
+    top: 0;
+    bottom: 0;
+    right: rem(30);
+  }
+  @media only screen and (orientation: portrait) {
+    .simplebar-track.simplebar-vertical {
+      top: 0;
+      bottom: 0;
+      right: rem(3);
+      width: rem(9);
+      border-radius: rem(7);
+    }
+    .simplebar-scrollbar:before {
+      background-size: rem(3);
+      border-radius: rem(5);
+    }
+  }
+}
+

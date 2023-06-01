@@ -1,0 +1,63 @@
+.where-buy {
+
+  &__images {
+    position: relative;
+    //min-height: rem(390);
+    padding-bottom: perc(390, 848);
+  }
+
+  &__img {
+    position: absolute;
+    height: rem(307);
+
+   &--first {
+    left: rem(103);
+    top: rem(28);
+    z-index: 10;
+   }
+
+   &--second {
+    left: rem(327);
+    top: rem(-55);
+    z-index: 5;
+   }
+  }
+
+  &__btn-place {
+    display: flex;
+    justify-content: space-between;
+    color: $link-default-color;
+  }
+
+  @include max($mob-width) {
+    &__images {
+      padding-bottom: 78%;
+    }
+
+    &__img {
+        width: rem(280);
+        height: auto;
+
+      &--first {
+        left: rem(-78);
+      }
+
+      &--second {
+        left: auto;
+        right: 0;
+        top: rem(-20);
+      }
+    }
+
+    &__btn-place {
+      flex-wrap: wrap;
+      .btn {
+        margin-bottom: rem(20);
+        &:last-child {
+          margin-bottom: 0; 
+        }
+      }
+    }
+
+  }
+}

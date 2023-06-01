@@ -1,0 +1,43 @@
+.ticker {
+  display: flex;
+  justify-content: flex-start;
+  padding: rem(19) 0;
+  border-top: 1px solid $link-default-color;
+  border-bottom: 1px solid $link-default-color;
+  color: $link-default-color;
+  overflow: hidden;
+  position: relative;
+  &__link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  @keyframes runner {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  &__inner {
+    white-space: nowrap;    
+    @include fontrem(48, 56.25, 300);
+    text-transform: uppercase;
+    animation: runner 30s linear infinite;
+    &:after {
+      content: 'получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10%';
+    }
+  }
+  @include max($mob-width) {
+    padding: rem(10) 0;
+    &__inner {
+      @include fontrem(28, 32);
+      animation-duration: 60s;
+    }
+  }
+}

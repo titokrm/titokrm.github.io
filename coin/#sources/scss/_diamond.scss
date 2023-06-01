@@ -1,0 +1,23 @@
+.diamond {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__num {
+  }
+
+  &__icon {
+    display: block;
+    margin-left: rem(7);
+  }
+
+  @media only screen and (orientation: portrait) {
+    &__num {
+      @include fontrem(13.25, 16.15);
+    }
+
+    &__icon {
+      @include sizerem(18, 18);
+    }
+  }
+}

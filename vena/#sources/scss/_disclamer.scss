@@ -1,0 +1,35 @@
+.disclamer {
+  padding: rem(15) rem(55);
+  &__text {
+    @include fontrem(34, 40, 300, -.04);
+    color: #242424;
+    text-transform: uppercase;
+    padding-right: rem(35);
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: rem(5);
+    border: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  @include min(2300) {
+    &__text {
+      text-align: center;
+    }
+  }
+  @include max($mob-width) {
+    padding: rem(10) rem(12);
+    &__text {
+      @include fontrem(12, 15);
+      padding-right: rem(15);
+    }
+    &__close {
+      top: rem(2);
+    }
+  }
+}
