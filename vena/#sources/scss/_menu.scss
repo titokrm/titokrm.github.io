@@ -4,10 +4,6 @@
   background-size: 100% auto;
   background-color: #fff;
   */
-  display: flex;
-  flex-direction: column;
-  padding: rem(40) 0;
-  overflow: auto;
   &__list {
     @include no-list;
     @include fontrem(16, 16, 700);
@@ -36,9 +32,6 @@
     }
   }
   @include max($mob-width) {
-    padding: rem(20) 0;
-    background-position: left top;
-    background-size: auto 100%;
     &.active {
       box-shadow: none;
     }

@@ -1,0 +1,75 @@
+$hint-fs: 14;
+$hint-lh: 18;
+$hint-w: 200;
+$hint-padding: em(10, $hint-fs);
+$hint-rad: 10;
+$hint-bg: #eee;
+$hint-shadow: 0 0 em(5, $hint-fs) rgba(0,0,0,.2);
+$hint-before-size: $hint-fs * .7;
+$hint-anim: $animate-time;
+
+.hint {
+  position: fixed;
+  @include fontrem($hint-fs, $hint-lh);
+  border-radius: em($hint-rad, $hint-fs);
+  width: em($hint-w, $hint-fs);
+  box-shadow: $hint-shadow;
+  z-index: 5000;
+  animation: hintShow $hint-anim linear 1 forwards;
+  transition: left $animate-time * 0.25 ease-in-out, top $animate-time * 0.25 ease-in-out, transform $animate-time * 0.25 ease-in-out;
+  &__inner {
+    display: block;
+    background-color: $hint-bg;
+    border-radius: em($hint-rad, $hint-fs);
+    z-index: 10;
+    padding: $hint-padding;
+    position: relative;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: em($hint-before-size, $hint-fs);
+    height: em($hint-before-size, $hint-fs);
+    box-shadow: $hint-shadow;
+    transform: translate(-50%, -50%) rotate(45deg);  
+    z-index: 5;
+    background-color: $hint-bg;
+  }
+  &--pull-left {
+    &:before {
+      left: auto;
+      right: em($hint-rad * 1.2, $hint-fs);
+      transform: translate(0, -50%) rotate(45deg);
+    }
+  }
+  &--pull-right {
+    &:before {
+      left: em($hint-rad * 1.1, $hint-fs);
+      transform: translate(0, -50%) rotate(45deg);      
+    }
+  }
+  &--pull-down {
+    &:before {
+      top: auto;
+      bottom: 100%;
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+    &--pull-left {
+      transform: translate(0, 50%) rotate(45deg);
+    }
+    &--pull-right {
+      transform: translate(0, 50%) rotate(45deg);
+    }
+  }
+}
+
+@keyframes hintShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

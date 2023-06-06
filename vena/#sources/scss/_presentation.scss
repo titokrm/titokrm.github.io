@@ -1,7 +1,13 @@
 .presentation {
+  &--old-browser {
+    background: url("../images/bg.svg") no-repeat center;
+    background-size: 100% auto;
+  }
   &__main {
     position: relative;
-    background: linear-gradient(266.71deg, #590D56 11.72%, #8C1688 86.77%);
+    background: linear-gradient(267deg, rgba(89,13,86,1) 0%, rgba(140,22,136,1) 100%);
+
+
     overflow: hidden;
     &:before, &:after {
       position: absolute;
@@ -16,6 +22,9 @@
     &:after {
       top: auto;
       bottom: -1px;
+    }
+    &--old-browser {
+      background: none;
     }
   }
   &__bg {

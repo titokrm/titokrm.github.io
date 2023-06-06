@@ -8,20 +8,26 @@ document.addEventListener( 'DOMContentLoaded', function() {
   let sliderSelector = '.presentation .slider';
   let swiper, sliderBlock, swiperVideo;
 
+  function getiOSVersion() { // return number version or false
+    var userAgent = window.navigator.userAgent;
+    var iOSVersion = false;
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      var match = userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
+      if (match !== null && match.length > 3) {
+        iOSVersion = parseInt(match[1], 10);
+      }
+    }
+
+    return iOSVersion;
+  }
+
   menuSlide({
     changePosition: true,
     addHeaderPadding: true,
   });
 
-  swiperVideo = new Swiper('.video-slider', {
-    loop: false,
-    navigation: false,
-    autoHeight: true,
-    autoplay: false,
-    grabCursor: true,
-    spaceBetween: 15,
-    slidesPerView: 1,
-  });  
+  hint();
 
   let wave1 = Snap('.burger svg path:nth-child(1)');
   let wave3 = Snap('.burger svg path:nth-child(3)');
@@ -136,13 +142,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
           });
         }
         itemArr.forEach((item) => {
-          /*
-          item.classStr.split(' ').forEach((className) => {
-            for (let i = 1; i <= 3; i++) {
-              item.elem.classList.remove(`slider__item--num-${i}`);
-            }
-            item.elem.classList.add(className);
-          });*/
           item.elem.classList = item.classStr;
         });
         document.querySelector(`.slider__item--num-2`).classList.add('slider__item--top');
@@ -154,18 +153,20 @@ document.addEventListener( 'DOMContentLoaded', function() {
         }, time * 0.5);
         setTimeout(() => {
           enabledSlide = true;
-          document.querySelector('.virash-1-2')?.classList.remove('virash-1-2');
-          document.querySelector('.virash-2-3')?.classList.remove('virash-2-3');
-          document.querySelector('.virash-2-1')?.classList.remove('virash-2-1');
-          document.querySelector('.virash-3-2')?.classList.remove('virash-3-2');
+          document.querySelector('.virash-1-2') ? document.querySelector('.virash-1-2').classList.remove('virash-1-2') : undefined;
+          document.querySelector('.virash-2-3') ? document.querySelector('.virash-2-3').classList.remove('virash-2-3') : undefined;
+          document.querySelector('.virash-2-1') ? document.querySelector('.virash-2-1').classList.remove('virash-2-1') : undefined;
+          document.querySelector('.virash-3-2') ? document.querySelector('.virash-3-2').classList.remove('virash-3-2') : undefined;
         }, time);
         
       }
     }
-    prevBtn?.addEventListener('click', toSlide);
-    nextBtn?.addEventListener('click', toSlide);
+    prevBtn ? prevBtn.addEventListener('click', toSlide) : undefined;
+    nextBtn ? nextBtn.addEventListener('click', toSlide) : undefined;
   }
+  
   sliderDesktop();
+  
   let width = window.innerWidth;
   startStopSwiper(width);
 
@@ -174,13 +175,18 @@ document.addEventListener( 'DOMContentLoaded', function() {
     startStopSwiper(width);
   });
   
-  // настроить стили и скрипт для мобильного
-  wave(mobWidth);
+  let iOSVersion = getiOSVersion();
+  if (iOSVersion !== false && +iOSVersion < 13) {
+    document.querySelector('.presentation__bg').innerHTML = ``;
+    document.querySelector('.presentation__main').classList.add('presentation__main--old-browser');
+    document.querySelector('.presentation').classList.add('presentation--old-browser');
+  } else {
+    wave(mobWidth);
+  }  
   
   document.querySelector('.disclamer__close').addEventListener('click', event => {
     event.preventDefault();
     let disclaimer = event.target.closest('.disclamer');
-    console.log('Disclamer = ', disclaimer);
     disclaimer.remove();
   });
   

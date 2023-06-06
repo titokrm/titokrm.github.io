@@ -37,14 +37,16 @@
   <nav class="header__navigation menu slide-nav js-slideblock">
     <div class="header__navigation-bg">
     </div>
-    <div class="header__container">
-      <ul class="menu__list">
-        <li class="menu__item"><a class="menu__link" href="#">Где купить</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">О препарате</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">О варикозе</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Решение</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Специалистам</a></li>
-      </ul>
+    <div class="header__scroll">
+      <div class="header__container">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link" href="#">Где купить</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">О препарате</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">О варикозе</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Решение</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Специалистам</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
@@ -54,7 +56,7 @@
 
         <div class="presentation__main">
           <div class="presentation__bg svg-animation">
-            <svg id=svg>
+            <svg id="svg">
               <g id="inner-top"></g>
               <g id="inner-bottom"></g>
             </svg>
@@ -184,12 +186,11 @@
             </div>
             <div class="advantag-item__text">
               <span>
-                Удобный прием. <br> Одна таблетка в сутки* <span class="advantag-item__hint">i</span>
+                Удобный прием. <br> Одна таблетка в сутки* <span class="advantag-item__hint" data-texthint="Lorem ipsum dolor sit amet.">i</span>
               </span>
             </div>            
           </div>
         </div>
-        
       </div>
       <section class="info-block">
         <div class="info-block__container">
@@ -371,6 +372,7 @@
   <script src="js/snap.svg-min.js"></script>  
   <script src="js/wave.js"></script>
   <script src="js/menuBurgerVanil.js"></script>
+  <script src="js/hint.js"></script>
   <script src="js/script.js"></script>
 
 

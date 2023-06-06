@@ -1,5 +1,6 @@
 .disclamer {
   padding: rem(15) rem(55);
+  opacity: 0.75;
   &__text {
     @include fontrem(34, 40, 300, -.04);
     color: #242424;
@@ -16,6 +17,7 @@
     background: none;
     padding: 0;
     border-radius: 0;
+    cursor: pointer;
   }
   @include min(2300) {
     &__text {

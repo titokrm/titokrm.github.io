@@ -25,6 +25,7 @@
       0% {transform: translateX(0)}
     100% {transform: translateX(var(--tx))}
   }
+
   &__navigation-bg {
     position: absolute;
     left: 0;
@@ -39,11 +40,23 @@
       display: block;
     }
   }
+  &__scroll {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2020;
+    overflow: auto;
+    padding: rem(40) 0;
+    display: flex;
+    flex-direction: column;
+  }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: relative;    
     z-index: 2020;
   }
 
@@ -68,6 +81,7 @@
 
   &__navigation {
 //    display: none;
+    overflow: visible;
   }
   @include min($mob-width + 1) {
     &.header--mooved {
@@ -82,6 +96,9 @@
     height: rem(51);
     &:before {
       height: 100%;      
+    }
+    &__scroll {
+      padding: rem(20) 0;
     }
     &__mooving {
       animation-duration: 5s;
