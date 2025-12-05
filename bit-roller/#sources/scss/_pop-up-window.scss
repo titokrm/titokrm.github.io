@@ -1,0 +1,76 @@
+.pop-up-window {
+  font-size: vh(18, 1080);
+  padding: vh(70, 1080) vh(85, 1080) vh(60, 1080);
+  text-align: center;
+  border-radius: vh(51, 1080);
+  background: url("../images/bg-pop-up.jpg") no-repeat center;
+  background-size: cover;
+  background-color: #0b83c7;
+  border: em(2.96, 18) solid #6F6F6F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &--message {
+    aspect-ratio: 1 / .83;
+    padding: vh(100, 1080) vh(120, 1080);
+  }
+
+  &__title {
+    font-size: em(32, 18);
+    font-weight: 500;
+    line-height: 1.07;
+    margin-bottom: em(25, 32);
+    letter-spacing: em(.96, 32);
+  }
+
+  &__text {
+    font-size: em(18, 18);
+    line-height: 1.07;
+    font-weight: 500;
+    margin-bottom: em(21, 18);
+    letter-spacing: em(.54, 18);
+  }
+
+  &__wallet {
+    margin: vh(21, 1080) auto vh(32, 1080);
+  }
+
+  &__input {
+    display: block;
+    line-height: 1;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    height: em(35, 18);
+    padding: 0 em(6, 18);
+    font-size: 1em;
+    border-radius: 0;
+    transition: border-color s ease-in-out;
+    color: #fff;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    margin-bottom: vh(33, 1080);
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: vh(280, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    padding: vw(15, 320);
+    border-radius: vw(20, 320);
+    border-width: 1px;
+    font-size: vw(11, 320);
+
+    &__input {
+      margin-bottom: vw(16, 320);
+    }
+
+    &__btn {
+      min-width: vw(170, 320);
+    }
+  }
+}

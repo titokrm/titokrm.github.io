@@ -1,0 +1,80 @@
+.navigation {
+  overflow: auto;
+  font-size: vh(18, 1080);
+  background-image: radial-gradient(farthest-side at 0 50%,
+      #355348 0%,
+      #303534 100%);
+  background-color: $back-default-color;
+
+  &__menu {
+    @include no-list;
+    padding-top: em(20, 18);
+    padding-left: em(20, 18);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  &__menu-item {
+    margin-top: em(75, 18);
+  }
+
+  &__menu-link {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all $animate-time ease-in-out;
+
+    &:hover {
+      color: #29FFCB;
+      text-decoration: none;
+
+      .icon--chart-arrow-up-rectangle {
+        fill: #29FFCB;
+      }
+
+      .icon--deal {
+        stroke: #29FFCB;
+      }
+
+      .icon--money-bag {
+        stroke: #29FFCB;
+      }
+
+      .icon--setting {
+        fill: #29FFCB;
+      }
+
+      .icon--logout {
+        stroke: #29FFCB;
+      }
+    }
+  }
+
+  &__icon {
+    flex: 0 0 em(28.8, 18);
+    width: em(28.8, 18);
+    height: em(28.8, 18);
+    margin-right: em(20, 18);
+  }
+
+  &__quick-invest-btn {
+    margin-top: vh(70, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    &__menu {}
+
+    &__menu-item {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__menu-link {}
+
+    &__quick-invest-btn {
+      flex: 0 0 vw(30, 320);
+      margin-top: vw(30, 320);
+    }
+  }
+}

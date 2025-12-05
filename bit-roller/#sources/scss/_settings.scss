@@ -1,0 +1,22 @@
+.settings {
+
+  &__avatar {
+    margin-bottom: vh(40, 1080);
+  }
+
+  &__form {
+    font-size: vh(12.77, 1080);
+    max-width: vh(546, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    &__avatar {
+      margin-bottom: vw(16, 320);
+    }
+
+    &__form {
+      font-size: vw(10, 320);
+      max-width: none;
+    }
+  }
+}

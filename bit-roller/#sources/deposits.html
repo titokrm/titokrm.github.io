@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@if (minCss === '.min') {
+@@include('./_head.htm', {
+"min": ".min"
+})
+}
+@@if (minCss !== '.min') {
+@@include('./_head.htm', {
+"min": ""
+})
+}
+
+<body>
+  <div class="wrapper-global">
+    <div class="layout">
+      <header class="layout__header header">
+        <div class="header__container">
+          <a class="header__logo-link" href="#">
+            <img class="header__logo-img" src="images/logo.svg" alt="Logo">
+          </a>
+          <a href="#" class="header__withdraw-btn btn btn--color--transp btn--size--normal"
+            data-da=".header__btns-mob,portrait,first"><span class="btn__text">Вывести прибыль</span></a>
+          <div class="header__btns">
+            <a href="#" class="header__replenish-btn btn btn--color--default btn--size--normal"
+              data-da=".header__btns-mob,portrait,last"><span class="btn__text">Пополнить баланс</span></a>
+            <button class="header__burger burger js-toggle-menu">
+              <div class="burger__line"></div>
+              <svg class="burger__icon icon icon--close" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header__btns-mob"></div>
+        </div>
+      </header>
+      <main class="layout__main main">
+        <div class="main__statistics statistics">
+          <div class="statistics__item">
+            <h5 class="statistics__title">Всего пополнено</h5>
+            <div class="statistics__inner">
+              <img src="images/wallet.svg" alt="Replenish icon" class="statistics__icon statistics__icon--wallet">
+              <span class="statistics__num">$100 000</span>
+            </div>
+          </div>
+          <div class="statistics__item">
+            <h5 class="statistics__title">Всего выведено</h5>
+            <div class="statistics__inner">
+              <img src="images/money-bag-2.png" alt="Withdraw icon"
+                class="statistics__icon statistics__icon--money-bag">
+              <span class="statistics__num">$10 000</span>
+            </div>
+          </div>
+          <div class="statistics__item">
+            <h5 class="statistics__title">Активные депозиты</h5>
+            <div class="statistics__inner">
+              <img src="images/diagram.svg" alt="Active deposits icon"
+                class="statistics__icon statistics__icon--diagram">
+              <span class="statistics__num">22</span>
+            </div>
+          </div>
+          <div class="statistics__item">
+            <h5 class="statistics__title">Всего реферальных</h5>
+            <div class="statistics__inner">
+              <img src="images/peoples.svg" alt="Referral icon" class="statistics__icon statistics__icon--wallet">
+              <span class="statistics__num">2</span>
+            </div>
+          </div>
+        </div>
+        <div class="main__deposits-slider deposits-slider">
+          <div class="deposits-slider__inner swiper">
+            <div class="deposits-slider__items swiper-wrapper">
+              <div class="deposits-slider__item deposit swiper-slide">
+                <div class="deposit__num">№ 727 844 32</div>
+                <div class="deposit__sum"><span class="gradient-text deposit__qurrency">$</span> <span
+                    class="gradient-text">8000</span>
+                </div>
+                <div class="deposit__date">2023.04.07</div>
+                <ul class="deposit__parameters-list">
+                  <li>22.12.2023</li>
+                  <li>модель + 20%</li>
+                  <li>8000 $</li>
+                </ul>
+              </div>
+              <div class="deposits-slider__item deposit swiper-slide">
+                <div class="deposit__num">№ 727 844 32</div>
+                <div class="deposit__sum"><span class="gradient-text deposit__qurrency">$</span> <span
+                    class="gradient-text">8000</span>
+                </div>
+                <div class="deposit__date">2023.04.07</div>
+                <ul class="deposit__parameters-list">
+                  <li>22.12.2023</li>
+                  <li>модель + 20%</li>
+                  <li>8000 $</li>
+                </ul>
+              </div>
+              <div class="deposits-slider__item deposit swiper-slide">
+                <div class="deposit__num">№ 727 844 32</div>
+                <div class="deposit__sum"><span class="gradient-text deposit__qurrency">$</span> <span
+                    class="gradient-text">8000</span>
+                </div>
+                <div class="deposit__date">2023.04.07</div>
+                <ul class="deposit__parameters-list">
+                  <li>22.12.2023</li>
+                  <li>модель + 20%</li>
+                  <li>8000 $</li>
+                </ul>
+              </div>
+              <div class="deposits-slider__item deposit swiper-slide">
+                <div class="deposit__num">№ 727 844 32</div>
+                <div class="deposit__sum"><span class="gradient-text deposit__qurrency">$</span> <span
+                    class="gradient-text">8000</span>
+                </div>
+                <div class="deposit__date">2023.04.07</div>
+                <ul class="deposit__parameters-list">
+                  <li>22.12.2023</li>
+                  <li>модель + 20%</li>
+                  <li>8000 $</li>
+                </ul>
+              </div>
+              <div class="deposits-slider__item deposit swiper-slide">
+                <div class="deposit__num">№ 727 844 32</div>
+                <div class="deposit__sum"><span class="gradient-text deposit__qurrency">$</span> <span
+                    class="gradient-text">8000</span>
+                </div>
+                <div class="deposit__date">2023.04.07</div>
+                <ul class="deposit__parameters-list">
+                  <li>22.12.2023</li>
+                  <li>модель + 20%</li>
+                  <li>8000 $</li>
+                </ul>
+              </div>
+              <div class="deposits-slider__item deposit swiper-slide">
+                <div class="deposit__num">№ 727 844 32</div>
+                <div class="deposit__sum"><span class="gradient-text deposit__qurrency">$</span> <span
+                    class="gradient-text">8000</span>
+                </div>
+                <div class="deposit__date">2023.04.07</div>
+                <ul class="deposit__parameters-list">
+                  <li>22.12.2023</li>
+                  <li>модель + 20%</li>
+                  <li>8000 $</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="deposits-slider__controls">
+            <div class="deposits-slider__prev-btn">
+              <svg class="deposits-slider__icon icon icon--arrow-left" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#arrow-left"></use>
+              </svg>
+            </div>
+            <div class="deposits-slider__next-btn">
+              <svg class="deposits-slider__icon icon icon--arrow-right" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#arrow-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="main__table scroll">
+          <div class="table-main">
+            <div class="table-main__row table-main__row--head">
+              <div class="table-main__cell table-main__cell--head table-main__cell--num-depo">Номер депозита</div>
+              <div class="table-main__cell table-main__cell--head table-main__cell--qurrency">Валюта</div>
+              <div class="table-main__cell table-main__cell--head table-main__cell--history">История выплат</div>
+              <div class="table-main__cell table-main__cell--head table-main__cell--data">Дата</div>
+              <div class="table-main__cell table-main__cell--head table-main__cell--status">Статус</div>
+            </div>
+            <div class="table-main__row table-main__row--space"></div>
+            <div class="table-main__row">
+              <div class="table-main__cell table-main__cell--num-depo">
+                <div class="table-main__cell-head-mob">Номер депозита</div>
+                1800
+              </div>
+              <div class="table-main__cell table-main__cell--qurrency">
+                <div class="table-main__cell-head-mob">Валюта</div>
+                1500$
+              </div>
+              <div class="table-main__cell table-main__cell--history">
+                <div class="table-main__cell-head-mob">История выплат</div>
+                <span>Выплаты по вкладу</span>
+              </div>
+              <div class="table-main__cell table-main__cell--data">
+                <div class="table-main__cell-head-mob">Дата</div>
+                27.10.2020
+              </div>
+              <div class="table-main__cell table-main__cell--status">
+                <div class="table-main__cell-head-mob">Статус</div>
+                Активно
+              </div>
+            </div>
+            <div class="table-main__row table-main__row--space"></div>
+            <div class="table-main__row">
+              <div class="table-main__cell table-main__cell--num-depo">
+                <div class="table-main__cell-head-mob">Номер депозита</div>
+                1800
+              </div>
+              <div class="table-main__cell table-main__cell--qurrency">
+                <div class="table-main__cell-head-mob">Валюта</div>
+                1500$
+              </div>
+              <div class="table-main__cell table-main__cell--history">
+                <div class="table-main__cell-head-mob">История выплат</div>
+                <span>Выплаты по вкладу</span>
+              </div>
+              <div class="table-main__cell table-main__cell--data">
+                <div class="table-main__cell-head-mob">Дата</div>
+                27.10.2020
+              </div>
+              <div class="table-main__cell table-main__cell--status">
+                <div class="table-main__cell-head-mob">Статус</div>
+                Активно
+              </div>
+            </div>
+            <div class="table-main__row table-main__row--space"></div>
+            <div class="table-main__row">
+              <div class="table-main__cell table-main__cell--num-depo">
+                <div class="table-main__cell-head-mob">Номер депозита</div>
+                1800
+              </div>
+              <div class="table-main__cell table-main__cell--qurrency">
+                <div class="table-main__cell-head-mob">Валюта</div>
+                1500$
+              </div>
+              <div class="table-main__cell table-main__cell--history">
+                <div class="table-main__cell-head-mob">История выплат</div>
+                <span>Выплаты по вкладу</span>
+              </div>
+              <div class="table-main__cell table-main__cell--data">
+                <div class="table-main__cell-head-mob">Дата</div>
+                27.10.2020
+              </div>
+              <div class="table-main__cell table-main__cell--status">
+                <div class="table-main__cell-head-mob">Статус</div>
+                Активно
+              </div>
+            </div>
+            <div class="table-main__row table-main__row--space"></div>
+            <div class="table-main__row">
+              <div class="table-main__cell table-main__cell--num-depo">
+                <div class="table-main__cell-head-mob">Номер депозита</div>
+                1800
+              </div>
+              <div class="table-main__cell table-main__cell--qurrency">
+                <div class="table-main__cell-head-mob">Валюта</div>
+                1500$
+              </div>
+              <div class="table-main__cell table-main__cell--history">
+                <div class="table-main__cell-head-mob">История выплат</div>
+                <span>Выплаты по вкладу</span>
+              </div>
+              <div class="table-main__cell table-main__cell--data">
+                <div class="table-main__cell-head-mob">Дата</div>
+                27.10.2020
+              </div>
+              <div class="table-main__cell table-main__cell--status">
+                <div class="table-main__cell-head-mob">Статус</div>
+                Активно
+              </div>
+            </div>
+            <div class="table-main__row table-main__row--space"></div>
+            <div class="table-main__row">
+              <div class="table-main__cell table-main__cell--num-depo">
+                <div class="table-main__cell-head-mob">Номер депозита</div>
+                1800
+              </div>
+              <div class="table-main__cell table-main__cell--qurrency">
+                <div class="table-main__cell-head-mob">Валюта</div>
+                1500$
+              </div>
+              <div class="table-main__cell table-main__cell--history">
+                <div class="table-main__cell-head-mob">История выплат</div>
+                <span>Выплаты по вкладу</span>
+              </div>
+              <div class="table-main__cell table-main__cell--data">
+                <div class="table-main__cell-head-mob">Дата</div>
+                27.10.2020
+              </div>
+              <div class="table-main__cell table-main__cell--status">
+                <div class="table-main__cell-head-mob">Статус</div>
+                Активно
+              </div>
+            </div>
+            <div class="table-main__row table-main__row--space"></div>
+            <div class="table-main__row">
+              <div class="table-main__cell table-main__cell--num-depo">
+                <div class="table-main__cell-head-mob">Номер депозита</div>
+                1800
+              </div>
+              <div class="table-main__cell table-main__cell--qurrency">
+                <div class="table-main__cell-head-mob">Валюта</div>
+                1500$
+              </div>
+              <div class="table-main__cell table-main__cell--history">
+                <div class="table-main__cell-head-mob">История выплат</div>
+                <span>Выплаты по вкладу</span>
+              </div>
+              <div class="table-main__cell table-main__cell--data">
+                <div class="table-main__cell-head-mob">Дата</div>
+                27.10.2020
+              </div>
+              <div class="table-main__cell table-main__cell--status">
+                <div class="table-main__cell-head-mob">Статус</div>
+                Активно
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="layout__aside aside">
+        <div class="aside__user-panel user-panel aside-block aside-block--user-panel">
+          <div class="user-panel__avatar avatar">
+            <div class="avatar__picture">
+              <img src="images/avatar.jpg" class="avatar__img" alt="Avatar">
+              <span class="avatar__indicator indicator indicator--online"></span>
+            </div>
+            <div class="avatar__user-name">John Dow</div>
+            <div class="avatar__email">user@gmail.com</div>
+          </div>
+          <div class="user-panel__available-withdraw available-withdraw">
+            <h6 class="available-withdraw__title">Доступно к выводу:</h6>
+            <div class="available-withdraw__sum">
+              <span>$ 777.777</span>
+              <span class="available-withdraw__qurrency">USDT</span>
+            </div>
+          </div>
+          <div class="user-panel__referal-info referal-info">
+            <h6 class="referal-info__title">Мои рефералы</h6>
+            <dl class="referal-info__item">
+              <dt class="referal-info__parameter">Всего приглашено:</dt>
+              <dd class="referal-info__value">10</dd>
+            </dl>
+            <dl class="referal-info__item">
+              <dt class="referal-info__parameter">Прибыль по рефералам:</dt>
+              <dd class="referal-info__value">100$</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="aside__daily-profit daily-profit aside-block aside-block--daily-profit scroll">
+          <h4 class="daily-profit__title">Ежедневная прибыль</h4>
+          <div class="daily-profit__table-profit table-profit">
+            <div class="table-profit__row">
+              <div class="table-profit__cell table-profit__cell--head table-profit__cell--data">Дата</div>
+              <div class="table-profit__cell table-profit__cell--head table-profit__cell--investment">Вложение</div>
+              <div class="table-profit__cell table-profit__cell--head table-profit__cell--profit">Прибыль</div>
+              <div class="table-profit__cell table-profit__cell--head table-profit__cell--qurrency">Валюта</div>
+            </div>
+            <div class="table-profit__row table-profit__row--space"></div>
+            <div class="table-profit__row">
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--data">Today</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--investment">-1800</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--profit">+800</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--qurrency">
+                <img class="table-profit__icon" src="images/bitcoin-fill.svg" alt="Bitcoin">
+              </div>
+            </div>
+            <div class="table-profit__row table-profit__row--space"></div>
+            <div class="table-profit__row">
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--data">14.04.23</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--investment">-1800</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--profit">+800</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--qurrency">
+                <img class="table-profit__icon" src="images/bitcoin-fill.svg" alt="Bitcoin">
+              </div>
+            </div>
+            <div class="table-profit__row table-profit__row--space"></div>
+            <div class="table-profit__row">
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--data">14.04.23</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--investment">-1800</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--profit">+800</div>
+              <div class="table-profit__cell table-profit__cell--body table-profit__cell--qurrency">
+                <img class="table-profit__icon" src="images/bitcoin-fill.svg" alt="Bitcoin">
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <nav class="layout__navigation navigation slide-nav js-slideblock">
+        <ul class="navigation__menu">
+          <li class="navigation__menu-item"><a class="navigation__menu-link" href="#"><svg
+                class="navigation__icon icon icon--chart-arrow-up-rectangle" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#chart-arrow-up-rectangle"></use>
+              </svg> <span>Dashboard</span></a></li>
+          <li class="navigation__menu-item"><a class="navigation__menu-link" href="#"><svg
+                class="navigation__icon icon icon--deal" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#deal"></use>
+              </svg> <span>Мои партнеры</span></a></li>
+          <li class="navigation__menu-item"><a class="navigation__menu-link" href="#"><svg
+                class="navigation__icon icon icon--money-bag" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#money-bag"></use>
+              </svg> <span>Депозиты</span></a></li>
+          <li class="navigation__menu-item"><a class="navigation__menu-link" href="#"><svg
+                class="navigation__icon icon icon--setting" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#setting"></use>
+              </svg> <span>Настройки</span></a></li>
+          <li class="navigation__menu-item"><a class="navigation__menu-link" href="#"><svg
+                class="navigation__icon icon icon--logout" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="images/sprite.svg#logout"></use>
+              </svg> <span>Выйти</span></a></li>
+        </ul>
+        <a href="#" class="navigation__quick-invest-btn btn btn--color--default btn--size--normal"><span
+            class="btn__text">Быстрые
+            инвестиции</span></a>
+      </nav>
+      <footer class="layout__footer footer">
+        <div class="footer__container">
+          <a class="footer__contacts-link contacts-link">
+            <svg class="contacts-link__icon icon icon--paper-planer" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="images/sprite.svg#paper-planer"></use>
+            </svg>
+            Contact Us
+          </a>
+          <ul class="footer__rules rules">
+            <li class="rules__item"><a class="rules__link" href="#">Terms and Conditions</a></li>
+            <li class="rules__item"><a class="rules__link" href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Библиотеки и сторонние плагины для данной страницы -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Библиотеки и сторонние плагины глобальные -->
+  @@if (production === true) {
+  @@scriptStr
+  }
+  @@if (production === false) {
+  @@include('./_scripts.htm')
+  }
+</body>
+
+</html>

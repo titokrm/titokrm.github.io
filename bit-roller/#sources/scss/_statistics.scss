@@ -1,0 +1,134 @@
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: vh(10, 1080);
+  font-size: vh(17.7, 1080);
+
+  &__item {
+    border-radius: em(18, 17.7);
+    position: relative;
+    background: url("../images/1.jpg") no-repeat center;
+    background-size: cover;
+    padding: em(40, 17.7) em(24, 17.7);
+    min-height: em(180, 17.7);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      border: 1px solid #6F6F6F;
+      border-radius: em(18, 17.7);
+      opacity: .7;
+    }
+
+    &:nth-child(2) {
+      background: url("../images/2.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(3) {
+      background: url("../images/3.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(4) {
+      background: url("../images/4.jpg") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 1.077;
+    margin-bottom: em(32 - 17.7 * 1.077, 17.7);
+    position: relative;
+    min-height: em(1.077 * 17.7 * 2, 17.7);
+    z-index: 2;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__icon {
+    display: block;
+    margin-right: em(12.4, 17.7);
+
+    &--wallet {
+      width: em(38, 17.7);
+      height: auto;
+    }
+
+    &--money-bag {
+      width: em(42, 17.7);
+      height: auto;
+    }
+
+    &--diagram {
+      width: em(42, 17.7);
+      height: auto;
+    }
+
+    &--peoples {
+      width: em(45, 17.7);
+      height: auto;
+    }
+  }
+
+  &__num {
+    font-size: em(21.23, 17.7);
+    font-weight: 700;
+    line-height: 1.077;
+    white-space: nowrap;
+  }
+
+  @media only screen and (max-width: 120vh) and (orientation: landscape) {
+    font-size: vw(17.7, 1300);
+  }
+
+  @media only screen and (max-width: 110vh) and (orientation: landscape) {
+    font-size: vw(15, 1200);
+  }
+
+  @media screen and (orientation: portrait) {
+    display: block;
+    font-size: vw(14, 320);
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: vw(8, 320);
+      }
+
+      min-height: vw(140, 320);
+    }
+
+    &__title {}
+
+    &__inner {}
+
+    &__icon {}
+
+    &__num {}
+  }
+
+  @include max($xs-mob-width) {
+    &__item {}
+
+    &__title {}
+
+    &__inner {}
+
+    &__icon {}
+
+    &__num {}
+  }
+}

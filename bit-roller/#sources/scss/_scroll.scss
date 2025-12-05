@@ -1,0 +1,68 @@
+.scroll {
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.daily-profit.simplebar-scrollable-y,
+  &.user-panel.simplebar-scrollable-y {
+    overflow: visible;
+  }
+
+  &.simplebar-scrollable-y::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (orientation: landscape) {
+    &--main-table {
+      max-height: vh(292, 1080);
+    }
+
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .scroll {
+    &.simplebar-scrollable-y {
+      padding-right: 10px;
+    }
+  }
+}
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  border-radius: vh(3, 1080);
+  width: rem(6);
+}
+
+.simplebar-scrollbar {
+
+  &:before {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #2EE5DA, #06F);
+    border-radius: vh(3, 1080);
+  }
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+@media only screen and (orientation: portrait) {
+
+  .simplebar-track.simplebar-vertical {
+    right: vw(3, 320);
+    width: vw(6, 320);
+    border-radius: vw(3, 320);
+  }
+
+  .simplebar-scrollbar:before {
+    border-radius: vw(3, 320);
+  }
+}

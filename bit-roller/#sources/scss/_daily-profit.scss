@@ -1,0 +1,24 @@
+.daily-profit {
+  font-size: vh(18, 1080);
+  //  flex: 1 1 auto;
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: em(.54, 18);
+    margin-bottom: em(18, 18);
+    text-align: center;
+  }
+
+  &__table-profit {
+    font-size: em(15, 18);
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: vw(14, 320);
+
+    &__title {}
+
+    &__table-profit {}
+  }
+}

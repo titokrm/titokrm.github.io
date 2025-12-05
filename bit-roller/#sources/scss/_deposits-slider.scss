@@ -1,0 +1,81 @@
+.deposits-slider {
+
+  &__inner {
+    overflow: hidden;
+    position: relative;
+
+    &:not(.no-full):after {
+      position: absolute;
+      content: '';
+      right: -1px;
+      top: 0;
+      bottom: 0;
+      width: vh(62, 1080);
+      z-index: 100;
+      background: linear-gradient(to left, #2B3032 0%, rgba(42, 40, 42, 0.00) 100%);
+    }
+
+    &.last-slide {
+      &:after {
+        right: auto;
+        left: -1px;
+        background: linear-gradient(to right, #2B3032 0%, rgba(42, 40, 42, 0.00) 100%);
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: flex-start;
+    width: 10000px;
+  }
+
+  &__item {
+    min-height: em(274, 17);
+    width: em(230, 17);
+  }
+
+  &__controls {
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__prev-btn {
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      .deposits-slider__icon {
+        stroke: #3E3E3E;
+      }
+    }
+  }
+
+  &__next-btn {
+    cursor: pointer;
+    margin-left: em(10, 17);
+
+    &.swiper-button-disabled {
+      .deposits-slider__icon {
+        stroke: #3E3E3E;
+      }
+    }
+  }
+
+  &__icon {
+    width: em(24, 17);
+    height: em(24, 17);
+  }
+
+  @media screen and (orientation: portrait) {
+    &__items {}
+
+    &__item {}
+
+    &__controls {}
+
+    &__prev-btn {}
+
+    &__next-btn {}
+  }
+}

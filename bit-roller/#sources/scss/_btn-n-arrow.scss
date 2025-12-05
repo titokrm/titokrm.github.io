@@ -1,0 +1,14 @@
+.btn-n-arrow {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    margin-right: em(20, 14);
+  }
+
+  &__arrow {
+    width: em(32, 14);
+    height: em(32, 14);
+    display: block;
+  }
+}

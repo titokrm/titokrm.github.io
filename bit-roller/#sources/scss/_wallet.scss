@@ -1,0 +1,89 @@
+.wallet {
+  padding: em(20, 18) em(22, 18) em(10, 18);
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: em(15, 18);
+  border: 1px solid #fff;
+  background-color: #19567A;
+  position: relative;
+
+  &__address {
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: em(-.09, 18);
+    margin-bottom: em(10, 18);
+  }
+
+  &__net {
+    font-size: em(16, 18);
+    line-height: 1.07;
+    font-weight: 600;
+    letter-spacing: em(.48, 16);
+
+  }
+
+  &__message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #19567A;
+    visibility: hidden;
+
+    @keyframes message {
+      0% {
+        visibility: visible;
+        background-color: #19567A;
+      }
+
+      25% {
+        background-color: #0596E7;
+      }
+
+      50% {
+        background-color: #19567A;
+      }
+
+      75% {
+        background-color: #0596E7;
+      }
+
+      100% {
+        background-color: #19567A;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &.active {
+    overflow: hidden;
+
+    .wallet__message {
+      animation-name: message;
+      animation-duration: var(--messageAnimateTime);
+      animation-fill-mode: forwards; // оставит конечные сво-ва после анимации
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-delay: 0;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    display: block;
+
+    &__address {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}

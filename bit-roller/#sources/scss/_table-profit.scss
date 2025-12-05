@@ -1,0 +1,83 @@
+.table-profit {
+  display: table;
+  width: 100%;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: em(-0.075, 15);
+
+  &__row {
+    display: table-row;
+
+    &--space {
+      height: em(9, 15);
+    }
+  }
+
+  &__cell {
+    display: table-cell;
+    padding: em(9.6, 15) em(8, 15);
+    text-align: center;
+
+    &--head {
+      font-size: em(12, 15);
+      padding: em(9, 12) em(8, 12);
+      color: #9C9C9C;
+    }
+
+    &--data {
+      border-radius: em(15, 15) 0 0 em(15, 15);
+      padding-left: em(15, 15);
+
+      &.table-profit__cell--head {
+        padding-left: em(15, 12);
+      }
+    }
+
+    &--investment.table-profit__cell--body {
+      color: #F03E40;
+    }
+
+    &--profit.table-profit__cell--body {
+      color: #00B65E;
+    }
+
+    &--qurrency {
+      border-radius: 0 em(15, 15) em(15, 15) 0;
+      padding-right: em(15, 15);
+
+      &.table-profit__cell--head {
+        padding-right: em(15, 12);
+      }
+    }
+
+    &--body {
+      background-color: #292729;
+      vertical-align: middle;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: em(40, 15);
+    margin: 0 auto;
+  }
+
+  @include max($tab-width) {
+    &__row {}
+
+    &__cell {
+
+      &--head {}
+
+      &--data {}
+
+      &--investment {}
+
+      &--profit {}
+
+      &--qurrency {}
+
+      &--body {}
+    }
+  }
+}

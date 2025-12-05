@@ -1,0 +1,143 @@
+:root {
+  height: 100%;
+  font-size: $rem-size * 1px;
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  font-family: $default-font;
+  background-color: $back-default-color;
+  color: $text-default-color;
+  font-weight: normal;
+  font-style: normal;
+  min-width: $min-width * 1px;
+  //min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="container"] {
+  //.container {  
+  //  max-width: $width-container + $padding-container * 2;
+  margin: auto;
+  width: 100%;
+  padding: 0 $padding-container;
+  flex: 1 1 auto;
+
+  @media only screen and (orientation: portrait) and (max-width: $tab-width + 'px') {
+    padding: 0 $padding-container-mob;
+    //max-width: $width-container + $padding-container-mob * 2;
+  }
+
+}
+
+body.scroll-lock {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+body.js-waiting:after {
+  position: fixed;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: url("../images/loading.gif") no-repeat center;
+  background-size: 50px auto;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.wrapper-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+body.scroll-lock .wrapper-global {
+  overflow-y: scroll;
+}
+
+a {
+  color: $link-default-color;
+  text-decoration: $link-decoration;
+  transition: all $animate-time ease-in-out;
+
+  &:hover {
+    color: $link-hover-default-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  fill: none;
+  transition: stroke $animate-time ease-in-out, fill $animate-time ease-in-out;
+
+  &--close {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--paper-planer {
+    fill: #29FFCB;
+  }
+
+  &--chart-arrow-up-rectangle {
+    fill: #fff;
+  }
+
+  &--deal {
+    stroke: #fff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--money-bag {
+    stroke: #fff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--setting {
+    fill: #fff;
+  }
+
+  &--logout {
+    stroke: #fff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--arrow-left {}
+
+  &--arrow-right,
+  &--arrow-left {
+    stroke: #fff;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &--copy {
+    stroke: #fff;
+  }
+
+  &--forward {
+    fill: #fff;
+  }
+}

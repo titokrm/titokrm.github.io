@@ -1,0 +1,53 @@
+.referals {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: vh(20, 1080);
+
+  &__item {
+    font-size: vh(14, 1080);
+    padding: vh(40, 1080) vh(22, 1080);
+    border-radius: em(17, 14);
+    min-height: vh(316, 1080);
+
+    &:nth-of-type(1) {
+      background: url("../images/bg-replenish-1.jpg") no-repeat center right;
+      background-size: cover;
+      border: 1px solid #6F6F6F;
+    }
+  }
+
+  &__title {
+    font-size: em(20, 14);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: em(.6, 20);
+    margin-bottom: em(32, 20);
+    max-width: vh(400, 1080);
+  }
+
+  &__sutitle {
+    font-size: em(30, 14);
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: em(.9, 30);
+  }
+
+  &__btn-place {}
+
+  @media screen and (orientation: portrait) {
+    display: block;
+
+    &__item {
+      margin-bottom: vw(10, 320);
+      font-size: vw(11, 320);
+      min-height: 0;
+      padding: vw(16, 320);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

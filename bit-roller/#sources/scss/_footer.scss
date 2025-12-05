@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contacts-link {}
+
+  &__rules {}
+
+  @media screen and (orientation: portrait) {
+    text-align: center;
+
+    &__container {
+      display: block;
+    }
+
+    &__contacts-link {}
+
+    &__rules {
+      margin-top: vw(10, 320);
+    }
+  }
+}

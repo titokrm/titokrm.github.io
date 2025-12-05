@@ -1,0 +1,56 @@
+.form-replenish {
+
+  &__label {
+    display: block;
+    margin-bottom: em(7, 14);
+    letter-spacing: em(.42, 14);
+    font-weight: 500;
+  }
+
+  &__input {
+    display: block;
+    line-height: 1;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    height: em(49, 22);
+    padding: 0 em(16, 22);
+    font-size: em(22, 14);
+    font-weight: 600;
+    border-radius: em(10, 22);
+    color: #292729;
+    background: rgba(255, 255, 255, 0.60);
+    border: none;
+    margin-bottom: em(7, 22);
+    @include placeholder(#292729, 1);
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+  }
+
+  @media screen and (orientation: portrait) {
+    display: flex;
+    align-items: center;
+
+    &__label {
+      margin-bottom: 0;
+      margin-right: vw(10, 320);
+      flex: 0 0 auto;
+    }
+
+    &__input {
+      flex: 1 1 auto;
+      margin-bottom: 0;
+      height: vw(30, 320);
+      font-size: em(15, 11);
+    }
+
+    &__btn {
+      flex: 0 0 auto;
+      width: auto;
+      margin-left: vw(10, 320);
+    }
+  }
+}

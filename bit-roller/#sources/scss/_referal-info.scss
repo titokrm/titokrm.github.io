@@ -1,0 +1,52 @@
+.referal-info {
+
+  font-size: vh(16, 1080);
+
+  &__title {
+    font-size: em(18, 16);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: em(.54, 18);
+    margin-bottom: em(24, 18);
+    color: #8B8A8B;
+    text-align: center;
+  }
+
+  &__item {
+    @include no-list;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: em(20, 16);
+    border-radius: em(15, 16);
+    margin-top: em(8.6, 16);
+    background-color: #292729;
+  }
+
+  &__parameter {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: em(.48, 16);
+  }
+
+  &__value {
+    color: #8B8A8B;
+    font-size: em(19, 16);
+    margin-left: em(10, 19);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: em(.576, 19);
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: vw(12, 320);
+
+    &__title {}
+
+    &__item {}
+
+    &__parameter {}
+
+    &__value {}
+  }
+}

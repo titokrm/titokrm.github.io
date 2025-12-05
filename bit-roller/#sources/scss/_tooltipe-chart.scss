@@ -1,0 +1,73 @@
+.tooltip-chart {
+  position: absolute;
+  background-color: #323232;
+  font-size: vh(12, 1080);
+  line-height: normal;
+  letter-spacing: em(.36, 12);
+  padding: em(10, 12);
+  border: 1.5px solid rgba(101, 101, 101, 0.24);
+  border-radius: em(15.6, 12);
+  color: #8B8A8B;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+  pointer-events: none;
+  margin-top: em(-24, 12);
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+
+  &--pull-right {
+    transform: translate(-100%, -100%);
+  }
+
+  &--pull-left {
+    transform: translate(0%, -100%);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: em(6, 12);
+    margin-right: em(17, 12);
+  }
+
+  &__label {
+    text-align: right;
+    margin-bottom: em(6, 12);
+  }
+
+  &__value {
+    font-size: em(18, 12);
+    font-weight: 700;
+    letter-spacing: em(.54, 18);
+    color: #00B65E;
+    white-space: nowrap;
+    margin-right: em(15, 18);
+
+    span {
+      color: #fff;
+    }
+  }
+
+  &__difference {
+    font-size: em(10, 12);
+    font-weight: 600;
+    letter-spacing: em(.3, 10);
+
+    &--negative {
+      color: #F03E40;
+    }
+
+    &--positive {
+      color: #00B65E;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: vw(8, 320);
+  }
+}

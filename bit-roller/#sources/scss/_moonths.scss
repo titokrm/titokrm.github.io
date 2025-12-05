@@ -1,0 +1,43 @@
+.moonths {
+  @include no-list;
+  font-size: vh(14, 1080);
+  font-weight: 500;
+  letter-spacing: em(.93, 14);
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+
+    &.active {
+      .moonths__link {
+        color: #2DE4DA;
+      }
+    }
+  }
+
+  &__link {
+    color: #7E7086;
+    text-decoration: none;
+
+    &:hover {
+      color: #2DE4DA;
+      text-decoration: none;
+    }
+  }
+
+  @media only screen and (max-width: 132vh) and (orientation: landscape) {
+    &__link {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    font-size: vw(12, 320);
+  }
+}

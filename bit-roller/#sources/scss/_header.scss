@@ -1,0 +1,122 @@
+.header {
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-link {
+    margin-right: vh(20, 1080);
+  }
+
+  &__logo-img {
+    display: block;
+    width: vh(178, 1080);
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: vh(370, 1080);
+    margin-right: vh(86, 1080);
+  }
+
+  &__withdraw-btn {
+    margin-right: vh(45, 1080);
+    margin-left: auto;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__replenish-btn {}
+
+  &__btns-mob {
+    display: none;
+  }
+
+  @media only screen and (max-width: 155vh) and (orientation: landscape) {
+    padding-left: vh(45, 1080);
+
+    &__btns {
+      margin-right: vh(45, 1080);
+    }
+
+  }
+
+  @media only screen and (max-width: 120vh) and (orientation: landscape) {
+    padding-left: vh(20, 1080);
+
+    &__btns {
+      margin-right: vh(20, 1080);
+    }
+
+    &__withdraw-btn {
+      margin-right: vh(20, 1080);
+    }
+  }
+
+  @media only screen and (max-width: 155vh) and (orientation: landscape) {
+    &__burger {
+      display: block;
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      backdrop-filter: blur(100px);
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__logo-link {
+      margin-right: vw(20, 320);
+      margin-left: vw(10, 320);
+    }
+
+    &__logo-img {
+      width: vw(137, 320);
+    }
+
+    &__btns {
+      width: auto;
+      margin-right: vw(20, 320);
+    }
+
+    &__withdraw-btn {
+      margin-right: vw(20, 320);
+      margin-left: vw(20, 320);
+    }
+
+    &__replenish-btn {
+      margin-right: vw(20, 320);
+      margin-left: 0;
+    }
+
+    &__btns-mob {
+      display: flex;
+      justify-content: space-between;
+      margin-top: vw(10, 320);
+      flex: 0 0 100%;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.slide-nav {
+
+  @media only screen and (max-width: 155vh) and (orientation: landscape) {
+    transition: transform $animate-time ease-in-out;
+
+    &.active {
+      transform: translateX(0);
+      box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    transition: transform $animate-time ease-in-out;
+
+    &.active {
+      transform: translateX(0);
+      box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.7);
+    }
+  }
+}

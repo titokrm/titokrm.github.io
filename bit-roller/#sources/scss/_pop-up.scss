@@ -1,0 +1,26 @@
+.pop-up {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  padding: vh(40, 1080);
+  z-index: 10000;
+  background: rgba(198, 9, 214, 0.01);
+  backdrop-filter: blur(vh(40, 1080));
+
+  &__window {
+    margin: auto;
+    max-width: 100%;
+    width: vh(672, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    padding: vw(30, 320) vw(20, 320);
+
+    &__window {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.table-main {
+  display: table;
+  width: 100%;
+
+  &__row {
+    display: table-row;
+
+    &--space {
+      height: vh(6.7, 1080);
+    }
+  }
+
+  &__cell {
+    display: table-cell;
+    padding: vh(14, 1080) 0;
+    background-color: #323232;
+    font-size: vh(14, 1080);
+    line-height: vh(17, 1080);
+    font-weight: 500;
+    color: #999;
+    min-width: 0;
+    padding-right: vh(15, 1080);
+
+    &--head {
+      border-top: 1.5px solid #3E3E3E;
+      border-bottom: 1.5px solid #3E3E3E;
+      padding: vh(20, 1080) 0;
+      padding-right: vh(15, 1080);
+      color: #fff;
+    }
+
+    &--head.table-main__cell--qurrency,
+    &--head.table-main__cell--status {
+      color: #fff;
+    }
+
+    &--head.table-main__cell--status {
+      border-right: 1.5px solid #3E3E3E;
+    }
+
+    &--head.table-main__cell--num-depo {
+      border-left: 1.5px solid #3E3E3E;
+    }
+
+    &--num-depo {
+      border-radius: vh(10, 1080) 0 0 vh(10, 1080);
+      padding-right: vh(15, 1080);
+      padding-left: vh(35, 1080);
+      width: vh(190, 1080);
+    }
+
+    &--qurrency {
+      color: #00B65E;
+    }
+
+    &--history {}
+
+    &--data {}
+
+    &--status {
+      border-radius: 0 vh(10, 1080) vh(10, 1080) 0;
+      padding-right: vh(35, 1080);
+      color: #00B65E;
+      width: vh(100, 1080);
+    }
+
+    .table-main__cell--head.table-main__cell--num-depo {
+      border-radius: vh(13, 1080) 0 0 vh(13, 1080);
+    }
+
+    .table-main__cell--head.table-main__cell--status {
+      border-radius: 0 vh(13, 1080) vh(13, 1080) 0;
+    }
+  }
+
+  &__cell-head-mob {
+    display: none;
+  }
+
+  @media screen and (orientation: portrait) {
+    display: block;
+
+    &__row {
+      &--head {
+        display: none;
+      }
+
+      &--space {
+        display: none;
+      }
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      margin-bottom: vw(6, 320);
+      background-color: #323232;
+      border-radius: vw(7.5, 320);
+      padding: vw(8, 320);
+      gap: vw(6, 320);
+    }
+
+    &__cell {
+      background: none;
+      display: block;
+      width: auto;
+      font-size: vw(10, 320);
+      line-height: normal;
+
+      &--num-depo {
+        padding: 0;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      &--qurrency {
+        padding: 0;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+
+      &--history {
+        padding: 0;
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        display: grid;
+        gap: vw(6, 320);
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &--data {
+        padding: 0;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      &--status {
+        padding: 0;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+    }
+
+    &__cell-head-mob {
+      display: block;
+      color: #fff;
+      margin-bottom: vw(4, 320);
+      flex: 0 0 50%;
+      margin-right: vw(6, 320);
+    }
+  }
+}

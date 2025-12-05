@@ -1,0 +1,43 @@
+.available-withdraw {
+  font-size: vh(12, 1080);
+  padding: em(20, 12);
+  background-color: #292729;
+  border-radius: vh(15, 1080);
+  text-align: center;
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: em(0.36, 12);
+    margin-bottom: em(12, 12);
+    color: #00B65E;
+  }
+
+  &__sum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: em(31, 12);
+    font-weight: 600;
+    letter-spacing: em(.93, 31);
+    line-height: 1.2;
+  }
+
+  &__qurrency {
+    font-size: em(21, 31);
+    letter-spacing: em(.63, 21);
+    color: #8B8A8B;
+    margin-left: em(12, 21);
+    line-height: 1;
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: vw(9, 320);
+
+    &__title {}
+
+    &__sum {}
+
+    &__qurrency {}
+  }
+}

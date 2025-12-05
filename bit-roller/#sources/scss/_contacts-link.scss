@@ -1,0 +1,31 @@
+.contacts-link {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: vh(16, 1080);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &__icon {
+    flex: 0 0 vh(30, 1080);
+    height: vh(26, 1080);
+    width: vh(30, 1080);
+    margin-right: vh(20, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    font-size: vw(14, 320);
+
+    &__icon {
+      flex: 0 0 vw(24, 320);
+      height: vw(21, 320);
+      width: vw(24, 320);
+      margin-right: vw(16, 320);
+    }
+  }
+}

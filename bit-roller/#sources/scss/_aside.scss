@@ -1,0 +1,29 @@
+.aside {
+  &__user-panel {
+    margin-bottom: vh(25, 1080);
+    flex: 0 0 auto;
+  }
+
+  &__daily-profit {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (orientation: landscape) {
+    &__user-panel {
+      //      max-height: vh(555, 1080);
+    }
+
+    &__daily-profit {
+      max-height: vh(274, 1080);
+      min-height: 0;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    &__user-panel {
+      margin-bottom: vw(20, 320);
+    }
+  }
+}

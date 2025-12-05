@@ -1,0 +1,72 @@
+.btn-round {
+  width: em(52, 14);
+  height: em(52, 14);
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color $animate-time ease-in-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(to bottom, #2DE2DA 0%, #06F 100%);
+    transition: opacity $animate-time ease-in-out;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: em(24, 14);
+    height: em(24, 14);
+    stroke: #292729;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0);
+
+    &:before {
+      opacity: 1;
+    }
+
+    .btn-round__icon {
+      stroke: #fff;
+    }
+  }
+
+  &--gradient {
+    background-color: rgba(255, 255, 255, 0);
+
+    &:before {
+      opacity: 1;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      &:before {
+        opacity: 0;
+      }
+
+      .btn-round__icon {
+        stroke: #292729;
+      }
+    }
+
+    .btn-round__icon {
+      width: em(25.5, 14);
+      height: em(24.24, 14);
+      stroke: #fff;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.title-block {
+  font-size: vh(22, 1080);
+  line-height: em(23.7, 22);
+  letter-spacing: em(.66, 22);
+  font-weight: 400;
+
+  @media screen and (orientation: portrait) {
+    font-size: vw(16, 320);
+  }
+}

@@ -1,0 +1,24 @@
+.user-panel {
+
+  &__avatar {
+    margin: 0 auto vh(27, 1080);
+  }
+
+  &__available-withdraw {
+    margin-bottom: vh(23, 1080);
+  }
+
+  &__referal-info {}
+
+  @media screen and (orientation: portrait) {
+    &__avatar {
+      margin-bottom: vw(18, 320);
+    }
+
+    &__available-withdraw {
+      margin-bottom: vw(15, 320);
+    }
+
+    &__referal-info {}
+  }
+}

@@ -1,0 +1,19 @@
+.replenish {
+  &__title {
+    margin-bottom: em(30, 22);
+  }
+
+  &__replenish-block {
+    font-size: vh(14, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    &__title {
+      margin-bottom: 1em;
+    }
+
+    &__replenish-block {
+      font-size: vw(11, 320);
+    }
+  }
+}

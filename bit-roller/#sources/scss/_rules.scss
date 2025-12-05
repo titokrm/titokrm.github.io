@@ -1,0 +1,39 @@
+.rules {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include no-list;
+  font-size: vh(16, 1080);
+  font-weight: 500;
+  line-height: 1.2;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: vh(50, 1080);
+    }
+  }
+
+
+  &__link {
+    color: #7C7C7C;
+
+    &:hover {
+      color: #7C7C7C;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    display: block;
+    font-size: vw(14, 320);
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: vw(10, 320);
+        margin-right: 0;
+      }
+    }
+
+    &__link {}
+
+  }
+}

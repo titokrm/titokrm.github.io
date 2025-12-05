@@ -1,0 +1,60 @@
+.article {
+  padding: vh(27, 1080) vh(37, 1080);
+  font-size: vh(16, 1080);
+  line-height: 1.2;
+
+  h4,
+  .h4 {
+    font-size: em(20, 16);
+    margin-bottom: em(19.2, 20);
+    font-weight: 400;
+    letter-spacing: em(.48, 20);
+  }
+
+  h6,
+  .h6 {
+    font-size: 1em;
+    margin-bottom: em(19.2, 16);
+    font-weight: 700;
+    letter-spacing: em(.48, 16);
+  }
+
+  p,
+  ul,
+  ol {
+    @include no-list;
+    font-size: 1em;
+    margin-bottom: em(19.2, 16);
+    font-weight: 400;
+    letter-spacing: em(.48, 16);
+
+    &:has(+ h6),
+    &:has(+ h4) {
+      margin-bottom: em(28, 16);
+    }
+  }
+
+  ul {
+    max-width: vh(920, 1080);
+
+    li {
+      &:before {
+        content: '— ';
+        display: inline;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: em(19.2, 16);
+      }
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    padding: vw(16, 320);
+    font-size: vw(12.58, 320);
+
+    ul {
+      max-width: none;
+    }
+  }
+}

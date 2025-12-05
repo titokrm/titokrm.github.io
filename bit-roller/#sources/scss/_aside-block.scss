@@ -1,0 +1,30 @@
+.aside-block {
+
+  padding: vh(30, 1080) vh(12, 1080);
+  border-radius: vh(15.6, 1080);
+  border: 1px solid #3E3E3E;
+
+  &--daily-profit {
+    background-image: radial-gradient(farthest-side at 100% 0,
+        #2a5666 0%,
+        #31383b 100%);
+    background-color: #323232;
+  }
+
+  &--user-panel {
+    background-image: radial-gradient(at 100% 50%,
+        #2a5666 0%,
+        #31383b 100%);
+    background-color: #323232;
+  }
+
+  @media screen and (orientation: portrait) {
+    padding: vw(22, 320) vw(8, 320);
+    border-radius: vw(12, 320);
+
+    &--daily-profit,
+    &--user-panel {
+      background-size: vw(280, 320) 100%;
+    }
+  }
+}

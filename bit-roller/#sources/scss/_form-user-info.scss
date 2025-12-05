@@ -1,0 +1,52 @@
+.form-user-info {
+
+  &__row {
+    margin-bottom: em(17, 12.77);
+
+    &--btn-place {
+      margin-top: em(36, 12.77);
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: em(11, 12.77);
+    letter-spacing: em(-0.064, 12.77);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.46);
+  }
+
+  &__input-wrap {}
+
+  &__input-field {
+    display: block;
+    line-height: 1;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    height: em(54, 12.77);
+    padding: 0 em(26, 12.77);
+    font-size: 1em;
+    border-radius: em(10, 12.77);
+    transition: border-color s ease-in-out;
+    color: #fff;
+    background-color: #323232;
+    border: 1px solid #3E3E3E;
+    margin-bottom: em(4, 12.77);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    width: vh(230, 1080);
+  }
+
+  @media screen and (orientation: portrait) {
+    &__btn {
+      width: vw(138, 320);
+    }
+
+  }
+}
