@@ -1,6 +1,7 @@
 ## Некоторые из моих работ
 
-- [https://titokrm.github.io/bit-roller/](https://titokrm.github.io/bit-roller/index.html) - верстка сайта с диаграммой получаемой с помощью chart.js (исходник - в папке coin/#sources)
+- [https://titokrm.github.io/trade-blade/](https://titokrm.github.io/trade-blade/index.html) - mobilefirst верстка лендинга с легкими ненавязчивыми анимациями заголовков, появления блоков и счетчиками на GSAP (исходник - в папке trade-blade/#sources)
+- [https://titokrm.github.io/bit-roller/](https://titokrm.github.io/bit-roller/index.html) - верстка сайта с диаграммой получаемой с помощью chart.js (исходник - в папке bit-roller/#sources)
 - [https://titokrm.github.io/coin/](https://titokrm.github.io/coin/change.html) - верстка обменника с кастомизацией скролла и селектов (исходник - в папке coin/#sources)
 - [https://titokrm.github.io/joy/](https://titokrm.github.io/joy/) - верстка лендинга (исходник - в папке joy/#sources)
 - [https://titokrm.github.io/vena/](https://titokrm.github.io/vena/) - верстка лендинга с svg-анимацией и самописной каруселью изображений (исходник - в папке vena/#sources)

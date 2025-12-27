@@ -1,0 +1,322 @@
+//Text overflow.
+@mixin text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin font($font-size, $line-height: $font-size, $font-weight: false, $letter-spacing: false) {
+  font-size: ($font-size) * 1px;
+
+  @if ($line-height ==0) {
+    line-height: normal;
+  }
+
+  @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if ($font-weight) {
+    font-weight: $font-weight;
+  }
+
+  @if ($letter-spacing) {
+    letter-spacing: $letter-spacing * 1px;
+  }
+}
+
+// helper: число ли это?
+@function is-number-unitless($value) {
+  @return type-of($value)=='number' and unitless($value);
+}
+
+@mixin size($width, $height: false) {
+
+  // width
+  @if is-number-unitless($width) {
+    width: $width + px;
+  }
+
+  @else {
+    width: $width;
+  }
+
+  // height
+  @if $height ==false {
+    $height: $width;
+  }
+
+  @if is-number-unitless($height) {
+    height: $height + px;
+  }
+
+  @else {
+    height: $height;
+  }
+}
+
+@mixin absolute-center($x: false, $y: false) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  @if ($x and $y) {
+    transform: translate($x, $y);
+  }
+
+  @else {
+    @if ($x) {
+      transform: translate($x, -50%);
+    }
+
+    @else {
+      @if ($y) {
+        transform: translate(-50%, $y);
+      }
+
+      @else {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@mixin placeholder($color, $opacity) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+
+  /* Firefox 19+ */
+  &::-moz-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+
+  /* Firefox 18- */
+  &:-moz-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: $opacity;
+    color: $color;
+  }
+
+  &::placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+}
+
+@mixin no-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin max($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin min($widthMin, $widthMax: null) {
+  @if ($widthMax) {
+    @media only screen and (min-width: $widthMin + "px") and (max-width: $widthMax+ "px") {
+      @content;
+    }
+  }
+
+  @else {
+    @media only screen and (min-width: $widthMin + "px") {
+      @content;
+    }
+  }
+}
+
+@mixin adaptiv-font($pcSize, $mobSize, $max-width: 1920, $min-width: 375) {
+  // для адаптивного шрифта
+  $addSize: $pcSize - $mobSize;
+  font-size: calc(#{$mobSize + "px"} + #{$addSize} * ((100vw - #{$min-width} * 1px) / #{$max-width}));
+}
+
+/* stylelint-disable */
+$prop-aliases: (
+  // Margin
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  mx: margin-inline,
+  my: margin-block,
+
+  t: top,
+  l: left,
+  r: right,
+  b: bottom,
+  i: inset,
+  // Padding
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+  px: padding-inline,
+  py: padding-block,
+
+  // Others (можешь дополнять)
+  fs: font-size,
+  lh: line-height,
+  w: width,
+  maw: max-width,
+  mw: min-width,
+  h: height,
+  bdrs: border-radius,
+  bw: border-width
+);
+
+/* stylelint-enable */
+// @function convert-values($values, $unit-fn, $base) {
+//   $result: (
+//   );
+
+// @if type-of($values)=='list' {
+//   @each $v in $values {
+//     @if type-of($v)=='number' and unitless($v) {
+//       $result: append($result, call(get-function($unit-fn), $v, $base));
+//     }
+
+//     @else {
+//       $result: append($result, $v);
+//     }
+//   }
+// }
+
+// @else {
+//   @if type-of($values)=='number' and unitless($values) {
+//     @return call(get-function($unit-fn), $values, $base);
+//   }
+
+//   @else {
+//     @return $values;
+//   }
+// }
+
+// @return $result;
+// }
+
+// @mixin responsive-prop($prop, $descSize, $mobSize: $descSize, $base-portrait: 375) {
+//   $real-prop: map-get($prop-aliases, $prop);
+
+//   @if $real-prop ==null {
+//     // @warn "Свойство `#{$prop}` не найдено в $prop-aliases. Применяется как есть.";
+//     $real-prop: $prop;
+//   }
+
+//   // Вспомогательная функция для обработки одного значения или списка
+
+//   // Применяем
+//   @if type-of($real-prop)=='list' {
+//     @each $p in $real-prop {
+//       @if $mobile-first ==1 {
+//         #{$p}: convert-values($mobSize, vw, $base-portrait);
+
+//         @include media-desc {
+//           #{$p}: convert-values($descSize, vh, 1080); // или замени на свой base
+//         }
+//       }
+
+//       @else {
+//         #{$p}: convert-values($descSize, vh, 1080);
+
+//         @include media-mobs {
+//           #{$p}: convert-values($mobSize, vw, $base-portrait);
+//         }
+//       }
+//     }
+//   }
+
+//   @else {
+//     @if $mobile-first ==1 {
+//       #{$real-prop}: convert-values($mobSize, vw, $base-portrait);
+
+//       @include media-desc {
+//         #{$real-prop}: convert-values($descSize, vh, 1080);
+//       }
+//     }
+
+//     @else {
+//       #{$real-prop}: convert-values($descSize, vh, 1080);
+
+//       @include media-mobs {
+//         #{$real-prop}: convert-values($mobSize, vw, $base-portrait);
+//       }
+//     }
+//   }
+// }
+
+// @mixin rp($args...) {
+//   @include responsive-prop($args...);
+// }
+
+/* функция revOffs (сокращение от reverse offset) возвращает смещение в % от ширины элемента ($width) - на сколько нужно сместить этот элемент с помощью transform: translateX() чтобы его край расположился
+ на заданном в $indent расстоянии от края экрана */
+@function revOffs($indent, $width, $widthScreen) {
+  @return ($widthScreen / 2 - $indent) / $width * 100%;
+}
+
+/* миксин располагающий элемент на расстоянии $indent от края экрана (по умолчанию - от левого края) это значение берется из дизайна, но привязка осуществляется относительно центра экрана.
+По умолчанию ширина экрана (дизайна) задана 1920 пикс. Если указать параметр $from - то всё будет вычисляться относительно правого края */
+@mixin posElem($indent, $width, $from: "left", $widthScreen: 1920) {
+  @if ($from =="left") {
+    left: 50%;
+    right: auto;
+    transform: translateX(revOffs($indent, $width, $widthScreen) * -1);
+  }
+
+  @else {
+    right: 50%;
+    left: auto;
+    transform: translateX(revOffs($indent, $width, $widthScreen));
+  }
+}
+
+@function text-stroke($font-size, $width-shadow, $color, $softening: 2) {
+  // для обводки текста
+  // пример использования:
+  // text-shadow: text-stroke(64, 4, blue);
+  //
+  // $font-size - размер шрифта в пикс для которого делается обводка
+  // $width-shadow - размер тени в пикс на макете
+  // $color - цвет
+  // $softening - смягчение тени (можно не указывать, по умолчанию 2px)
+  // все значения вычисляются в em поэтому для мобильного всё пересчитается с учетом размера шрифта заданного в стилях для мобильного у-ва
+
+  $shadows: (
+  );
+
+@for $i from -$width-shadow through $width-shadow {
+  @for $j from -$width-shadow through $width-shadow {
+    $shadows: append($shadows,
+        #{"#{em($i, $font-size)} #{em($j, $font-size)} #{em($softening, $font-size)} #{$color}"},
+ comma);
+  }
+}
+
+@return $shadows;
+}
+
+@mixin sizerem($width, $height: false) {
+  width: rem($width);
+
+  @if ($height) {
+    height: rem($height);
+  }
+
+  @else {
+    height: rem($width);
+  }
+}

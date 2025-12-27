@@ -1,0 +1,139 @@
+.statistics {
+  position: relative;
+  background-color: $color-white;
+  color: $color-black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    right: auto;
+    transform: translateX(rem(-143));
+    top: rem(-24);
+    width: 50%;
+    background-color: $color-white;
+
+    @include min($width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      top: rem(-58);
+    }
+  }
+
+  &__container {
+    padding-top: rem(24);
+    padding-bottom: rem(48);
+    position: relative;
+
+    @include min($width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      padding-top: rem(56);
+      padding-bottom: rem(61);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: perc(639, 1440);
+      height: rem(82);
+      background: url("../img/trapecy-mob.svg") no-repeat right center / auto 100%;
+      transform: translateY(rem(-24));
+
+      @include min($width-mob) {
+        // для планшетов и десктопов >= $width-mob 
+        height: rem(60);
+        background: url("../img/trapecy.svg") no-repeat right center / auto 100%;
+        transform: translateY(rem(-58));
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(32);
+
+    @include min($width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      flex-wrap: nowrap;
+      gap: rem(15);
+    }
+  }
+
+  &__text {
+    flex: 0 0 100%;
+    position: relative;
+
+    @include min($width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      flex: 0 0 perc(169 + 141, 1440);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(2);
+
+    @include min($width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__period {
+    font-size: rem(14);
+    line-height: rem(20);
+    opacity: 0.5;
+  }
+
+  &__items-wrapper {
+    position: relative;
+    display: grid;
+    flex: 0 0 100%;
+    row-gap: rem(32);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 0;
+
+
+    @include min($width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      flex: 1 1 auto;
+      grid-template-columns: 33% 1fr 33%;
+      column-gap: rem(15);
+      padding-top: rem(12);
+    }
+
+  }
+
+  &__item-label {
+    font-size: rem(14);
+    line-height: rem(20);
+    margin-bottom: rem(8);
+    opacity: 0.8;
+    text-transform: uppercase;
+
+    @include min($width-tab-sm) {
+
+      // для десктопов >= 980px
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__item-number {
+    font-size: rem(35);
+    font-weight: 500;
+    line-height: 1.1;
+    color: $color-purple;
+    font-variant-numeric: slashed-zero;
+    font-feature-settings: "zero";
+
+    @include min($width-tab-sm) {
+      // для планшетов и десктопов >= $width-mob 
+      font-size: rem(60);
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.faq {
+  padding-block: rem(56);
+  color: $color-black;
+  background-color: $color-white;
+
+  @include min($width-mob) {
+    // >= $width-mob 
+    padding-block: rem(96);
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: rem(846);
+  }
+
+  &__title {
+    margin-bottom: rem(40);
+
+    @include min($width-mob) {
+      // >= $width-mob 
+      margin-bottom: rem(64);
+    }
+  }
+}
+
+.accordion {
+
+  &__item {
+    background-color: rgba(234, 239, 240, 1);
+    border-radius: rem(4);
+    margin-bottom: rem(12);
+    color: rgba(3, 7, 24, 1);
+
+    &.active {
+      background-color: $color-purple;
+      color: $color-white;
+
+      .accordion__btn {
+        transform: scaleY(-1);
+
+        &:before {
+          border-color: $color-white;
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (hover: hover) {
+      &:not(.active) {
+        .accordion__title:hover {
+          padding-left: rem(26);
+          padding-right: rem(46);
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding: rem(16) rem(56) rem(16) rem(16);
+    cursor: pointer;
+    position: relative;
+    font-size: rem(20);
+    line-height: rem(28);
+    font-weight: 500;
+    color: inherit;
+    transition: padding $animate-time ease-in-out;
+
+    @include min($width-mob) {
+      // >= $width-mob 
+      font-size: rem(24);
+      line-height: rem(32);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: rem(16);
+    transform: translateY(-50%);
+    @include sizerem(24, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center 38%;
+    transition: transform $animate-time ease-in-out;
+
+    &:before {
+      content: '';
+      display: block;
+      @include sizerem(10, 11);
+      border-bottom: 2px solid rgba(3, 7, 24, 1);
+      border-right: 2px solid rgba(3, 7, 24, 1);
+      transform: rotate(45deg);
+      opacity: 0.5;
+      transition: border-color $animate-time ease-in-out;
+    }
+  }
+
+  &__collapsed-block {
+    height: 0;
+    overflow: hidden;
+    transition: height $animate-time ease-in-out;
+  }
+
+  &__text {
+    opacity: 0.8;
+    padding: rem(16);
+    padding-top: 0;
+
+    p {
+      margin: 0;
+      margin-bottom: rem(20);
+      font-size: rem(16);
+      line-height: 1.25;
+      color: inherit;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
