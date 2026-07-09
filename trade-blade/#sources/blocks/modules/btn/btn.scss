@@ -1,0 +1,49 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow variables.$animate-time ease-in-out;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border: functions.rem(1.5) solid variables.$color-q;
+  font-size: functions.rem(14);
+  padding-inline: functions.rem(24);
+  padding-block: functions.rem(11);
+  font-weight: 500;
+  line-height: functions.rem(20);
+  border-radius: functions.rem(4);
+  box-shadow: 0 0 functions.em(4, 16) variables.$color-q;
+
+  @include mixins.min(variables.$width-mob) {
+    // для планшетов и десктопов >= $width-mob
+    font-size: functions.rem(16);
+    padding-block: functions.rem(16);
+  }
+
+  &--primary {
+    background-color: variables.$color-q;
+    color: variables.$color-back-default;
+
+    &:hover {
+      box-shadow: 0 0 0.5em variables.$color-q;
+      color: variables.$color-back-default;
+    }
+  }
+
+  &--secondary {
+    background-color: rgba(87, 225, 255, 0.2);
+    color: variables.$color-q;
+
+    &:hover {
+      box-shadow: 0 0 0.8em variables.$color-q;
+      color: variables.$color-q;
+    }
+  }
+}

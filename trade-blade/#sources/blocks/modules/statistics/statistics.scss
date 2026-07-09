@@ -1,0 +1,143 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+.statistics {
+  position: relative;
+  background-color: variables.$color-white;
+  color: variables.$color-black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    right: auto;
+    transform: translateX(functions.rem(-143));
+    top: functions.rem(-24);
+    width: 50%;
+    background-color: variables.$color-white;
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      top: functions.rem(-58);
+    }
+  }
+
+  &__container {
+    padding-top: functions.rem(24);
+    padding-bottom: functions.rem(48);
+    position: relative;
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      padding-top: functions.rem(56);
+      padding-bottom: functions.rem(61);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: functions.perc(639, 1440);
+      height: functions.rem(82);
+      background: url("../img/trapecy-mob.svg") no-repeat right center / auto 100%;
+      transform: translateY(functions.rem(-24));
+
+      @include mixins.min(variables.$width-mob) {
+        // для планшетов и десктопов >= $width-mob 
+        height: functions.rem(60);
+        background: url("../img/trapecy.svg") no-repeat right center / auto 100%;
+        transform: translateY(functions.rem(-58));
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: functions.rem(32);
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      flex-wrap: nowrap;
+      gap: functions.rem(15);
+    }
+  }
+
+  &__text {
+    flex: 0 0 100%;
+    position: relative;
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      flex: 0 0 functions.perc(169 + 141, 1440);
+    }
+  }
+
+  &__title {
+    margin-bottom: functions.rem(2);
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      margin-bottom: functions.rem(4);
+    }
+  }
+
+  &__period {
+    font-size: functions.rem(14);
+    line-height: functions.rem(20);
+    opacity: 0.5;
+  }
+
+  &__items-wrapper {
+    position: relative;
+    display: grid;
+    flex: 0 0 100%;
+    row-gap: functions.rem(32);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 0;
+
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      flex: 1 1 auto;
+      grid-template-columns: 33% 1fr 33%;
+      column-gap: functions.rem(15);
+      padding-top: functions.rem(12);
+    }
+
+  }
+
+  &__item-label {
+    font-size: functions.rem(14);
+    line-height: functions.rem(20);
+    margin-bottom: functions.rem(8);
+    opacity: 0.8;
+    text-transform: uppercase;
+
+    @include mixins.min(variables.$width-tab-sm) {
+
+      // для десктопов >= 980px
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__item-number {
+    font-size: functions.rem(35);
+    font-weight: 500;
+    line-height: 1.1;
+    color: variables.$color-purple;
+    font-variant-numeric: slashed-zero;
+    font-feature-settings: "zero";
+
+    @include mixins.min(variables.$width-tab-sm) {
+      // для планшетов и десктопов >= $width-mob 
+      font-size: functions.rem(60);
+    }
+  }
+}

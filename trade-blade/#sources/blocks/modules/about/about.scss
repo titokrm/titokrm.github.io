@@ -1,0 +1,157 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+.about {
+  position: relative;
+  background-color: variables.$color-white;
+  color: variables.$color-black;
+
+  @include mixins.max(variables.$width-mob - 0.1) {
+
+    // для мобилок
+    &+section {
+      padding-top: functions.rem(125 + 56);
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    right: auto;
+    transform: translateX(functions.rem(-143));
+    top: functions.rem(-24);
+    width: 50%;
+    background-color: variables.$color-white;
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      top: functions.rem(-58);
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: functions.rem(40);
+    flex-direction: column;
+    padding-top: functions.rem(24);
+    padding-bottom: functions.rem(1);
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      padding-top: functions.rem(56);
+      padding-bottom: functions.rem(92);
+    }
+
+    @include mixins.min(variables.$width-tab-xs) {
+      // для планшетов и десктопов >= $width-mob 
+      gap: functions.rem(20);
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: functions.perc(639, 1440);
+      height: functions.rem(82);
+      background: url("../img/trapecy-mob.svg") no-repeat right center / auto 100%;
+      transform: translateY(functions.rem(-24));
+
+      @include mixins.min(variables.$width-mob) {
+        // для планшетов и десктопов >= $width-mob 
+        height: functions.rem(60);
+        background: url("../img/trapecy.svg") no-repeat right center / auto 100%;
+        transform: translateY(functions.rem(-58));
+      }
+    }
+  }
+
+  &__text {
+    flex: 0 0 auto;
+    position: relative;
+
+    @include mixins.min(variables.$width-tab-xs) {
+      // для планшетов и десктопов >= $width-mob 
+      flex: 1 1 functions.rem(415);
+    }
+
+    @include mixins.min(variables.$width-tab-sm) {
+      // @include min(a, b) {...}
+      // a <= x <= b
+      flex-grow: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: functions.rem(20);
+
+    @include mixins.min(variables.$width-mob) {
+      // >= $width-mob 
+      margin-top: functions.rem(-56);
+    }
+
+    @include mixins.min(variables.$width-tab-sm) {
+      // для планшетов и десктопов >= $width-mob 
+      margin-top: functions.rem(-12);
+      margin-bottom: functions.rem(32);
+    }
+
+    @include mixins.min(variables.$width-tab) {
+      // >= $width-tab 
+      margin-top: 0;
+      margin-bottom: functions.rem(40);
+    }
+  }
+
+  &__description {
+    font-size: functions.rem(16);
+    line-height: 1.25;
+    color: rgba(3, 7, 24, 1);
+    margin-bottom: 1.25em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: functions.rem(16);
+    max-width: none;
+    margin-bottom: functions.rem(-125);
+    border-radius: functions.rem(4);
+    background-color: variables.$color-purple;
+
+    @include mixins.min(variables.$width-tab-xs) {
+      // для планшетов и десктопов >= $width-mob 
+      padding: functions.rem(32) functions.rem(65) functions.rem(40);
+      max-width: functions.rem(630);
+      margin-bottom: 0;
+      flex: 1 1 functions.rem(630);
+    }
+  }
+
+  &__form-title {
+    font-size: functions.rem(20);
+    color: variables.$color-white;
+    line-height: 1.28;
+    letter-spacing: functions.em(1.12, 28);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: functions.rem(20);
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      margin-bottom: functions.rem(32);
+      font-size: functions.rem(28);
+    }
+  }
+}

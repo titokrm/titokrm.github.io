@@ -1,0 +1,139 @@
+@use "../helpers/functions";
+@use "../helpers/mixins";
+@use "../helpers/variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100%;
+  background-color: variables.$color-back-default;
+  font-weight: 400;
+  font-style: normal;
+  min-width: variables.$min-width * 1px;
+  display: flex;
+  flex-direction: column;
+
+  &.debug * {
+    outline: 1px solid rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+[class*="container"] {
+  max-width: functions.rem(variables.$width-container);
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: functions.rem(variables.$padding-container-mob-xs);
+
+  @include mixins.min(variables.$width-mob-sm) {
+    // для мобилок >= $width-mob-sm
+    padding-inline: functions.rem(variables.$padding-container-mob);
+  }
+
+  @include mixins.min(variables.$width-mob) {
+    // для планшетов и десктопов >= $width-mob
+    padding-inline: functions.rem(variables.$padding-container-tab);
+  }
+
+  @include mixins.min(variables.$width-tab) {
+    // для десктопов >= $width-tab
+    padding-inline: functions.rem(variables.$padding-container-desk-sm);
+  }
+
+  @include mixins.min(variables.$width-desk-sm) {
+    // для десктопов >= $width-desk-sm
+    padding-inline: functions.rem(variables.$padding-container-desk);
+  }
+}
+
+body.scroll-lock {
+  overflow: hidden !important;
+}
+
+.wrapper-global {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+body.scroll-lock .wrapper-global {
+  overflow-y: scroll;
+
+  scrollbar-color: transparent transparent;
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+  padding-top: functions.rem(64);
+}
+
+a {
+  color: variables.$link-default-color;
+  text-decoration: variables.$link-decoration;
+  transition: all variables.$animate-time ease-in-out;
+
+  &:hover {
+    color: variables.$link-hover-default-color;
+    text-decoration: variables.$link-hover-decoration;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  transition:
+    stroke variables.$animate-time ease-in-out,
+    fill variables.$animate-time ease-in-out;
+
+  &--close {
+    @include mixins.sizerem(32, 32);
+    fill: variables.$color-white;
+  }
+
+  &--burger {
+    @include mixins.sizerem(32, 32);
+    fill: variables.$color-white;
+    display: block;
+  }
+
+  &--arrow {
+    @include mixins.sizerem(36, 36);
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  &--arrow-profit {
+    @include mixins.sizerem(11, 18);
+    stroke: currentColor;
+    stroke-width: 2;
+
+    &-down {
+      transform: scaleY(-1);
+    }
+  }
+
+  &--dropdown {
+    @include mixins.sizerem(24, 24);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}

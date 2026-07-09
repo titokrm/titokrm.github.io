@@ -1,0 +1,22 @@
+@use "sass:math";
+
+@function rem($px) {
+  @return calc(#{$px} / var(--root-font-size) * 1rem);
+}
+
+@function perc($value, $base) {
+  @return math.div($value, $base) * 100%;
+}
+
+@function vw($px-size, $base: 375) {
+  @return math.div($px-size, $base) * 100vw;
+}
+
+@function vh($px-size, $base: 768) {
+  @return math.div($px-size, $base) * 100vh;
+}
+
+/* функция emc (сокращение от "em calculation") возвращает сколько в em будет заданное в пикселях в $px-size если значение font-size для этого блока равно $font-size заданному тоже в пикселях */
+@function em($px-size, $font-size) {
+  @return math.div($px-size, $font-size) * 1em;
+}

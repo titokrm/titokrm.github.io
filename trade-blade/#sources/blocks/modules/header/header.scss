@@ -1,0 +1,245 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+body {
+  --header-bg-color: #{variables.$color-back-default};
+  --header-bg-shadow: 0 0 #{functions.rem(20)} #{variables.$color-back-default};
+  --header-height: #{functions.rem(52)};
+  --header-logo-width: #{functions.rem(107)};
+
+  --header-slide-nav-animation: translateX(-100%); // начальное состояние выезжающего меню - откуда оно выезжает
+  --header-slide-nav-bg-color: #{variables.$color-purple}; // цвет фона выезжающего меню
+  --header-slide-nav-padding: #{functions.rem(84)} #{functions.rem(16)} #{functions.rem(16)}; // отступы выезжающего меню
+  --header-slide-nav-width: 100%; // ширина выезжающего меню
+
+  --header-menu-font-size: #{functions.rem(24)};
+  --header-menu-line-height: normal;
+  --header-menu-font-weight: 500;
+  --header-menu-space-item: #{functions.rem(32)};
+  --header-menu-link-color: rgba(255, 255, 255, 0.7);
+  --header-menu-link-hover-color: #{variables.$color-q};
+
+  --header-btns-margin-left: 0;
+  --header-btns-gap: #{functions.rem(16)};
+
+  @include mixins.min(variables.$width-mob-sm) {
+    // >= $width-mob-sm
+    --header-height: #{functions.rem(64)};
+    --header-logo-width: #{functions.rem(132)};
+    --header-slide-nav-width: #{functions.rem(480)};
+  }
+
+  @include mixins.min(variables.$width-tab) {
+    // >= $width-tab
+    --header-slide-nav-padding: #{functions.rem(84)} #{functions.rem(40)} #{functions.rem(40)};
+    --header-menu-font-size: #{functions.rem(14)};
+    --header-btns-margin-left: #{functions.rem(82)};
+    --header-btns-gap: #{functions.rem(12)};
+  }
+}
+
+.menu {
+  font-size: var(--header-menu-font-size);
+  line-height: var(--header-menu-line-height);
+  font-weight: var(--header-menu-font-weight);
+  color: var(--header-menu-link-color);
+  text-transform: uppercase;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: auto;
+
+    justify-content: flex-start;
+    @include mixins.no-list;
+    flex: 1 1 auto;
+
+    @include mixins.min(variables.$width-tab) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    margin-bottom: var(--header-menu-space-item);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mixins.min(variables.$width-tab) {
+      margin-bottom: 0;
+      margin-right: var(--header-menu-space-item);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--header-menu-link-color);
+    transition: none;
+  }
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  box-shadow: var(--header-bg-shadow);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform variables.$animate-time ease-in-out;
+
+  &.header--hidden {
+    transform: translateY(-100%);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    position: relative;
+  }
+
+  &__logo {
+    width: var(--header-logo-width);
+    position: relative;
+    display: block;
+  }
+
+  &__logo-img {
+    display: block;
+    width: 100%;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    @include mixins.min(variables.$width-tab) {
+      // >= $width-tab
+      flex-direction: row;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: var(--header-menu-space-item);
+    gap: var(--header-btns-gap);
+
+    @include mixins.min(variables.$width-tab) {
+      // >= $width-tab
+      justify-content: flex-start;
+      margin-left: var(--header-btns-margin-left);
+      margin-top: 0;
+    }
+  }
+
+  &__login,
+  &__register {
+    font-size: functions.rem(16);
+    padding-block: functions.rem(16);
+    flex: 1 1 100%;
+
+    @include mixins.min(variables.$width-tab) {
+      // >= $width-tab
+      font-size: functions.rem(14);
+      padding-block: functions.rem(11);
+      flex: unset;
+    }
+  }
+
+  &__menu-burger-btn {
+    display: flex;
+    position: relative;
+    padding: functions.rem(16);
+    padding-right: 0;
+    background: none;
+    border: none;
+  }
+
+  &__menu-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: functions.rem(16);
+    background: none;
+    border: none;
+    display: flex;
+  }
+
+  &__menu-burger-btn,
+  &__menu-close-btn {
+    cursor: pointer;
+
+    .icon {
+      transition: transform variables.$animate-time ease-in-out;
+    }
+
+    &:hover {
+      .icon {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @include mixins.min(variables.$width-tab) {
+
+    &__menu-burger-btn,
+    &__menu-close-btn {
+      display: none;
+    }
+  }
+}
+
+.slide-nav {
+  @include mixins.max(variables.$width-tab - 0.1) {
+    @keyframes hidemenu {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--header-slide-nav-bg-color);
+    box-sizing: border-box;
+    padding: var(--header-slide-nav-padding);
+    width: var(--header-slide-nav-width);
+    transform: var(--header-slide-nav-animation);
+    z-index: 1001;
+    animation-name: hidemenu;
+    animation-duration: variables.$animate-time * 2;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    transition: transform variables.$animate-time ease-in-out;
+
+    &.active {
+      transform: translate(0, 0);
+      //box-shadow: 0 0 rem(20) rgba(0,0,0,0.7);
+    }
+  }
+}

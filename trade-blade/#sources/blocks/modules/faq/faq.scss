@@ -1,0 +1,132 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+.faq {
+  padding-block: functions.rem(56);
+  color: variables.$color-black;
+  background-color: variables.$color-white;
+
+  @include mixins.min(variables.$width-mob) {
+    // >= $width-mob 
+    padding-block: functions.rem(96);
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: functions.rem(846);
+  }
+
+  &__title {
+    margin-bottom: functions.rem(40);
+
+    @include mixins.min(variables.$width-mob) {
+      // >= $width-mob 
+      margin-bottom: functions.rem(64);
+    }
+  }
+}
+
+.accordion {
+
+  &__item {
+    background-color: rgba(234, 239, 240, 1);
+    border-radius: functions.rem(4);
+    margin-bottom: functions.rem(12);
+    color: rgba(3, 7, 24, 1);
+
+    &.active {
+      background-color: variables.$color-purple;
+      color: variables.$color-white;
+
+      .accordion__btn {
+        transform: scaleY(-1);
+
+        &:before {
+          border-color: variables.$color-white;
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (hover: hover) {
+      &:not(.active) {
+        .accordion__title:hover {
+          padding-left: functions.rem(26);
+          padding-right: functions.rem(46);
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding: functions.rem(16) functions.rem(56) functions.rem(16) functions.rem(16);
+    cursor: pointer;
+    position: relative;
+    font-size: functions.rem(20);
+    line-height: functions.rem(28);
+    font-weight: 500;
+    color: inherit;
+    transition: padding variables.$animate-time ease-in-out;
+
+    @include mixins.min(variables.$width-mob) {
+      // >= $width-mob 
+      font-size: functions.rem(24);
+      line-height: functions.rem(32);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: functions.rem(16);
+    transform: translateY(-50%);
+    @include mixins.sizerem(24, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center 38%;
+    transition: transform variables.$animate-time ease-in-out;
+
+    &:before {
+      content: '';
+      display: block;
+      @include mixins.sizerem(10, 11);
+      border-bottom: 2px solid rgba(3, 7, 24, 1);
+      border-right: 2px solid rgba(3, 7, 24, 1);
+      transform: rotate(45deg);
+      opacity: 0.5;
+      transition: border-color variables.$animate-time ease-in-out;
+    }
+  }
+
+  &__collapsed-block {
+    height: 0;
+    overflow: hidden;
+    transition: height variables.$animate-time ease-in-out;
+  }
+
+  &__text {
+    opacity: 0.8;
+    padding: functions.rem(16);
+    padding-top: 0;
+
+    p {
+      margin: 0;
+      margin-bottom: functions.rem(20);
+      font-size: functions.rem(16);
+      line-height: 1.25;
+      color: inherit;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

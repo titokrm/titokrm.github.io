@@ -1,0 +1,64 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+.start-now {
+  padding: functions.rem(16) 0;
+  background-color: variables.$color-purple;
+  color: variables.$color-white;
+
+  @include mixins.min(variables.$width-mob) {
+    // >= $width-mob 
+    padding: functions.rem(40) 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: functions.rem(20);
+
+
+    @include mixins.min(variables.$width-mob) {
+      // >= $width-mob 
+      align-items: center;
+    }
+
+    @include mixins.min(variables.$width-tab-sm) {
+      // @include min(a, b) {...}
+      // a <= x <= b
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    font-size: functions.rem(20);
+    line-height: functions.rem(28);
+    font-weight: 500;
+
+    @include mixins.min(variables.$width-mob-sm, variables.$width-tab-sm - 0.1) {
+      // >= $width-mob-sm 
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mixins.min(variables.$width-mob) {
+      // >= $width-mob 
+      font-size: functions.rem(28);
+      line-height: functions.rem(36);
+    }
+  }
+
+  &__form {
+    flex: 0 0 functions.perc(522, 1280);
+
+    @include mixins.min(variables.$width-mob) {
+      // >= $width-mob-sm 
+      min-width: functions.rem(560);
+    }
+  }
+}

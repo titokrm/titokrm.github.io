@@ -1,0 +1,23 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+.title {
+  font-size: functions.rem(28);
+  font-weight: bold;
+  line-height: 1.28;
+  text-transform: uppercase;
+  color: inherit;
+
+  @include mixins.min(variables.$width-mob) {
+    // >= $width-mob 
+    font-size: functions.rem(36);
+  }
+
+  @include mixins.min(variables.$width-tab-xs) {
+    // >= $width-tab-sm
+    font-size: functions.rem(44);
+  }
+
+
+}

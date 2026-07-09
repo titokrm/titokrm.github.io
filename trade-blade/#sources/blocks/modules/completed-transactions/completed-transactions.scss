@@ -1,0 +1,187 @@
+@use "../../../styles/helpers/functions";
+@use "../../../styles/helpers/mixins";
+@use "../../../styles/helpers/variables";
+
+.completed-transactions {
+  --swiper-scrollbar-bottom: calc(-22px);
+  --swiper-scrollbar-sides-offset: 4.67%;
+  --swiper-scrollbar-size: 6px;
+  --swiper-scrollbar-border-radius: 56px;
+  --swiper-scrollbar-bg-color: rgba(67, 79, 112, 0.4);
+  --swiper-scrollbar-drag-bg-color: rgba(96, 115, 161, 1);
+
+  @include mixins.min(variables.$width-mob) {
+    // для планшетов и десктопов >= $width-mob 
+    --swiper-scrollbar-bottom: calc(-30px);
+    --swiper-scrollbar-sides-offset: 12.65%;
+  }
+
+
+  color: variables.$color-white;
+  padding: functions.rem(48) 0 functions.rem(77) 0;
+
+  @include mixins.min(variables.$width-mob) {
+    // для планшетов и десктопов >= $width-mob 
+    padding: functions.rem(96) 0 functions.rem(178) 0;
+  }
+
+  &__title {
+    margin-bottom: functions.rem(2);
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      margin-bottom: functions.rem(4);
+    }
+  }
+
+  &__online {
+    font-size: functions.rem(14);
+    line-height: functions.rem(20);
+    color: rgba(53, 255, 158, 1);
+    display: flex;
+    align-items: center;
+
+    &--offline {
+      color: red;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      @include mixins.sizerem(7, 7);
+      border-radius: 50%;
+      background-color: currentColor;
+      margin-right: functions.rem(4);
+      animation: blink-online 1.5s infinite;
+    }
+
+    @keyframes blink-online {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    span {
+      opacity: 0.9;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-right: functions.rem(-15);
+    margin-bottom: 22px;
+    margin-top: functions.rem(24);
+
+    @include mixins.min(variables.$width-mob) {
+      // для планшетов и десктопов >= $width-mob 
+      margin-right: functions.rem(-15);
+      margin-top: functions.rem(72);
+      margin-bottom: 30px;
+    }
+
+    @include mixins.min(variables.$width-desk-sm) {
+      // для десктопов >= $width-desk-sm 
+      margin-right: functions.rem(-80);
+    }
+  }
+}
+
+.swiper-slide {
+  &__inner {
+    width: functions.rem(299);
+    max-width: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 299 / 208;
+    padding: functions.rem(16) functions.rem(16) functions.rem(13);
+    display: flex;
+    flex-direction: column;
+    background: url("../img/slide-bg.svg") no-repeat center / 100% 100%;
+  }
+}
+
+.completed-transactions-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  font-weight: 500;
+  color: variables.$color-white;
+  font-size: clamp(20px, functions.vw(20, 375), functions.rem(29));
+
+  @include mixins.min(560) {
+    // для планшетов и десктопов >= $width-mob 
+    font-size: clamp(15px, functions.vw(17, 560), functions.rem(20));
+  }
+
+  @include mixins.min(variables.$width-mob) {
+    // для планшетов и десктопов >= $width-mob 
+    font-size: clamp(15px, functions.vw(17, 768), functions.rem(20));
+  }
+
+  @include mixins.min(variables.$width-tab-sm) {
+    font-size: clamp(15px, functions.vw(17, variables.$width-tab-sm), functions.rem(20));
+  }
+
+  @include mixins.min(variables.$width-desk-sm) {
+    // для десктопов >= $width-desk-sm 
+    font-size: functions.rem(20);
+  }
+
+  &__currencies {
+    font-size: functions.em(20, 20);
+    line-height: 1.4;
+    margin-bottom: functions.em(2, 20);
+  }
+
+  &__note {
+    font-size: functions.em(14, 20);
+    line-height: 1.28;
+    opacity: 0.4;
+    margin-bottom: auto;
+    margin-top: 0;
+  }
+
+  &__pofit {
+    margin-top: auto;
+    margin-bottom: functions.em(2, 14);
+    font-size: functions.em(14, 20);
+    line-height: 1.28;
+    opacity: 0.7;
+    text-transform: uppercase;
+  }
+
+  &__perc {
+    font-size: functions.em(28, 20);
+    color: rgba(53, 255, 158, 1);
+    line-height: 1.28;
+    margin-bottom: functions.em(9, 28);
+
+    &--negative {
+      color: red;
+    }
+  }
+
+  &__target-n-date {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__target {
+    font-size: functions.em(14, 20);
+    line-height: 1.28;
+    opacity: 0.7;
+  }
+
+  &__date {
+    font-size: functions.em(14, 20);
+    line-height: 1.28;
+    opacity: 0.4;
+    font-weight: 400;
+  }
+}

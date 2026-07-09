@@ -1,0 +1,14 @@
+// Переменные, миксины, функции
+@use "helpers/variables";
+@use "helpers/functions";
+@use "helpers/mixins";
+
+// CSS-файлы библиотек
+@use "vendor/libs";
+
+// Основное
+@use "base/fonts";
+@use "base/general";
+
+// БЭМ-блоки
+@use "../blocks/modules";
